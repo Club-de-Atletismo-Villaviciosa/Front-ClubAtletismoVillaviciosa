@@ -1,8 +1,14 @@
 import './App.css';
+import ContactForm from './Components/Contact/ContactForm';
+
+
 
 function App() {
   return (
-    <div className="App">
+    <div>
+
+      <ContactForm />
+      
     </div>
   );
 }

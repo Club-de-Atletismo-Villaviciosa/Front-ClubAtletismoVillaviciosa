@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    font: 1em sans-serif;
+    max-width: 320px;
+}
+
+p > label {
+    display: block;
+}
+
+.contacform {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    flex-direction: column;
+}
+
+ul li {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input:invalid {
+    border: 2px solid blue;
+}
+input:invalid {
+    box-shadow: 0 0 5px 1px red;
+}
+input:focus:invalid {
+    box-shadow: none;
+}
+
+input:invalid:required {
+    background-image: linear-gradient(to right, pink, green);
+}
+
+input:valid {
+    border: 2px solid black;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    border: 1px solid #333;
+    box-sizing: border-box;
+} 
+
