@@ -1,20 +1,14 @@
 import './App.css';
-import ContactForm from './Components/Contact/ContactForm';
-import Footer from './Components/Footer/Footer';
-import Navbar from './Components/Navbar/Navbar';
+import Contact from './Pages/ContactPage/Contact';
 
 
 
 function App() {
   return (
     <div>
-      <div>
-      <Navbar />
-      </div>
       
-      <ContactForm />
-      <Footer />
-      
+      <Contact />
+
     </div>
   );
 }

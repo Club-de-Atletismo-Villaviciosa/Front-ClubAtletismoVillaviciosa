@@ -14,7 +14,9 @@ const ContactForm = () => {
 
     return (
         <div>
-            
+            <div>
+                <h1 className='headerForm'>CLUB ATLETISMO VILLAVICIOSA</h1>
+            </div>
             <form className='contacform' onSubmit={handleSubmit}>
             <h1>CONTACTO</h1>
                 <div className='nameForm'>

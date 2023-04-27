@@ -8,8 +8,7 @@ footer {
     /* align-items: center; */
     justify-content: space-evenly;
     background-color: #623173;
-    height: 25vh;
-    
+    height: 25vh;    
 }
 
 p {
@@ -25,5 +24,10 @@ p {
 }
 
 .gaitero {
-    padding-right: 10px;
+    padding-right: 200px;
+}
+
+.headerForm {
+    display: flex;
+    justify-content: center;
 }
