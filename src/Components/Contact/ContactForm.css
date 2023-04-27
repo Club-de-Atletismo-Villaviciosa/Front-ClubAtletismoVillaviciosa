@@ -3,52 +3,52 @@
     padding: 0;
 }
 
-form {
-    font: 1em sans-serif;
-    max-width: 320px;
-}
-
-p > label {
-    display: block;
-}
-
 .contacform {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
+    padding: 3%;
 }
 
-ul {
+.nameForm {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 30%;
+}
+
+.emailForm {
+    display: flex;    
+    align-items: flex-start;        
+    flex-direction: column;
+    width: 30%;
+}
+
+.textForm {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 30%;
+}
+
+.contactInfo {
     display: flex;
     list-style: none;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
-}
-
-ul li {
-    display: flex;
-    justify-content: flex-start;
+    padding: 3%;
 }
 
 .map {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-input:invalid {
-    border: 2px solid blue;
-}
-input:invalid {
-    box-shadow: 0 0 5px 1px red;
-}
-input:focus:invalid {
-    box-shadow: none;
+    padding: 3%;
 }
 
 input:invalid:required {
-    background-image: linear-gradient(to right, pink, green);
+    border: 2px solid blue;
 }
 
 input:valid {
