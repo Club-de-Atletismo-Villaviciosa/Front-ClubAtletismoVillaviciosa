@@ -1,6 +1,5 @@
 .navbar {
-    background-color: #623173;
-    
+    background-color: #623173;    
     font-size: larger;
     width: 30vh;
     height: 100vh;
@@ -51,7 +50,6 @@
 .open{
     height: 100%;
 }
-
 
 .navbar-bar{
     margin-top: 10vh;
