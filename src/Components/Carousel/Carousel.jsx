@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 function Carousel(){
     return (
-        <div>
+        <div className="slider">
             <Slider dots={true} infinite={true} speed={500} slidesToShow={1} slidesToScroll={1}>
   {AthleteText.map((text) => (
     <div key={text.id}>
@@ -15,7 +15,6 @@ function Carousel(){
   ))}
 </Slider>
         </div>
-
     )
 }
 
