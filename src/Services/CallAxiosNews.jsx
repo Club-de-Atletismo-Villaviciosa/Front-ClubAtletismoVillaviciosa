@@ -2,7 +2,7 @@ import axios from "axios";
 
 const CallAxiosNews = () => {
 
-const url = "http://localhost:8080/api/v1/news"
+
 
 const getNews = async () => {
     const res = await axios.get(`${url}`);
