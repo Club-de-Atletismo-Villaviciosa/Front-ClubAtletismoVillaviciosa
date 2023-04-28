@@ -1,0 +1,28 @@
+.athlete{
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size:larger;
+}
+
+.athlete img{
+    width: 60%;
+}
+
+.athlete-description{
+    width: 60%;
+    /*texto debajo de la foto centrado*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.athlete-name{
+    font-weight: 500;
+    font-size: x-large;
+}
+
+.athlete-attributes{
+    color: rgb(113, 113, 113);
+}
