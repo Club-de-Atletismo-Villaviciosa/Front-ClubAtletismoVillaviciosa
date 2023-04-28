@@ -79,7 +79,7 @@ input, textarea {
 }
 
 input:invalid:required {
-    border: 2px solid blue;
+    border: 2px solid grey;
 }
 
 input:valid {
@@ -87,7 +87,7 @@ input:valid {
 }
 
 textarea:invalid {
-    border: 2px solid blue;
+    border: 2px solid grey;
 }
 
 textarea:valid {
