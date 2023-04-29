@@ -3,7 +3,8 @@ import Carousel from "../../Components/Carousel/Carousel"
 import Navbar from "../../Components/Navbar/Navbar"
 import ButtonToForm from "../../Components/ButtonToForm/ButtonToForm"
 import FormMain from "../../Components/FormMain/FormMain"
-import "./Main.css"
+import "./MainPage.css"
+import MainSection from "../../Components/MainSection/MainSection"
 
 function Main(){
 
@@ -15,6 +16,7 @@ function Main(){
             <PhotoMainPage />
             <Carousel />
             <ButtonToForm />
+            <MainSection />
           
         </div>
         </div>

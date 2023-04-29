@@ -1,0 +1,16 @@
+.newsCard {
+    background-color: #FBD1AB;
+    margin: 3vh;
+    padding: 2vh;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 70%;
+}
+.newsCard span{
+    cursor: pointer;
+}
+.newsCard-titlePencilTrash {
+    display: flex;
+    align-items: center;
+}
