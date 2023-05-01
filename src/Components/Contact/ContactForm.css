@@ -22,6 +22,7 @@ input, textarea {
 
 .inputForm { 
     background-color: #9395D3;
+    width: 30%;
     margin: 3vh 0vh;
 }
 
@@ -93,11 +94,3 @@ textarea:invalid {
 textarea:valid {
     border: 2px solid black;
 }
-
-/* input[type="text"],
-input[type="email"],
-textarea {
-    width: 100%;
-    border: 1px solid #333;
-    box-sizing: border-box;
-}  */

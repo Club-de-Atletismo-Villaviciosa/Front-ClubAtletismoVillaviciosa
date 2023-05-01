@@ -1,39 +1,46 @@
-import React, { useState } from 'react'
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import './ContactForm.css';
 
 const ContactForm = () => {
 
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [textArea, setTextArea] = useState("");
+    const form = useRef();
 
-    function handleSubmit(event) {
-        event.preventDefault();
+    const sendEmail = (e) => {
+        e.preventDefault();
 
-    }
+        emailjs.sendForm('service_arjzlfl', 'template_97z06zi', form.current, 'O4lisxogcfKr3Z7J9')
+            .then((result) => {
+                console.log(result.text);
+                alert('Mensaje enviado')
+            }, (error) => {
+                console.log(error.text);
+                alert('Mensaje sin enviar')
+            });
+
+            e.target.reset();
+    };    
 
     return (
         <div className='container'>
             <div>
                 <h1>CLUB ATLETISMO VILLAVICIOSA</h1>
             </div>
-            <form className='contacform' onSubmit={handleSubmit}>
+            <form className='contacform' ref={form} onSubmit={sendEmail}>
             <h1>CONTACTO</h1>
                 <div className='form-item'>
                     <label for="name">Nombre:*</label><br />
-                    <input type="text" name="name" id='name' maxLength="30" placeholder='Inserta tu nombre' autoFocus required
-                        onChange={(event) => { setName(event.target.value) }} />
+                    <input type="text" name="user_name" id='user_name' maxLength="30" 
+                    placeholder='Inserta tu nombre' autoFocus required />
                 </div>
                 <div className='form-item'>
                     <label for='email'>Email:*</label><br />
-                    <input type="email" name="email" id='email' pattern='^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$'
-                        placeholder='Inserta tu correo electrónico' required
-                        onChange={(event) => { setEmail(event.target.value) }} />
+                    <input type="email" name="user_email" id='user_email' pattern='^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$'
+                        placeholder='Inserta tu correo electrónico' required />
                 </div>
                 <div className='form-item'>
                     <label>Consulta:*</label><br /> 
-                    <textarea name="message" rows="10" cols="30" placeholder='Mensaje' required 
-                    onChange={(event) => { setTextArea(event.target.value) }}>
+                    <textarea name="message" rows="10" cols="30" placeholder='Mensaje' required >
                     </textarea>
                 </div>
                 <div className='form-item'>
