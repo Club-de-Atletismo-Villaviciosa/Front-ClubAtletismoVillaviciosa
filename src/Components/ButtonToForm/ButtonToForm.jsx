@@ -18,12 +18,7 @@ return(
         <div className={`formDropdown ${isOpen ? 'open' : 'close'}`}>
             <FormMain/>
         </div>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
+    
         
     </div>
 )

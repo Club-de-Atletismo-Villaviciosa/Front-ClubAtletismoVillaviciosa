@@ -1,16 +1,21 @@
 import "./FormMain.css"
 import CallAxiosNews from "../../Services/CallAxiosNews"
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import {useLocation, useNavigate } from 'react-router-dom';
+import InputPhoto from "../InputPhoto/InputPhoto";
+
 
 function FormMain(){
+    
+    const State = useLocation().state 
     let [data, setData] = useState(State ? State : {title: "", url: "", activity: ""})
-    const State = useLocation().state
+  
 
 function handleSubmit(event) {
         event.preventDefault();
         State ? CallAxiosNews().updateNews(data, State.id) : CallAxiosNews().createNews(data)
-        notify()
-        setIsSubmitted(true);
+        
+    
           
     }
 function handleChange(event) {
@@ -34,8 +39,8 @@ function handleChange(event) {
             <div className="formMain-image">
                 <label>Imagen:</label>
                 <div className="formMain-image-inputAndButton">
-                    <input type="url" name="url" onChange={handleChange} defaultValue={State ? State.url: ""} autoComplete="off" placeholder="Imagen" required></input>
-                    <button><span>Examinar documento...</span></button>
+                    <InputPhoto handleChange ={handleChange}/>
+                    <p>(Asegurate que la foto esté centrada)</p>
                 </div>
             </div>
                 <div className="formMain-activity">

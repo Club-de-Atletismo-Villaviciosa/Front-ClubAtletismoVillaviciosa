@@ -19,12 +19,11 @@ function NewsCard({id,url,title,activity}){
         <div>
             <div className="newsCard-titlePencilTrash">
                 <h2 alt="Título de la noticia">{title}</h2>
-                <img src={pencil}></img>
-                <img src={trash}></img>
+                {/* <img src={pencil}></img>
+                <img src={trash}></img> */}
             </div>
             <p alt="Texto de la noticia" >{truncateText(activity, 50)}<span onClick={()=>{navigate ("/NewsPage", {state: {id,title,url,activity}})}}>Leer mas...</span></p>
         </div>
-
     </div>
     )
 }

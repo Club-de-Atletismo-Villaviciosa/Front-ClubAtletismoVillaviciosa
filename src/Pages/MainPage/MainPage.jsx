@@ -6,7 +6,7 @@ import FormMain from "../../Components/FormMain/FormMain"
 import "./MainPage.css"
 import MainSection from "../../Components/MainSection/MainSection"
 
-function Main(){
+function MainPage(){
 
     return(    
         <div>
@@ -24,4 +24,4 @@ function Main(){
     )
 }
 
-export default Main
+export default MainPage

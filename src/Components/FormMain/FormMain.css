@@ -36,6 +36,16 @@
 .formMain-image span{
     color:white
 }
+.formMain-image-inputAndButton {
+    display: flex;
+    align-items: center;
+}
+.formMain-image-inputAndButton p{
+color: rgb(241, 141, 141);
+margin-left: 1vw;
+font-size: small;
+
+}
 .formMain-activity{
     display: flex;
     flex-direction: column;
