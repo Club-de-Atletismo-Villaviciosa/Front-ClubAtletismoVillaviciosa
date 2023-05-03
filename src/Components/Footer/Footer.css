@@ -1,32 +1,33 @@
-* {
-    padding: 0;
-    margin: 0;
-}
-
 footer {
     display: flex;    
-    justify-content: space-evenly;
+    flex-wrap: wrap;    
+    justify-content: center;
     background-color: #623173;
-    height: 20vh; 
+    height: 22vh;    
 }
 
-p {
-    display: flex;
-    align-items: flex-start;
-    margin: 3vh;
+p {      
     font-weight: bold;
+    padding-right: 100px;
 }
 
-.logos {
-    display: flex;
-    align-items: center;
+.footerImages {
+   display: flex; 
+   align-items: center;   
 }
 
 .gaitero {
-    padding-right: 200px;
+    padding-right: 150px;
 }
 
-.headerForm {
-    display: flex;
-    justify-content: center;
+/* @media (max-width: 800px) {
+    footer {
+        flex: 50%;        
+    }
 }
+
+@media (max-width: 600px) {
+    footer {
+        flex: 100%;
+    }
+} */

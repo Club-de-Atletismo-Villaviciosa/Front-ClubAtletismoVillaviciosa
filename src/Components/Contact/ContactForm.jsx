@@ -22,11 +22,11 @@ const ContactForm = () => {
     };    
 
     return (
-        <div className='container'>
+        <div className='contactForm'>
             <div>
                 <h1>CLUB ATLETISMO VILLAVICIOSA</h1>
             </div>
-            <form className='contacform' ref={form} onSubmit={sendEmail}>
+            <form ref={form} onSubmit={sendEmail}>
             <h1>CONTACTO</h1>
                 <div className='form-item'>
                     <label for="name">Nombre:*</label><br />
