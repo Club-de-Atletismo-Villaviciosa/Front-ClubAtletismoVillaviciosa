@@ -1,19 +1,22 @@
 import "./FormMain.css"
 import CallAxiosNews from "../../Services/CallAxiosNews"
+import ApiPostService from '../../Services/ApiPostService';
+import ApiPutService from '../../Services/ApiPutService';
 import React, { useEffect, useState } from 'react';
 import {useLocation, useNavigate } from 'react-router-dom';
 import InputPhoto from "../InputPhoto/InputPhoto";
 
 
 function FormMain(){
-    
+    const url = "http://localhost:8080/api/v1/news"
     const State = useLocation().state 
-    let [data, setData] = useState(State ? State : {title: "", url: "", activity: ""})
+    let [data, setData] = useState(State ? State : {title: "", url: "", news: ""})
   
 
 function handleSubmit(event) {
         event.preventDefault();
-        State ? CallAxiosNews().updateNews(data, State.id) : CallAxiosNews().createNews(data)
+        State ? ApiPutService(url, data, State.id) : ApiPostService(url, data)
+
         
     
           
@@ -28,7 +31,7 @@ function handleChange(event) {
         }
         setData(temp_data);
       }
-    
+    console.info(data)
 
     return(
         <form className="formMain" onSubmit={handleSubmit} method="post">
@@ -39,13 +42,14 @@ function handleChange(event) {
             <div className="formMain-image">
                 <label>Imagen:</label>
                 <div className="formMain-image-inputAndButton">
-                    <InputPhoto handleChange ={handleChange}/>
+                    <input type="url" name="url" onChange={handleChange} defaultValue={State ? State.url: ""} autoComplete="off" placeholder="Enlace de Imgur" required pattern="https?://.+" />
+                    {/* <InputPhoto handleChange ={handleChange}/> */}
                     <p>(Asegurate que la foto esté centrada)</p>
                 </div>
             </div>
                 <div className="formMain-activity">
                 <label>Actividad:</label>
-                <textarea rows="15" type="text" name="activity"  defaultValue={State ? State.description : ""} onChange={handleChange} id="" required/>
+                <textarea rows="15" type="text" name="news"  defaultValue={State ? State.description : ""} onChange={handleChange} id="" required/>
             </div>
             <div className="formMain-postButton">
                 <button><span>Publicar</span></button>

@@ -1,5 +1,5 @@
 .newsCard {
-    background-color: #FBD1AB;
+  
     margin: 3vh;
     padding: 2vh;
     display: flex;
@@ -13,4 +13,7 @@
 .newsCard-titlePencilTrash {
     display: flex;
     align-items: center;
+}
+.newsCard-imgNews{
+    width: 20%;
 }

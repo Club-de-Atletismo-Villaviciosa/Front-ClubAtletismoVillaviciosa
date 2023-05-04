@@ -17,7 +17,7 @@ function MainSection(){
 
         <div>
             {data.map((item)=>(
-                <NewsCard  key={item.id} id={item.id} title={item.title} url={item.url} activity={item.activity}/>
+                <NewsCard  key={item.id} id={item.id} title={item.title} url={item.url} news={item.news}/>
             ))}
         </div>
     )

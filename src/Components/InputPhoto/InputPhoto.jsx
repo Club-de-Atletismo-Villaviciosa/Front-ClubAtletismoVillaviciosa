@@ -40,7 +40,7 @@ function InputPhoto({handleChange}) {
             <textarea value={base64} required className="form-control" placeholder="Añade una foto"  onChange= {handleChange}
                                 id="photo"/>
         <input type="file"onChange={handleFileChange} id="archivo" name="archivo"/>
-        <label for="archivo" className="custom-file-button">Seleccionar archivo</label>
+        <label id='buttonBase64' for="archivo" className="custom-file-button">Seleccionar archivo</label>
         </div>
     );
 }
