@@ -1,7 +1,7 @@
 
 h1 {
     text-align: center;
-    padding-top: 3%;
+    padding-top: 3vh;
 }
 
 input, textarea {
@@ -22,61 +22,23 @@ input, textarea {
 
 .inputForm { 
     background-color: #9395D3;
-    width: 30%;
-    margin: 3vh 0vh;
+    width: 25%;  
 }
-
-
-
-/* .form-item {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-    padding-bottom: 5vh;   
-} */
-
-/* .nameForm {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    width: 30%;
-    padding-bottom: 5vh;
-} */
-
-/* .emailForm {
-    display: flex;    
-    align-items: flex-start;        
-    flex-direction: column;
-    width: 30%;
-    padding-bottom: 5vh;
-} */
-
-/* .textForm {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    width: 30%;
-    padding-bottom: 5vh;
-} */
-
-/* .inputForm {
-    padding-bottom: 5vh;
-} */
 
 .contactInfo {
     display: flex;
     list-style: none;
     align-items: flex-start;
     flex-direction: column;
-    padding: 3%;
+    padding-top: 5vh;
+    font-weight: bold;
 }
 
 .map {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 3%;
+    padding: 5vh 0vh;
 }
 
 input:invalid:required {
