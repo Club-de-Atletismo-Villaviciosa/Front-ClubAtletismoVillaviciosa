@@ -1,43 +1,44 @@
 import React, { useState } from 'react'
 import Athlete from './Athlete/Athlete'
 import "./Athletes.css"
+import img from "./../../assets/img/Athlete.jpg" 
 
 function Athletes() {
     let [athletes, setAthletes] = useState([{
         name: "Lorem Ipsum1",
         category: "Lorem ipsum",
         discipline: "Lorem ipsum",
-        url: "https://i.imgur.com/jiQxUtt.png",
+        url: img,
         licenseNumber: 1
     }, {
         name: "Lorem Ipsum2",
         category: "Lorem ipsum",
         discipline: "Lorem ipsum",
-        url: "https://i.imgur.com/jiQxUtt.png",
+        url: img,
         licenseNumber: 2
     }, {
         name: "Lorem Ipsum3",
         category: "Lorem ipsum",
         discipline: "Lorem ipsum",
-        url: "https://i.imgur.com/jiQxUtt.png",
+        url: img,
         licenseNumber: 3
     }, {
         name: "Lorem Ipsum3",
         category: "Lorem ipsum",
         discipline: "Lorem ipsum",
-        url: "https://i.imgur.com/jiQxUtt.png",
+        url: img,
         licenseNumber: 4
     }, {
         name: "Lorem Ipsum3",
         category: "Lorem ipsum",
         discipline: "Lorem ipsum",
-        url: "https://i.imgur.com/jiQxUtt.png",
+        url: img,
         licenseNumber: 5
     }, {
         name: "Lorem Ipsum3",
         category: "Lorem ipsum",
         discipline: "Lorem ipsum",
-        url: "https://i.imgur.com/jiQxUtt.png",
+        url: img,
         licenseNumber: 6
     }])
 

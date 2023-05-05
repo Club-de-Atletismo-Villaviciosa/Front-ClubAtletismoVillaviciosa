@@ -8,11 +8,11 @@ function InfoSection() {
   return (
     <div className='infoSection'>
         <img src="" alt="" />
-        <div>
+        <div className='infoSection-description'>
             <h2>Historia del club</h2>
-            <p></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam efficitur molestie blandit. Maecenas rutrum mauris sit amet urna pulvinar feugiat. Cras non nisl quis enim iaculis egestas. Vivamus vehicula tristique hendrerit. Phasellus pharetra sapien vitae arcu porta tempor. Suspendisse quis ante venenatis, efficitur ipsum congue, posuere nibh. Morbi non ante lacus. In hac habitasse platea dictumst.</p>
         </div>
-        <div>
+        <div className='infoSection-description'>
             <h2>Palmarés <MdModeEditOutline color='gray'/> <small className='small'>editar</small></h2>
             <p>{palmares}</p>
         </div>

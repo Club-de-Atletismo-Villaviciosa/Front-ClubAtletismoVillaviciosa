@@ -5,3 +5,7 @@
 .infoSection{
     margin-left: 15vw;
 }
+
+.infoSection-description{
+    margin: 5vh 13vw 5vh 13vw;
+}
