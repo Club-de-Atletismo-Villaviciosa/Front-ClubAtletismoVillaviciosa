@@ -1,18 +1,19 @@
 .navbar {
-    background-color: #623173;
-    
+    background-color: #623173;    
     font-size: larger;
     width: 30vh;
     height: 100vh;
     position: fixed;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;    
     align-items: center;
     overflow: hidden;
 }
 
 .navbar-logo {
     margin: 5vh 0 5vh 0;
+    display: flex;
+    justify-content: center; /*added*/
 }
 
 .navbar-logo img{
@@ -22,6 +23,7 @@
 .navbar-ul, .navbar-ul-dropdown{
     display: flex;
     flex-direction: column;
+    align-items: center; /*added*/
 }
 
 .navbar-ul li{
@@ -51,7 +53,6 @@
 .open{
     height: 100%;
 }
-
 
 .navbar-bar{
     margin-top: 10vh;

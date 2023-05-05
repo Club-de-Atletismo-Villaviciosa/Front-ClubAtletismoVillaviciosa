@@ -1,0 +1,32 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+footer {
+    display: flex;    
+    justify-content: space-evenly;
+    background-color: #623173;
+    height: 20vh; 
+}
+
+p {
+    display: flex;
+    align-items: flex-start;
+    margin: 3vh;
+    font-weight: bold;
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+}
+
+.gaitero {
+    padding-right: 200px;
+}
+
+.headerForm {
+    display: flex;
+    justify-content: center;
+}
