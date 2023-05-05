@@ -1,13 +1,12 @@
 import './App.css';
-import Calendar from './Components/Calendar/Calendar';
-import Navbar from './Components/Navbar/Navbar';
+import CalendarPage from './Pages/CalendarPage/CalendarPage';
 
 function App() {
 
   return (
     <div className="App">
-      <Navbar />
-      <Calendar />
+      
+      <CalendarPage />
     </div>
   );
 }
