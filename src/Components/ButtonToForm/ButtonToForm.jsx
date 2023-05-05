@@ -2,7 +2,7 @@ import "./ButtonToForm.css";
 import FormMain from "../FormMain/FormMain";
 import React, { useState } from 'react'
 
-function ButtonToForm(){
+function ButtonToForm({type}){
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -14,12 +14,10 @@ function ButtonToForm(){
 
 return(
     <div className="buttonToForm">
-        <button onClick={handleDropdownClick}><span className="buttonToForm-span">Publicar una actividad</span></button>
+        <button onClick={handleDropdownClick}><span className="buttonToForm-span">{type == "athlete"? "Publicar un/a athlete" : "Publicar una actividad"}</span></button>
         <div className={`formDropdown ${isOpen ? 'open' : 'close'}`}>
-            <FormMain/>
+            <FormMain type={type}/>
         </div>
-    
-        
     </div>
 )
 

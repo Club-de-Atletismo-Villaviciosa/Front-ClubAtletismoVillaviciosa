@@ -60,3 +60,7 @@
     background-color: black;
     transform: rotate(10deg);
 }
+
+.click{
+    cursor: pointer;
+}

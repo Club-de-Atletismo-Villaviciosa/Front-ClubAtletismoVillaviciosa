@@ -7,7 +7,6 @@ function Navbar() {
 
     function handleDropdownClick(e) {
         mode == "close"? setMode("open") : setMode("close")
-        
     }
 
     return (
@@ -18,7 +17,7 @@ function Navbar() {
             <ul className='navbar-ul'>
                 <a href=""><li>Inicio</li></a>
                 <a href=""><li>Competiciones</li></a>
-                <li onClick={handleDropdownClick}>Info. del club <IoIosArrowDown /></li>
+                <li className="click" onClick={handleDropdownClick}>Info. del club <IoIosArrowDown /></li>
                 <ul className={`navbar-ul-dropdown ${mode}`} >
                     <a href=""><li>Historia</li></a>
                     <a href=""><li>Palmarés</li></a>

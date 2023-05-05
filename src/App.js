@@ -1,12 +1,12 @@
 import './App.css';
 import MainPage from './Pages/MainPage/MainPage';
-import Navbar from './Components/Navbar/Navbar';
+import InfoPage from './Pages/InfoPage/InfoPage';
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 
 function App() {
   const router = createBrowserRouter([{
     path: "/",
-     element: <MainPage />
+     element: <InfoPage />
 
 }]);
     return (
