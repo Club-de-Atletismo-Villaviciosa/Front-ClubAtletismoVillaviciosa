@@ -1,0 +1,31 @@
+.buttonToForm button{
+    background-color:#9395D3 ;
+    cursor: pointer;
+    border-radius: 10px;
+    border-style: none;
+    height: 6vh;
+    width: 25vw;
+    
+}
+.buttonToForm{
+    margin-top: 15vh;
+    
+}
+
+.buttonToForm-span{
+    font-size: 2.5vh;
+    color: white
+}
+
+.formDropdown {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 0px;
+    max-height: 500px; 
+    transition: height 1s ease-in-out; 
+  }
+  .formDropdown.open { 
+    height: 500px;
+
+  }

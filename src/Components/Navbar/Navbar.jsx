@@ -7,7 +7,7 @@ function Navbar() {
 
     function handleDropdownClick(e) {
         mode == "close"? setMode("open") : setMode("close")
-        console.log(mode)
+        
     }
 
     return (

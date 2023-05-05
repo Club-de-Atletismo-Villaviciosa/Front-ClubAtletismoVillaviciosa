@@ -1,0 +1,10 @@
+.slider {
+    margin-top: 10vh;
+    width: 50vw;
+    margin-left: 16vw;
+    background-color: #B3B7EE;
+}
+
+.slick-prev::before, .slick-next::before {
+    color: rgb(3, 3, 3) !important;
+  }

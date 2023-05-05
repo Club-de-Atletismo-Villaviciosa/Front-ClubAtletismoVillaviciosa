@@ -1,0 +1,84 @@
+.formMain {
+    margin-top: 10vh; 
+    height: 50vh;
+ margin-left: 15vw;
+   
+}
+
+.formMain-title{
+    display: flex;
+    align-items: center;
+    margin-bottom: 2vh;
+       
+}
+.formMain-title label{
+    width: 10%;
+}
+.formMain-image {
+    display: flex;
+    align-items: center;
+}
+.formMain-image label{
+    width: 10%;
+}
+.formMain-image input{
+    margin-right: 1.5vw;
+}
+
+.formMain-image button{
+    background-color:#9395D3;
+    border-radius: 5px;
+    border-style: none;
+    width: 15vw;
+    height: 3vh;
+    cursor: pointer;
+}
+.formMain-image span{
+    color:white
+}
+.formMain-image-inputAndButton {
+    display: flex;
+    align-items: center;
+}
+.formMain-image-inputAndButton p{
+color: rgb(241, 141, 141);
+margin-left: 1vw;
+font-size: small;
+
+}
+.formMain-activity{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.8vw;
+}
+.formMain-activity label{
+    margin-top: 5vh;
+    display: flex;
+}
+.formMain-activity textarea{
+    width: 80%;
+}
+
+.formMain-postButton{
+    display: flex;
+}
+
+.formMain-postButton button{
+border-radius: 5px;
+border-style: none;
+background-color: #9395D3;
+width: 10vw;
+height: 3vh;
+cursor: pointer;
+
+}
+.formMain-postButton{
+    display: flex;
+    justify-content: center;
+    margin-left: -15vw;
+    margin-top: 5vh;
+}
+.formMain-postButton span{
+    color: white;
+    font-size: 2vh;
+}
