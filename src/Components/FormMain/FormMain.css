@@ -50,6 +50,7 @@ font-size: small;
     display: flex;
     flex-direction: column;
     margin-left: 1.8vw;
+    
 }
 .formMain-activity label{
     margin-top: 5vh;
@@ -61,6 +62,7 @@ font-size: small;
 
 .formMain-postButton{
     display: flex;
+    margin-bottom: 10vh;
 }
 
 .formMain-postButton button{
