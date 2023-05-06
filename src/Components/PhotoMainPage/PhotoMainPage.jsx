@@ -1,4 +1,4 @@
-import photo from "../../assets/img/Grupal.JPG"
+import photo from "../../assets/img/Grupal.png"
 import "./PhotoMainPage.css"
 
 function PhotoMainPage(){

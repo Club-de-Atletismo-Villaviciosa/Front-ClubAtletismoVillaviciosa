@@ -17,10 +17,7 @@ function FormMain(){
 function handleSubmit(event) {
         event.preventDefault();
         State ? ApiPutService(url, data, State.id) : ApiPostService(url, data)
-
-        
-    
-          
+  
     }
 function handleChange(event) {
         const target = event.target;
@@ -45,8 +42,7 @@ function handleChange(event) {
                 <div className="formMain-image-inputAndButton">
                     {/* <input type="url" name="url" onChange={handleChange} defaultValue={State ? State.url: ""} autoComplete="off" placeholder="Enlace de Imgur" required pattern="https?://.+" /> */}
                     
-                    <textarea name='url' defaultValue={State ? State.url : base64} required className="form-control" placeholder="Añade una foto"  onChange= {handleChange}
-                                id="photo"/>
+                    <textarea name='url' defaultValue={State ? State.url : base64} required className="form-control" placeholder="Añade una foto"  onChange= {handleChange} id="photo"/>
                     <InputPhoto setBase64 ={setBase64} setData={setData}/> 
                     <p>(Asegurate que la foto esté centrada)</p>
                 </div>

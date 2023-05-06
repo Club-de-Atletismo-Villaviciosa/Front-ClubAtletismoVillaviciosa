@@ -11,12 +11,16 @@ function MainSection(){
         CallAxiosNews().getNews()
           .then((data) => setData(data))
           .catch((error) => console.error(error));
+          
       }, []);
+
+      const newData = [...data];
+      newData.splice(-3, 3);
 
     return(
 
         <div>
-            {data.map((item)=>(
+            {newData.sort((a, b) => b.id - a.id).map((item)=>(
                 <NewsCard  key={item.id} id={item.id} title={item.title} url={item.url} news={item.news}/>
             ))}
         </div>
