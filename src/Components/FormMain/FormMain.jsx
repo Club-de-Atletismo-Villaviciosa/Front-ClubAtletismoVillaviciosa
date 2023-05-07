@@ -44,7 +44,7 @@ function handleChange(event) {
                 <div className="formMain-image-inputAndButton">
                     <input type="url" name="url" onChange={handleChange} defaultValue={State ? State.url: ""} autoComplete="off" placeholder="Enlace de Imgur" required pattern="https?://.+" />
                     {/* <InputPhoto handleChange ={handleChange}/> */}
-                    <p>(Asegurate que la foto esté centrada)</p>
+                    <p>(Asegúrate que la foto esté centrada)</p>
                 </div>
             </div>
                 <div className="formMain-activity">

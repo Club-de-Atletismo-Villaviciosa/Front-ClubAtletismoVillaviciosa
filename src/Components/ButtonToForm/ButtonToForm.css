@@ -4,12 +4,11 @@
     border-radius: 10px;
     border-style: none;
     height: 6vh;
-    width: 25vw;
-    
+    width: 25vw;    
 }
+
 .buttonToForm{
-    margin-top: 15vh;
-    
+    margin-top: 15vh;    
 }
 
 .buttonToForm-span{
@@ -25,7 +24,7 @@
     max-height: 500px; 
     transition: height 1s ease-in-out; 
   }
-  .formDropdown.open { 
-    height: 500px;
 
+.formDropdown.open { 
+    height: 500px;
   }
