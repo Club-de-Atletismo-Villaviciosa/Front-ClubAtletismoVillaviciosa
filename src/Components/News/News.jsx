@@ -5,16 +5,17 @@ import ApiGetByIdService from '../../Services/ApiGetByIdService';
 
 const News = () => {
 
-    const idInstate = useLocation().state.id;
+    const idInState = useLocation().state.id;
     const url = useLocation().state.url;
     const title = useLocation().state.title;
     const news = useLocation().state.news;
     const [data, setData] = useState({});
     const [editNews, setEditNews] = useState(null);
     const navigate = useNavigate();
+    const urlGenerate = "http://localhost:8080/api/v1/news";
 
     useEffect(() => {
-        ApiGetByIdService(url, idInstate)
+        ApiGetByIdService(urlGenerate, idInState)
             .then((data) => setData(data))
             .catch((error) => console.error(error));
     }, []);
@@ -31,7 +32,7 @@ const News = () => {
             ) : (
                 <div>
                     <p>{data.title}</p>
-                    <img src={data.url} alt="Imagen de una noticia" />
+                    <img src={data.url} alt="Imagen de una noticia" width="300" />
                     <p>{data.news}</p>
                 </div>
             )}

@@ -25,7 +25,7 @@ const News2 = () => {
 
     const handleDelete = () => {
         if (window.confirm("¿Está seguro de querer eliminar este elemento?")) {
-            CallAxiosNews.deleteNews(data.id)
+            ApiDeleteService(data.id)
                 .then(() => navigate("/"))
                 .catch(console.error);
         }
