@@ -24,7 +24,11 @@ return (
             title={item.title}
             url={item.url}
             news={item.news}
-            className={`news-card ${index === 2 ? "biggest-news" : ""}`}
+            customClass={`first-cards ${
+              index === 0 ? "item1" :
+              index === 1 ? "item2" : 
+              index === 2 ? "item3" :
+               "" }`}
           />
         ))}
     </div>
