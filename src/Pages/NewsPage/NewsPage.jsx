@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../../Components/Navbar/Navbar'
 import News from '../../Components/News/News'
-import ButtonToForm from '../../Components/ButtonToForm/ButtonToForm'
+import News2 from '../../Components/News/News2'
 
 const NewsPage = () => {
   return (
@@ -10,9 +10,10 @@ const NewsPage = () => {
         <Navbar />
 
         <div className='main'>
-        <News />     
-        <ButtonToForm />
-
+        <News />   
+        {/* <News2 /> */}
+        
+        
         </div>
 
     </div>

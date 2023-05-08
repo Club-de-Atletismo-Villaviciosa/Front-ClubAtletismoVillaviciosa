@@ -1,8 +1,8 @@
 import axios from "axios";
 
-async function ApiGetbyIdService(url, id){
+async function ApiGetByIdService(url, id){
   let response = await axios.get(url + `/${id}`)
   return response.data
 }
 
-export default ApiGetbyIdService;
+export default ApiGetByIdService;
