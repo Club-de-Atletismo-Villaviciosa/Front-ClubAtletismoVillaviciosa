@@ -15,6 +15,11 @@
     align-items: center;
     margin-left: 3vw;
 }
+.newsCard-titlePencilTrash img{
+    cursor: pointer;
+    height:3vh ;
+    margin-left: 1vw;
+}
 .newsCard-imgNews{
     width: 20vw;
     cursor: pointer;

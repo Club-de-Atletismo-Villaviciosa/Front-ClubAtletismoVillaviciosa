@@ -40,8 +40,6 @@ function handleChange(event) {
             <div className="formMain-image">
                 <label>Imagen:</label>
                 <div className="formMain-image-inputAndButton">
-                    {/* <input type="url" name="url" onChange={handleChange} defaultValue={State ? State.url: ""} autoComplete="off" placeholder="Enlace de Imgur" required pattern="https?://.+" /> */}
-                    
                     <textarea name='url' defaultValue={State ? State.url : base64} required className="form-control" placeholder="Añade una foto"  onChange= {handleChange} id="photo"/>
                     <InputPhoto setBase64 ={setBase64} setData={setData}/> 
                     <p>(Asegurate que la foto esté centrada)</p>
@@ -49,7 +47,7 @@ function handleChange(event) {
             </div>
                 <div className="formMain-activity">
                 <label>Actividad:</label>
-                <textarea rows="10" type="text" name="news"  defaultValue={State ? State.description : ""} onChange={handleChange} id="" required/>
+                <textarea rows="10" type="text" name="news"  defaultValue={State ? State.news : ""} onChange={handleChange} id="" required/>
             </div>
             <div className="formMain-postButton">
                 <button><span>Publicar</span></button>
