@@ -5,6 +5,7 @@ import ButtonToForm from "../../Components/ButtonToForm/ButtonToForm"
 import FormMain from "../../Components/FormMain/FormMain"
 import "./MainPage.css"
 import MainSection from "../../Components/MainSection/MainSection"
+import LastThreeNews from "../../Components/LastThreeNews/LastThreeNews"
 
 function MainPage(){
 
@@ -15,6 +16,7 @@ function MainPage(){
         <div className="main"> 
             <PhotoMainPage />
             <Carousel />
+            <LastThreeNews/>
             <ButtonToForm />
             <MainSection />
           
