@@ -10,13 +10,13 @@ import InputPhoto from "../InputPhoto/InputPhoto";
 function FormMain(){
     const url = "http://localhost:8080/api/v1/news"
     const State = useLocation().state 
-    let [data, setData] = useState(State ? State : {title: "", url: "", news: ""})
+    let [data, setData] = useState({})
     const [base64, setBase64] = useState("");
   
 
 function handleSubmit(event) {
         event.preventDefault();
-        State ? ApiPutService(url, data, State.id) : ApiPostService(url, data)
+        ApiPostService(url, data)
   
     }
 function handleChange(event) {
@@ -29,25 +29,26 @@ function handleChange(event) {
         }
         setData(temp_data);
       }
-    console.info(data.url)
+    console.info(data)
+      console.info(State)
 
     return(
         <form className="formMain" onSubmit={handleSubmit} method="post">
             <div className="formMain-title">
                 <label>Título:</label>
-                <input type="text" name="title" onChange={handleChange} id=""  defaultValue={State ? State.title : ""} placeholder="Título" required></input>
+                <input type="text" name="title" onChange={handleChange} id=""  defaultValue={""} placeholder="Título" required></input>
             </div>
             <div className="formMain-image">
                 <label>Imagen:</label>
                 <div className="formMain-image-inputAndButton">
-                    <textarea name='url' defaultValue={State ? State.url : base64} required className="form-control" placeholder="Añade una foto"  onChange= {handleChange} id="photo"/>
+                    <textarea name='url' defaultValue={base64} required className="form-control" placeholder="Añade una foto"  onChange= {handleChange} id="photo"/>
                     <InputPhoto setBase64 ={setBase64} setData={setData}/> 
                     <p>(Asegurate que la foto esté centrada)</p>
                 </div>
             </div>
                 <div className="formMain-activity">
                 <label>Actividad:</label>
-                <textarea rows="10" type="text" name="news"  defaultValue={State ? State.news : ""} onChange={handleChange} id="" required/>
+                <textarea rows="10" type="text" name="news"  defaultValue={""} onChange={handleChange} id="" required/>
             </div>
             <div className="formMain-postButton">
                 <button><span>Publicar</span></button>
