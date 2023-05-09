@@ -2,50 +2,81 @@ import "./MainSection.css"
 import CallAxiosNews from "../../Services/CallAxiosNews";
 import NewsCard from "../NewsCard/NewsCard";
 import { useEffect, useState } from 'react';
+import arrowLeft from "../../assets/img/arrowLeft.png"
+import arrowRight from "../../assets/img/arrowRight.png"
 
 
-function MainSection(){
 
-    const [pageSize, setPageSize] = useState(10);
-    const [currentPage, setCurrentPage] = useState(1)
+function MainSection() {
+  const PAGE_SIZE = 10;
+  const [data, setData] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  
+  useEffect(() => {
+    CallAxiosNews().getNews()
+      .then((data) => setData(data))
+      .catch((error) => console.error(error));
+  }, []);
+  
+  const newData = [...data].reverse();
+  newData.splice(0, (currentPage - 1) * PAGE_SIZE);
+  newData.splice(PAGE_SIZE);
+  
+  const totalPages = Math.ceil(data.length / PAGE_SIZE);
+  let pageNumbers = [];
 
+  if (totalPages <= 5) {
+    pageNumbers = Array.from({ length: totalPages }, (_, i) => i + 1);
+  } else {
+    const startPage = Math.max(currentPage - 2, 1);
+    const endPage = Math.min(startPage + 4, totalPages);
     
-
-    const [data, setData] = useState([]);
-    useEffect(() => {
-        CallAxiosNews().getNews()
-          .then((data) => setData(data))
-          .catch((error) => console.error(error));
-          
-      }, []);
-
-      const newData = [...data].sort((a, b) => b.id - a.id);
-      const lastThreeIds = newData.slice(-3,3).map((item) => item.id);
-      const visibleData = newData
-        .filter((item) => !lastThreeIds.includes(item.id))
-        .slice((currentPage - 1) * pageSize, currentPage * pageSize);
+     if (startPage > 1) {
+      pageNumbers.push(1, '...');
+     
+    } else {
+      if (pageNumbers[0] === '...') {
+        pageNumbers.shift();   
+      }
+    }
+console.info(pageNumbers)
     
-      const handleNextPage = () => {
-        setCurrentPage(currentPage + 1);
-      };
+    pageNumbers.push(...Array.from({ length: endPage - startPage + 1 }, (_, i) => startPage + i));
     
-      const handlePrevPage = () => {
-        setCurrentPage(currentPage - 1);
-      };
+    if (endPage < totalPages) {
+      pageNumbers.push('....', totalPages);
+    }
+  }
+  
+  const handleClick = (event, pageNumber) => {
+    event.preventDefault();
+    setCurrentPage(pageNumber);
+  };
+  
+  return (
+    <div className="mainSection">
+      {newData.sort((a, b) => b.id - a.id).map((item) => (
+        <NewsCard customClass="newsCard" key={item.id} id={item.id} title={item.title} url={item.url} news={item.news} />
+      ))}
+      
+      <div className="pagination">
+        <button className="pagination-buttonLeft" onClick={(e) => handleClick(e, currentPage - 1)} disabled={currentPage === 1}>
+        <img className="pagination-arrows" src={arrowLeft}/>
+        </button>
+        
+        {pageNumbers.map((number) => (
+          <span key={number} className={currentPage === number ? 'active' : 'numbersPage'} onClick={(e) => handleClick(e, number)}>
+            {number}
+          </span>
+        ))}
+        
+        <button className="pagination-buttonRight" onClick={(e) => handleClick(e, currentPage + 1)} disabled={currentPage === totalPages}>
+          <img className="pagination-arrows" src={arrowRight}/>
+        </button>
+      </div>
+    </div>
     
-    return(
-
-        <div>
-            {visibleData.sort((a, b) => b.id - a.id).map((item)=>(
-                <NewsCard customClass="newsCard" key={item.id} id={item.id} title={item.title} url={item.url} news={item.news} />
-            ))}
-                 {currentPage > 1 && (
-        <button onClick={handlePrevPage}>Página anterior</button>
-      )}
-      {newData.length > currentPage * pageSize &&  (
-        <button onClick={handleNextPage}>Cargar más noticias</button>
-      )}
-        </div>
-    )
+  );
 }
-export default MainSection
+
+export default MainSection;
