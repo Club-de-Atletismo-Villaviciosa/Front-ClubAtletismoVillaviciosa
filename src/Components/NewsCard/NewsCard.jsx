@@ -22,8 +22,7 @@ function NewsCard({id, url, title, news, customClass}){
         <img className={`newsCard-imgNews ${customClass}`} alt="Imagen de la noticia" onClick={()=>{navigate ("/NewsPage", {state: {id,title,url,news}})}} tabIndex="0" title="Haz clic para leer la noticia completa" src={url}></img>
         <div className="newsCard-containerNews">
             <div className="newsCard-titlePencilTrash">
-                <h2 alt="Título de la noticia">{title}</h2>
-                <img onClick={()=>{navigate ("/NewsPage", {state: {id,title,url,news}})}} src={pencil}></img>
+                <h2 alt="Título de la noticia">{title}</h2>                
                 <img onClick={handleDelete} src={trash}></img>
             </div>
             <p className="newsCard-bodyNews" alt="Texto de la noticia" >{news ? news.substring(0, maxLength): ""}<span onClick={()=>{navigate ("/NewsPage", {state: {id,title,url,news}})}}>Leer mas...</span></p>

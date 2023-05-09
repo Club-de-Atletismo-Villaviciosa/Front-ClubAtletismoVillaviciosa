@@ -12,9 +12,8 @@ const News = () => {
     const title = useLocation().state.title;
     const news = useLocation().state.news;
     const [data, setData] = useState({});
-    const [editNews, setEditNews] = useState(null);
     const navigate = useNavigate();
-    const urlGeneral = "http://localhost:8080/api/v1/news";    
+    const urlGeneral = "http://localhost:8080/api/v1/news";
     let [mode, setMode] = useState("close")
 
     function handleDropdownClick(e) {
@@ -26,29 +25,19 @@ const News = () => {
             .then((data) => setData(data))
             .catch((error) => console.error(error));
     }, []);
-
-    const handleEdit = () => {
-        setEditNews(true);
-    }
-
+    
     return (
 
         <div>
-            {editNews ? (
-                <img src={data.url} />
-            ) : (
-                <div className='news-container'>
-                    <div className='news-titlePencil'>
+            <div className='news-container'>
+                <div className='news-titlePencil'>
                     <h2>{data.title}</h2>
-                    <img onClick={(e) => {handleDropdownClick(e)}} src={pencil} alt="button to edit" />
-                    <FormNews customClass={mode} />
-                    </div>
-                    <img src={data.url} alt="Imagen de una noticia" width="750" />
-                    <p>{data.news}</p>
+                    <img onClick={(e) => { handleDropdownClick(e) }} src={pencil} alt="button to edit" />
+                    <FormNews customClass={mode} title={title} news={news} url={url} />
                 </div>
-            )}
-
-
+                <img src={data.url} alt="Imagen de una noticia" width="750" />
+                <p>{data.news}</p>
+            </div>
 
         </div>
 
