@@ -2,9 +2,9 @@ import React from 'react'
 import ContactForm from '../../Components/Contact/ContactForm'
 import Footer from '../../Components/Footer/Footer'
 import Navbar from '../../Components/Navbar/Navbar'
-import './Contact.css';
+import './ContactPage.css';
 
-const Contact = () => {
+const ContactPage = () => {
     return (
         <div>
 
@@ -19,4 +19,4 @@ const Contact = () => {
     )
 }
 
-export default Contact
+export default ContactPage

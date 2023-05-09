@@ -42,14 +42,14 @@ function handleChange(event) {
             <div className="formMain-image">
                 <label>Imagen:</label>
                 <div className="formMain-image-inputAndButton">
-                    <textarea name='url' onChange= {handleChange} defaultValue={State.url} required className="form-control" placeholder="Añade una foto"   id="photo"/>
+                    <textarea name='url' onChange= {handleChange} defaultValue={data.url} required className="form-control" placeholder="Añade una foto"   id="photo"/>
                     <InputPhoto setBase64 ={setBase64} setData={setData}/> 
                     <p>(Asegurate que la foto esté centrada)</p>
                 </div>
             </div>
                 <div className="formMain-activity">
                 <label>Actividad:</label>
-                <textarea rows="10" type="text" name="news" onChange={handleChange} defaultValue={State.news}  id="" required/>
+                <textarea rows="10" type="text" name="news" onChange={handleChange} defaultValue={data.news}  id="" required/>
             </div>
             <div className="formMain-postButton">
                 <button><span>Publicar</span></button>
