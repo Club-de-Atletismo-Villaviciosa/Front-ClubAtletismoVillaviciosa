@@ -1,7 +1,7 @@
 .formMain {
     margin-top: 10vh; 
     height: 50vh;
- margin-left: 15vw;
+    margin-left: 15vw;
    
 }
 
@@ -41,9 +41,9 @@
     align-items: center;
 }
 .formMain-image-inputAndButton p{
-color: rgb(241, 141, 141);
-margin-left: 1vw;
-font-size: small;
+    color: rgb(241, 141, 141);
+    margin-left: 1vw;
+    font-size: small;
 
 }
 .formMain-activity{

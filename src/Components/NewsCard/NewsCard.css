@@ -1,13 +1,14 @@
 .newsCard { 
-
     padding: 2vh;
     display: flex;
     align-items: center; 
     width: 70%;
 }
+
 .newsCard span{
     cursor: pointer;
 }
+
 .newsCard-titlePencilTrash {
     display: flex;
     align-items: center;
@@ -16,13 +17,14 @@
 .newsCard-titlePencilTrash img{
     cursor: pointer;
     height:3vh ;
-    margin-left: 1vw;
-    
+    margin-left: 1vw;    
 }
+
 .newsCard-imgNews{
     width: 20vw;
     cursor: pointer;
 }
+
 .newsCard-containerNews {
     margin-left: 0;
     margin-left: 1vw;

@@ -9,9 +9,7 @@ const NewsPage = () => {
         <Navbar />
 
         <div className='main'>
-        <News />   
-     
-        
+        <News />      
         
         </div>
 

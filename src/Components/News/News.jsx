@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import ApiGetByIdService from '../../Services/ApiGetByIdService';
-
+import pencil from "../../assets/img/pencil.png";
+import "./News.css";
+import FormNews from '../FormNews/FormNews';
 
 const News = () => {
 
@@ -12,10 +14,15 @@ const News = () => {
     const [data, setData] = useState({});
     const [editNews, setEditNews] = useState(null);
     const navigate = useNavigate();
-    const urlGenerate = "http://localhost:8080/api/v1/news";
+    const urlGeneral = "http://localhost:8080/api/v1/news";    
+    let [mode, setMode] = useState("close")
+
+    function handleDropdownClick(e) {
+        mode == "close" ? setMode("open") : setMode("close")
+    }
 
     useEffect(() => {
-        ApiGetByIdService(urlGenerate, idInState)
+        ApiGetByIdService(urlGeneral, idInState)
             .then((data) => setData(data))
             .catch((error) => console.error(error));
     }, []);
@@ -30,9 +37,13 @@ const News = () => {
             {editNews ? (
                 <img src={data.url} />
             ) : (
-                <div>
-                    <p>{data.title}</p>
-                    <img src={data.url} alt="Imagen de una noticia" width="300" />
+                <div className='news-container'>
+                    <div className='news-titlePencil'>
+                    <h2>{data.title}</h2>
+                    <img onClick={(e) => {handleDropdownClick(e)}} src={pencil} alt="button to edit" />
+                    <FormNews customClass={mode} />
+                    </div>
+                    <img src={data.url} alt="Imagen de una noticia" width="750" />
                     <p>{data.news}</p>
                 </div>
             )}
