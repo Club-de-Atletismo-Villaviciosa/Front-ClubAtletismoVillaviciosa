@@ -11,10 +11,7 @@ function App() {
     },
     {path: "/NewsPage",
     element: <NewsPage />  
-    },
-    {path: "/ContactPage",
-    element: <ContactPage />
-    }
+    }    
 
 ]);
     return (
