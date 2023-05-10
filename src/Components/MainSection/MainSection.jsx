@@ -55,9 +55,9 @@ console.info(pageNumbers)
   
   return (
     <div className="mainSection">
-      {newData.sort((a, b) => b.id - a.id).map((item) => (
+      {newData.sort((a, b) => b.id - a.id).map((item, index) => (index >= newData.length -3 && (
         <NewsCard customClass="newsCard" key={item.id} id={item.id} title={item.title} url={item.url} news={item.news} />
-      ))}
+      )))}
       
       <div className="pagination">
         <button className="pagination-buttonLeft" onClick={(e) => handleClick(e, currentPage - 1)} disabled={currentPage === 1}>

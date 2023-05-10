@@ -18,7 +18,7 @@ function NewsCard({id,url,title,news, customClass}){
           .then(() => window.location.reload())
           .catch((error) => console.error(error));
       }
-    const maxLength = 100;
+    const maxLength = 300;
    
     return(
 
@@ -30,7 +30,7 @@ function NewsCard({id,url,title,news, customClass}){
                 <img onClick={()=>{navigate ("/NewsPage", {state: {id,title,url,news}})}} src={pencil}></img>
                 <img onClick={handleDelete} src={trash}></img>
             </div>
-            <p className="newsCard-bodyNews" alt="Texto de la noticia" >{news ? news.substring(0, maxLength): ""}<span onClick={()=>{navigate ("/NewsPage", {state: {id,title,url,news}})}}>Leer mas...</span></p>
+            <p className="newsCard-bodyNews" alt="Texto de la noticia" >{news ? news.substring(0, maxLength): ""}<span onClick={()=>{navigate ("/NewsPage", {state: {id,title,url,news}})}}>...Leer mas</span></p>
             
         </div>
     </div>

@@ -28,3 +28,7 @@
     margin-left: 1vw;
     text-align: start;
 }
+
+.newsCard-bodyNews span{
+    color: #623173;
+}
