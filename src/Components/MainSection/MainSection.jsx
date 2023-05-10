@@ -18,7 +18,7 @@ function MainSection() {
       .catch((error) => console.error(error));
   }, []);
   
-  const newData = [...data].reverse();
+  const newData = [...data].slice(0,-3).reverse();
   newData.splice(0, (currentPage - 1) * PAGE_SIZE);
   newData.splice(PAGE_SIZE);
   
@@ -55,9 +55,9 @@ console.info(pageNumbers)
   
   return (
     <div className="mainSection">
-      {newData.sort((a, b) => b.id - a.id).map((item, index) => (index >= newData.length -3 && (
+      {newData.sort((a, b) => b.id - a.id).map((item) =>(
         <NewsCard customClass="newsCard" key={item.id} id={item.id} title={item.title} url={item.url} news={item.news} />
-      )))}
+      ))}
       
       <div className="pagination">
         <button className="pagination-buttonLeft" onClick={(e) => handleClick(e, currentPage - 1)} disabled={currentPage === 1}>
