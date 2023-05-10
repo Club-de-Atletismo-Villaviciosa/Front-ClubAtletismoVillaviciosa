@@ -1,7 +1,6 @@
-
-h1 {
+.contact-form h1 {
     text-align: center;
-    padding-top: 3vh;
+    padding-top: 3vh;    
 }
 
 input, textarea {
@@ -20,12 +19,17 @@ input, textarea {
    padding-top: 3vh;
 }
 
-.inputForm { 
+.form-item label {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.input-form { 
     background-color: #9395D3;
     width: 25%;  
 }
 
-.contactInfo {
+.contact-info {
     display: flex;
     list-style: none;
     align-items: flex-start;
@@ -41,18 +45,18 @@ input, textarea {
     padding: 5vh 0vh;
 }
 
-input:invalid:required {
+.form-item input:invalid:required {
     border: 2px solid grey;
 }
 
-input:valid {
+.form-item input:valid {
     border: 2px solid black;
 }
 
-textarea:invalid {
+.form-item textarea:invalid {
     border: 2px solid grey;
 }
 
-textarea:valid {
+.form-item textarea:valid {
     border: 2px solid black;
 }

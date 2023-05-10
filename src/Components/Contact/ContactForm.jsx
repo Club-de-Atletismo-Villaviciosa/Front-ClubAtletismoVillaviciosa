@@ -26,7 +26,7 @@ const ContactForm = () => {
             <div>
                 <h1>CLUB ATLETISMO VILLAVICIOSA</h1>
             </div>
-            <form ref={form} onSubmit={sendEmail}>
+            <form className='contact-form' ref={form} onSubmit={sendEmail}>
             <h1>CONTACTO</h1>
                 <div className='form-item'>
                     <label for="name">Nombre:*</label><br />
@@ -44,11 +44,11 @@ const ContactForm = () => {
                     </textarea>
                 </div>
                 <div className='form-item'>
-                    <input className='inputForm' type="submit" name='submit' id='submit' value="Enviar consulta" />
+                    <input className='input-form' type="submit" name='submit' id='submit' value="Enviar consulta" />
                 </div>
 
                 <div>
-                    <ul className='contactInfo'>
+                    <ul className='contact-info'>
                         <li>Dirección: C/ Pintor Guillermo Simon (Villaviciosa) Asturias</li>
                         <li>Email: clubatletismovillaviciosa@gmail.com</li>
                     </ul>
