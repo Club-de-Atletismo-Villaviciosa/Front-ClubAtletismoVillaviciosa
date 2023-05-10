@@ -40,4 +40,23 @@
     margin-left: 1vw;
   }
 
+  @media (max-width: 800px){
+    .item1,.item2, .item3  {
+      width: 100%;
+      text-align: start;
+    }
+    .first-cards {
+      margin-left: 0;
+    }
+    .news-grid {
+      display: block;
+    }
+    .LastThreeNews {
+      text-align: start;
+    }
+  
+  }
+   
+  
+  
 

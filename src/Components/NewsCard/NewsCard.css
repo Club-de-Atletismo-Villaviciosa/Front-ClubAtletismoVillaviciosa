@@ -1,9 +1,8 @@
 .newsCard { 
-
     padding: 2vh;
     display: flex;
     align-items: center; 
-    width: 70%;
+    width: 92%;
 }
 .newsCard span{
     cursor: pointer;
@@ -11,14 +10,16 @@
 .newsCard-titlePencilTrash {
     display: flex;
     align-items: center;
+    
 }
 
 .newsCard-titlePencilTrash img{
     cursor: pointer;
-    height:3vh ;
+    height:2vh ;
     margin-left: 1vw;
     
 }
+
 .newsCard-imgNews{
     width: 20vw;
     cursor: pointer;
@@ -31,4 +32,19 @@
 
 .newsCard-bodyNews span{
     color: #623173;
+}
+
+
+
+@media (max-width: 800px){
+    .newsCard { 
+        display: flex;
+        flex-direction: column;
+        width: 92%;
+        padding: 0;
+    }
+.newsCard-containerNews {
+    margin-left: 0
+}
+
 }

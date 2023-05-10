@@ -1,0 +1,21 @@
+footer {
+    display: flex;    
+    flex-wrap: wrap;    
+    justify-content: center;
+    background-color: #623173;
+    height: 22vh;    
+}
+
+.footer-p p{      
+    font-weight: bold;
+    padding-right: 100px;
+}
+
+.footerImages {
+   display: flex; 
+   align-items: center;   
+}
+
+.gaitero {
+    padding-right: 150px;
+}

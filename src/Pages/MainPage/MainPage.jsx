@@ -6,6 +6,7 @@ import FormMain from "../../Components/FormMain/FormMain"
 import "./MainPage.css"
 import MainSection from "../../Components/MainSection/MainSection"
 import LastThreeNews from "../../Components/LastThreeNews/LastThreeNews"
+import Footer from "../../Components/Footer/Footer"
 
 function MainPage(){
 
@@ -19,7 +20,7 @@ function MainPage(){
             <LastThreeNews/>
             <ButtonToForm />
             <MainSection />
-          
+            <Footer/>
         </div>
         </div>
         
