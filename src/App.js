@@ -1,12 +1,16 @@
 import './App.css';
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import ContactPage from './Pages/ContactPage/ContactPage';
 
 function App() {
+  const router = createBrowserRouter([
+    {path: "/",
+    element: <ContactPage />
+    }
+  ])
   return (
-    <div>
-      
-      <ContactPage />
-
+    <div className="App">
+      <RouterProvider router={router} />
     </div>
   );
 }
