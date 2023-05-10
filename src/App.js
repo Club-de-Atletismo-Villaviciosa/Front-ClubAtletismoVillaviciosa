@@ -1,13 +1,11 @@
 import './App.css';
-import Contact from './Pages/ContactPage/Contact';
-
-
+import ContactPage from './Pages/ContactPage/ContactPage';
 
 function App() {
   return (
     <div>
       
-      <Contact />
+      <ContactPage />
 
     </div>
   );
