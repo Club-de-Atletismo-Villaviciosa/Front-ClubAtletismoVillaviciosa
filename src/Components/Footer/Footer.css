@@ -6,7 +6,7 @@ footer {
     height: 22vh;    
 }
 
-p {      
+.footer-p {      
     font-weight: bold;
     padding-right: 100px;
 }
