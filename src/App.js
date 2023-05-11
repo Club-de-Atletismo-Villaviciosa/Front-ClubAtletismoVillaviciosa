@@ -1,14 +1,18 @@
 import './App.css';
 import MainPage from './Pages/MainPage/MainPage';
-import Navbar from './Components/Navbar/Navbar';
+import NewsPage from './Pages/NewsPage/NewsPage';
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 
 function App() {
-  const router = createBrowserRouter([{
-    path: "/",
+  const router = createBrowserRouter([
+    {path: "/",
      element: <MainPage />
+    },
+    {path: "/NewsPage",
+    element: <NewsPage />  
+    }    
 
-}]);
+]);
     return (
     
       <div className="App">     

@@ -4,9 +4,11 @@
     margin-bottom: 2vh;
    
 }
+
 .newsCard span{
     cursor: pointer;
 }
+
 .newsCard-titlePencilTrash {
     display: flex;
     align-items: center;
@@ -26,6 +28,7 @@
     cursor: pointer;
     margin-right: 2vw;
 }
+
 .newsCard-containerNews {
     
     text-align: start;

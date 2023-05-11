@@ -3,12 +3,8 @@ import { Navigate, useNavigate } from 'react-router-dom'
 import pencil from "../../assets/img/pencil.png"
 import trash from "../../assets/img/trash.png"
 import ApiDeleteService from "../../Services/ApiDeleteService"
-import ApiPutService from "../../Services/ApiPutService"
 
-
-
-
-function NewsCard({id,url,title,news, customClass}){
+function NewsCard({id, url, title, news, customClass}){
    
     const urlGeneral = "http://localhost:8080/api/v1/news"
     let navigate = useNavigate()
