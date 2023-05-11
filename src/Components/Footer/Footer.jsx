@@ -6,15 +6,14 @@ const Footer = () => {
 
     return (
         <div>
-            <footer className='footer-p'>
-                <div>
+            <footer>
+                <div className='footer-p'>
                     <p>Patrocinado por:</p>
                 </div>
-                <div className='footerImages'>
-                    <img className='gaitero' src={El_Gaitero_logo} alt="Sidra El Gaitero" width="125" />
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Escudo_de_Villaviciosa.svg"
-                        alt="Escudo Villaviciosa" width="125" />
+                <div>
+                    <img className='gaitero' src={El_Gaitero_logo} alt="Sidra El Gaitero" width="100" />                    
                 </div>
+                
             </footer>
         </div>
     )

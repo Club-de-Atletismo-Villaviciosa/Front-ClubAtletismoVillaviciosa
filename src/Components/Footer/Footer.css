@@ -1,21 +1,12 @@
 footer {
-    display: flex;    
-    flex-wrap: wrap;    
+    display: flex;
+    align-items: center;
     justify-content: center;
     background-color: #623173;
-    height: 22vh;    
+    height: 20vh;      
 }
 
-.footer-p {      
+footer p {      
     font-weight: bold;
-    padding-right: 100px;
-}
-
-.footerImages {
-   display: flex; 
-   align-items: center;   
-}
-
-.gaitero {
-    padding-right: 150px;
+    padding-right: 5vw;
 }

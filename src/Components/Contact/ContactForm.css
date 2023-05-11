@@ -1,16 +1,16 @@
+.contactForm {
+    width: 50vw;
+    margin: auto;
+}
+
 .contact-form h1 {
     text-align: center;
     padding-top: 3vh;    
 }
 
-input, textarea {
+.form-item input, textarea {
     padding: 2vh;
     border-radius: 10px;
-}
-
-.contactForm {
-    width: 50vw;
-    margin: auto;
 }
 
 .form-item {

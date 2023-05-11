@@ -1,5 +1,6 @@
 import React from 'react'
 import ContactForm from '../../Components/Contact/ContactForm'
+import Footer from '../../Components/Footer/Footer';
 import Navbar from '../../Components/Navbar/Navbar'
 import './ContactPage.css';
 
@@ -10,7 +11,8 @@ const ContactPage = () => {
             <Navbar />
 
             <div className='mainContact'>
-                <ContactForm />                
+                <ContactForm /> 
+                <Footer />               
             </div>
 
         </div>
