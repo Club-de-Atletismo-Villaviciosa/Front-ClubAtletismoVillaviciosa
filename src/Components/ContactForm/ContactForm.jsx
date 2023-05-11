@@ -22,7 +22,7 @@ const ContactForm = () => {
     };    
 
     return (
-        <div className='container'>
+        <div className='contact-container'>
             <div>
                 <h1>CLUB ATLETISMO VILLAVICIOSA</h1>
             </div>

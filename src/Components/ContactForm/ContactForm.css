@@ -8,7 +8,7 @@ input, textarea {
     border-radius: 10px;
 }
 
-.container {
+.contact-container {
     width: 50vw;
     margin: auto;
 }
@@ -59,4 +59,16 @@ input, textarea {
 
 .form-item textarea:valid {
     border: 2px solid black;
+}
+
+@media (max-width: 800px) {
+    .contact-container {
+        display: flex;        
+        align-items: center;
+        width: auto;
+    }  
+
+    .map {
+        width: 75%;
+    }
 }
