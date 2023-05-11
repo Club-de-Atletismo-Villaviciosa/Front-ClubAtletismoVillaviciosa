@@ -4,3 +4,19 @@
     height:3vh ;
     margin-left: 1vw;    
 }
+
+@media (max-width: 800px) {
+    .news-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .news-container img {
+        width: 75%;
+    }
+
+    .news-titlePencil {
+        width: 75%;
+        }
+}

@@ -7,12 +7,14 @@ const NewsPage = () => {
   return (
     <div>
 
-        <Navbar />
+      <Navbar />
 
-        <div className='main'>
-        <News />      
-        
+      <div className='main'>
+        <div className='wrapper'>
+          <News />
         </div>
+
+      </div>
 
     </div>
   )
