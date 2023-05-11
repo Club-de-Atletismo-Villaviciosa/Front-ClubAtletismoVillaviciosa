@@ -3,9 +3,9 @@ import "./PhotoMainPage.css"
 
 function PhotoMainPage(){
 return(
-<div className="header">
+<div className="headerPhoto">
 
-<img className="header-photo" src={photo}/>
+<img src={photo}/>
 
 </div>)
 }

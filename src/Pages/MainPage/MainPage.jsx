@@ -6,6 +6,7 @@ import "./MainPage.css"
 import MainSection from "../../Components/MainSection/MainSection"
 import LastThreeNews from "../../Components/LastThreeNews/LastThreeNews"
 import Footer from "../../Components/Footer/Footer"
+import Header from "../../Components/Header/Header"
 
 function MainPage(){
 
@@ -14,6 +15,7 @@ function MainPage(){
             <Navbar/>
         
         <div className="main"> 
+        <Header/>
             <PhotoMainPage />
             
             <div className="wrapper">
@@ -21,10 +23,11 @@ function MainPage(){
                 <LastThreeNews/>
                 <ButtonToForm />
                 <MainSection />
+                
             </div>
-            
+            <Footer/>
         </div>
-        <Footer/>
+        
         </div>
         
     )

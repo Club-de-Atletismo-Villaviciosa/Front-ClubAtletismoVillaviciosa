@@ -4,6 +4,16 @@
     height:3vh ;
     margin-left: 1vw;    
 }
+.news-titlePencilForm h2{
+    margin:3vh 0vh;
+}
+.news-newsUrl{
+    margin-bottom: 4vh;
+}
+.news-container p{
+    text-align: justify;
+    margin-bottom: 4vh;
+}
 
 @media (max-width: 800px) {
     .news-container {
@@ -12,11 +22,11 @@
         align-items: center;
     }
 
-    .news-container img {
-        width: 75%;
+    .news-newsUrl {
+      width: 100%;
     }
 
-    .news-titlePencil {
-        width: 75%;
+    .news-titlePencilForm {
+       width: 100%;
         }
 }
