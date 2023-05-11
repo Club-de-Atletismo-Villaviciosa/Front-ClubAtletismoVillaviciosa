@@ -13,7 +13,7 @@ function App() {
     {path: "/NewsPage",
     element: <NewsPage />  
     },
-    {path: "/contact",
+    {path: "/ContactPage",
     element:<ContactPage/>
     }    
 
