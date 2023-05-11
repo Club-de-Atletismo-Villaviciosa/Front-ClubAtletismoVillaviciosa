@@ -15,7 +15,7 @@ function MainPage(){
             <Navbar/>
         
         <div className="main"> 
-        <Header/>
+            <Header/>
             <PhotoMainPage />
             
             <div className="wrapper">
