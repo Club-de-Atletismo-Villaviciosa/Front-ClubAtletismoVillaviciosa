@@ -1,12 +1,67 @@
 footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: #623173;
-    height: 20vh;      
+    height: 100%; 
+    width: 100%;
 }
 
-footer p {      
-    font-weight: bold;
-    padding-right: 5vw;
+.footer {
+    display: flex;    
+    justify-content: center;
+    align-items: center;   
+}
+
+.phrase{      
+    font-weight: bold; 
+    padding: 2vh; 
+    color: black;
+    font-size: 2.5vh;
+}
+
+.footer-footerPartners {
+   display: flex; 
+   justify-content: center;
+   align-items: center;
+   width: 50%;   
+}
+
+.footer-ayto p{
+    color:white;    
+}
+
+.footer-gaitero p{
+    color: white;    
+}
+
+.footer-gaitero{
+    width: 100%;
+}
+
+.footer-ayto{
+   width: 100%;
+}
+
+.gaitero{
+   width: 50%;
+}
+
+.ayto{
+    width: 50%;
+}
+
+@media (max-width: 50em) {
+    footer p {
+        font-size: 1vh;
+    }
+    .phrase {
+        font-size: 1.5vh;
+    }    
+}
+
+@media (max-width: 30em) {
+    footer p {
+        font-size: 0.8vh;
+    }
+    .phrase {
+        font-size: 1.2vh;
+    }    
 }
