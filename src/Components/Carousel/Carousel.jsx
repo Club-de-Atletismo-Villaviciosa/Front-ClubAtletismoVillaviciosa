@@ -9,7 +9,7 @@ function Carousel(){
         <div className="slider">
             <Slider dots={true} infinite={true} speed={500} slidesToShow={1} slidesToScroll={1}>
   {AthleteText.map((text) => (
-    <div key={text.id}>
+    <div className="opinion" key={text.id}>
       <p>{text.text}</p>
     </div>
   ))}

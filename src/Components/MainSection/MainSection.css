@@ -39,3 +39,14 @@ align-items: center;
     position: absolute;
     left:45vw;
 }
+@media (max-width: 850px){
+
+    .pagination-buttonRight {
+        position: absolute;
+        right: 10vw;
+    }
+    .pagination-buttonLeft{
+        position: absolute;
+        left:24vw;
+    }
+}

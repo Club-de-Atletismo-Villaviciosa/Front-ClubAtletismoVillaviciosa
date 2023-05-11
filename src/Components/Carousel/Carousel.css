@@ -1,9 +1,10 @@
 .slider {
     margin-top: 10vh;
-    width: 50vw;
-    margin-left: 16vw;
+    margin-left:7.5vw ;
+    width: 80%;
     background-color: #B3B7EE;
-   border-radius: 10px;
+    border-radius: 10px;
+  
 }
 
 .slick-prev::before, .slick-next::before {
@@ -12,6 +13,10 @@
 
   .slider p{
     padding: 2vh;
-    
-    
   }
+
+.opinion {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}

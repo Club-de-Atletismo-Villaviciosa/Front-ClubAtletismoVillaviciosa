@@ -16,12 +16,16 @@ function MainPage(){
         
         <div className="main"> 
             <PhotoMainPage />
-            <Carousel />
-            <LastThreeNews/>
-            <ButtonToForm />
-            <MainSection />
-            <Footer/>
+            
+            <div className="wrapper">
+                <Carousel />
+                <LastThreeNews/>
+                <ButtonToForm />
+                <MainSection />
+            </div>
+            
         </div>
+        <Footer/>
         </div>
         
     )
