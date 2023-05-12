@@ -1,5 +1,5 @@
 import React from 'react'
-import ContactForm from '../../Components/Contact/ContactForm'
+import ContactForm from '../../Components/ContactForm/ContactForm'
 import Navbar from '../../Components/Navbar/Navbar'
 import './ContactPage.css';
 
