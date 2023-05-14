@@ -1,0 +1,16 @@
+.playbill {
+    font-family: Playbill;
+    font-size: 15vh;
+}
+
+.cambria {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 10vh;
+    font-weight: bold;
+}
+
+.centaur {
+    font-family: Centaur;
+    font-size: 12vh;
+    font-weight: bold;
+}
