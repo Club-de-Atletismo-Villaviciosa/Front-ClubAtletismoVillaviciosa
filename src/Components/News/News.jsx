@@ -17,7 +17,7 @@ const News = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const handleDropdownClick = () => {
-      setIsOpen(!isOpen);
+        setIsOpen(!isOpen);
     };
 
     useEffect(() => {
@@ -25,7 +25,7 @@ const News = () => {
             .then((data) => setData(data))
             .catch((error) => console.error(error));
     }, []);
-    
+
     return (
 
         <div>
@@ -33,14 +33,13 @@ const News = () => {
                 <div className='news-titlePencilForm'>
                     <h2>{data.title}</h2>
                     <img onClick={handleDropdownClick} className='news-pencil' src={pencil} alt="button to edit" />
-                    <div className={`formDropdown ${isOpen ? 'open' : 'close'}`}>
-                        <FormNews  title={title} news={news} url={url} />
-                    </div>
+                </div>
+                <div className={`formDropdown ${isOpen ? 'open' : 'close'}`}>
+                    <FormNews title={title} news={news} url={url} />
                 </div>
                 <img className='news-newsUrl' src={data.url} alt="Imagen de una noticia" width="750" />
                 <p>{data.news}</p>
             </div>
-
         </div>
 
     )
