@@ -22,10 +22,10 @@
     flex-direction: column;
     overflow: hidden;
     height: 0px;
-    max-height: 500px; 
-    transition: height 1s ease-in-out; 
+    max-height: 650px; 
+    transition: height 1s ease-in-out;
   }
 
 .formDropdown.open { 
-    height: 500px;
+    height: 650px;
   }
