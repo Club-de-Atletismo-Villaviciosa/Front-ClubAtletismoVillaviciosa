@@ -33,6 +33,8 @@ const News = () => {
                 <div className='news-titlePencil'>
                     <h2>{data.title}</h2>
                     <img onClick={(e) => { handleDropdownClick(e) }} src={pencil} alt="button to edit" />
+                </div>
+                <div>
                     <FormNews customClass={mode} title={title} news={news} url={url} />
                 </div>
                 <img src={data.url} alt="Imagen de una noticia" width="750" />
