@@ -15,9 +15,10 @@
     align-items: center;
 }
 
-.infoSection-description h2{
+.infoSection-description span, .infoSection-description h2{
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .infoSection-description svg{
@@ -25,3 +26,11 @@
     cursor: pointer;
 
 }
+
+.pre-wrap {
+    white-space: pre-wrap;
+}
+
+/* .form-container{
+    height: ;
+} */

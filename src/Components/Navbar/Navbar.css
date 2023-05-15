@@ -45,7 +45,8 @@
 }
 
 .close{
-    height: 0%;
+    height: 0vh !important;
+    overflow: hidden;
 }
 
 .open{
