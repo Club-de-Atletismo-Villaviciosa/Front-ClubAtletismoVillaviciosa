@@ -11,7 +11,7 @@ function Navbar() {
     }
 
     return (
-        <nav className='navbar'>
+        <nav  className='navbar'>
             <div className='navbar-logo'>
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Escudo_de_Villaviciosa.svg/350px-Escudo_de_Villaviciosa.svg.png" alt="villaviciosa logo" />
             </div>
@@ -19,7 +19,7 @@ function Navbar() {
                 <a href="/"><li>Inicio</li></a>
                 <a href=""><li>Competiciones</li></a>
                 <li onClick={handleDropdownClick}>Info. del club <IoIosArrowDown /></li>
-                <ul className={`navbar-ul-dropdown ${mode}`} >
+                <ul data-testid="navbar-dropdown" className={`navbar-ul-dropdown ${mode}`} >
                     <a href=""><li>Historia</li></a>
                     <a href=""><li>Palmarés</li></a>
                     <a href=""><li>Perfiles de los atletas</li></a>

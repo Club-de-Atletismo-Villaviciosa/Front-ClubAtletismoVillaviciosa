@@ -1,7 +1,5 @@
 import "./FormMain.css"
-import CallAxiosNews from "../../Services/CallAxiosNews"
 import ApiPostService from '../../Services/ApiPostService';
-import ApiPutService from '../../Services/ApiPutService';
 import React, { useEffect, useState } from 'react';
 import {useLocation, useNavigate } from 'react-router-dom';
 import InputPhoto from "../InputPhoto/InputPhoto";
@@ -29,8 +27,8 @@ function handleChange(event) {
         }
         setData(temp_data);
       }
-    console.info(data)
-      console.info(State)
+
+      
 
     return(
         <form className="formMain" onSubmit={handleSubmit} method="post">

@@ -15,7 +15,7 @@ function ButtonToForm(){
 return(
     <div className="buttonToForm">
         <button onClick={handleDropdownClick}><span className="buttonToForm-span">Publicar una actividad</span></button>
-        <div className={`formDropdown ${isOpen ? 'open' : 'close'}`}>
+        <div data-testid="button-dropdown" className={`formDropdown ${isOpen ? 'open' : 'close'}`}>
             <FormMain/>
         </div>
     

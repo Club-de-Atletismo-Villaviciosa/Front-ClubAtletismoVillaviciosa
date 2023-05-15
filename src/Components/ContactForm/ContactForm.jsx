@@ -24,9 +24,6 @@ const ContactForm = () => {
 
     return (
         <div className='contact-container'>
-            <div>
-                <h1>CLUB ATLETISMO VILLAVICIOSA</h1>
-            </div>
             <form className='contact-form' ref={form} onSubmit={sendEmail}>
             <h1>CONTACTO</h1>
                 <div className='form-item'>

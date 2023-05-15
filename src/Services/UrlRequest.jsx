@@ -1,3 +1,3 @@
-const url = "http://localhost:8080"
+const urlRequest = "http://localhost:8080"
 
-export default url
+export default urlRequest

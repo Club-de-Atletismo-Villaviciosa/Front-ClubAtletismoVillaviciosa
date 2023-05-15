@@ -32,8 +32,8 @@ const News = () => {
             <div className='news-container'>
                 <div className='news-titlePencilForm'>
                     <h2>{data.title}</h2>
-                    <img onClick={handleDropdownClick} className='news-pencil' src={pencil} alt="button to edit" />
-                    <div className={`formDropdown ${isOpen ? 'open' : 'close'}`}>
+                    <img onClick={handleDropdownClick} data-testid="news-pencil" className='news-pencil' src={pencil} alt="button to edit" />
+                    <div data-testid="news-dropdown" className={`formDropdown ${isOpen ? 'open' : 'close'}`}>
                         <FormNews  title={title} news={news} url={url} />
                     </div>
                 </div>
