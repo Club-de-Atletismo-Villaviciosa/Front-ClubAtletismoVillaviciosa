@@ -17,7 +17,7 @@ const News = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const handleDropdownClick = () => {
-      setIsOpen(!isOpen);
+        setIsOpen(!isOpen);
     };
 
     useEffect(() => {
@@ -25,7 +25,7 @@ const News = () => {
             .then((data) => setData(data))
             .catch((error) => console.error(error));
     }, []);
-    
+
     return (
 
         <div>
@@ -40,7 +40,6 @@ const News = () => {
                 <img className='news-newsUrl' src={data.url} alt="Imagen de una noticia" width="750" />
                 <p>{data.news}</p>
             </div>
-
         </div>
 
     )
