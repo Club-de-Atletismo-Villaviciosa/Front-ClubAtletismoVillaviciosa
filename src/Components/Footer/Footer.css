@@ -1,7 +1,11 @@
 footer {
     background-color: #623173;
     height: 100%; 
-    width: 100%;
+    width: 100%;    
+}
+
+footer p {
+    font-size: 1.3vw;
 }
 
 .footer {
@@ -12,9 +16,9 @@ footer {
 
 .phrase {      
     font-weight: bold; 
-    padding: 2vh; 
+    padding-top: 2vh; 
     color: black;
-    font-size: 2.5vh;
+    font-size: 2.5vw;
 }
 
 .footer-footerPartners {
@@ -48,20 +52,26 @@ footer {
     width: 50%;
 }
 
+.f5 {
+    color: #ff4700;
+    font-family: Poppins;       
+}
+
+.footer-email {
+    color: white;
+}
+
+.footer-coders p {
+    color: white;
+
+}
+
+.footer-copyright p {
+    font-size: 1.1vw;
+}
+
 @media (max-width: 50em) {
     footer p {
         font-size: 1vh;
-    }
-    .phrase {
-        font-size: 1.5vh;
-    }    
-}
-
-@media (max-width: 30em) {
-    footer p {
-        font-size: 0.8vh;
-    }
-    .phrase {
-        font-size: 1.2vh;
-    }    
+    }   
 }
