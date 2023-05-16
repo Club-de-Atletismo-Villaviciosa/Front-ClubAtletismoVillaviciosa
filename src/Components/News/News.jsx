@@ -6,13 +6,9 @@ import "./News.css";
 import FormNews from '../FormNews/FormNews';
 
 const News = () => {
-
-    const idInState = useLocation().state.id;
-    const url = useLocation().state.url;
-    const title = useLocation().state.title;
-    const news = useLocation().state.news;
+    const state = useLocation().state
+    const idInState = state.id;
     const [data, setData] = useState({});
-    const navigate = useNavigate();
     const urlGeneral = "http://localhost:8080/api/v1/news";
     const [isOpen, setIsOpen] = useState(false);
 
@@ -21,11 +17,16 @@ const News = () => {
     };
 
     useEffect(() => {
+        if (state.edit) {
+            setIsOpen(!isOpen);
+        }
+
         ApiGetByIdService(urlGeneral, idInState)
             .then((data) => setData(data))
             .catch((error) => console.error(error));
     }, []);
 
+    
     return (
 
         <div>
@@ -34,11 +35,11 @@ const News = () => {
                     <h2>{data.title}</h2>
                     <img onClick={handleDropdownClick} className='news-pencil' src={pencil} alt="button to edit" />
                 </div>
-                <div className={`formDropdown ${isOpen ? 'open' : 'close'}`}>
-                    <FormNews title={title} news={news} url={url} />
+                <div className={`formNewsDropdown ${isOpen ? 'open' : 'close'}`}>
+                    <FormNews item={data} />
                 </div>
                 <img className='news-newsUrl' src={data.url} alt="Imagen de una noticia" width="750" />
-                <p>{data.news}</p>
+                <p className='pre-wrap'>{data.news}</p>
             </div>
         </div>
 

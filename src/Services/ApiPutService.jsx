@@ -3,7 +3,8 @@ import axios from "axios"
 
 async function ApiPutService(url, item, id) {
   try {
-    await axios.put(url + '/update/' + id, item)
+    let res = await axios.put(url + '/update/' + id, item)
+    console.log(res)
   } catch (error) {
     console.log(error)
   }

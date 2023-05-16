@@ -47,7 +47,8 @@
 }
 
 .close{
-    height: 0% 
+    height: 0vh !important;
+    overflow: hidden;
 }
 
 .open{
@@ -60,4 +61,8 @@
     height: 5vh;
     background-color: black;
     transform: rotate(10deg);
+}
+
+.click{
+    cursor: pointer;
 }
