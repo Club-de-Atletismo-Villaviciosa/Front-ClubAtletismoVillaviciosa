@@ -1,0 +1,125 @@
+.navbar {
+    background-color: #623173;    
+    font-size: larger;
+    width: 30vh;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.navbar-logo {
+    margin: 5vh 0 5vh 0;
+}
+
+.navbar-logo img {
+    width: 50%;
+}
+
+.navbar-ul, .navbar-ul-dropdown {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-ul li {
+    color: white;
+    list-style: none;
+}
+
+.navbar-ul a {
+    text-decoration: none;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.navbar-ul-dropdown a {
+    margin-bottom: 1vh;
+}
+
+.navbar-ul-dropdown {
+    transition: all 1s;
+    overflow: hidden;
+}
+
+.close {
+    height: 0%;
+}
+
+.open {
+    height: 100%;
+}
+
+.navbar-bar {
+    margin-top: 10vh;
+    width: 150%;
+    height: 5vh;
+    background-color: black;
+    transform: rotate(10deg);
+}
+
+.navbar-btn {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    .navbar {   
+        position: fixed;     
+        height: 7vh;
+        top: 0; 
+        z-index: 99;
+                     
+    }
+    .navbar, .navbar-icons {        
+        width: 100%;
+    }
+    
+    .navbar-icons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 7vh;
+        
+    }
+    .navbar-btn {
+        display: flex;        
+        justify-content: center;
+        align-items: center;
+        width: 10vw;
+        height: 10vh;
+        font-size: 1.8rem;
+        background-color: #623173;
+        color: white;
+        border: none;
+        cursor: pointer;            
+    }   
+    .navbar-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 14vh;       
+    }
+    .navbar-elements {
+        position: fixed;
+        left: 0;
+        top: 7vh;
+        background-color: #623173;
+        width: 0;
+        transition: all 0.7s ease-in-out;        
+        /* overflow: hidden; */
+    }
+    .navbar-elements.active {
+        
+        display: flex;
+        justify-content: center;                     
+        width: 100%;
+        height: 100vh;
+          
+    }
+    .navbar-bar {
+        margin-top: 50vh;
+               
+    }
+    
+}

@@ -7,12 +7,14 @@ import MainSection from "../../Components/MainSection/MainSection"
 import LastThreeNews from "../../Components/LastThreeNews/LastThreeNews"
 import Footer from "../../Components/Footer/Footer"
 import Header from "../../Components/Header/Header"
+import NavbarRespo from "../../Components/Navbar/NavbarRespo"
 
 function MainPage(){
 
     return(    
         <div>
             <Navbar/>
+            {/* <NavbarRespo /> */}
         
         <div className="main"> 
             <Header/>
