@@ -8,9 +8,14 @@ import LastThreeNews from "../../Components/LastThreeNews/LastThreeNews"
 import Footer from "../../Components/Footer/Footer"
 import Header from "../../Components/Header/Header"
 import NavbarRespo from "../../Components/Navbar/NavbarRespo"
+import { useState } from "react"
 
 function MainPage(){
-
+    const [isOpen, setIsOpen] = useState(false);
+    const handleDropdownClick = () => {
+        setIsOpen(!isOpen);
+    };
+   
     return(    
         <div>
             <Navbar/>
@@ -23,7 +28,7 @@ function MainPage(){
             <div className="wrapper">
                 <Carousel />
                 <LastThreeNews/>
-                <ButtonToForm />
+                <ButtonToForm  handleDropdownClick={handleDropdownClick} isOpen={isOpen}/>
                 <MainSection />
                 
             </div>

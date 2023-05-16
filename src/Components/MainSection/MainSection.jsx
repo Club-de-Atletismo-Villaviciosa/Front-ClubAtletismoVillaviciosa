@@ -39,7 +39,6 @@ function MainSection() {
         pageNumbers.shift();   
       }
     }
-console.info(pageNumbers)
     
     pageNumbers.push(...Array.from({ length: endPage - startPage + 1 }, (_, i) => startPage + i));
     
