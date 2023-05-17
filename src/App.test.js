@@ -1,5 +1,6 @@
 import 'matchmedia-polyfill';
 import { render, screen,fireEvent,waitFor } from '@testing-library/react';
+import { queryAllByRole } from '@testing-library/dom';
 import App from './App';
 import React from 'react/jsx-runtime';
 import Footer from './Components/Footer/Footer';
@@ -12,6 +13,8 @@ import ButtonToForm from './Components/ButtonToForm/ButtonToForm';
 import News from './Components/News/News';
 import Carousel from './Components/Carousel/Carousel';
 import AthleteText from './Components/Carousel/AthleteText';
+
+
 
 describe('Footer', () => {
   it('renders two images', () => {
@@ -57,7 +60,6 @@ test('handleDropdownClick toggles mode state', () => {
 });
 
 
-
 test('handleDropdownClick toggles mode state', () => {
   render(
     <MemoryRouter>
@@ -90,7 +92,11 @@ describe('Carousel', () => {
 });
 
 
-
-
-
+test('renders home component for "/" route', () => {
+  render(
+    <App />
+  );
+  const paginationButtons = screen.queryAllByRole('button');
+  expect(paginationButtons.length).toBeGreaterThanOrEqual(2);
+});
 
