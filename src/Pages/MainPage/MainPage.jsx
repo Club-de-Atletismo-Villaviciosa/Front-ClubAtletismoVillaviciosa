@@ -7,7 +7,6 @@ import MainSection from "../../Components/MainSection/MainSection"
 import LastThreeNews from "../../Components/LastThreeNews/LastThreeNews"
 import Footer from "../../Components/Footer/Footer"
 import Header from "../../Components/Header/Header"
-import NavbarRespo from "../../Components/Navbar/NavbarRespo"
 import { useState } from "react"
 
 function MainPage(){
@@ -18,8 +17,7 @@ function MainPage(){
    
     return(    
         <div>
-            <Navbar/>
-            {/* <NavbarRespo /> */}
+            <Navbar/>    
         
         <div className="main"> 
             <Header/>
