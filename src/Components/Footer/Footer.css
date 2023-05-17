@@ -4,28 +4,35 @@ footer {
     width: 100%;    
 }
 
-footer p {
+.footer-main {
+    display: flex;   
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-contact {
+    padding-left: 2vw;
+}
+
+.footer-contact, a {
+    color: white;
+    font-size: 1.5vw;
+}
+
+.footer-contact, p {
     font-size: 1.3vw;
 }
 
-.footer {
-    display: flex;    
-    justify-content: center;
-    align-items: center;   
-}
-
 .phrase {      
-    font-weight: bold; 
-    padding-top: 2vh; 
+    font-weight: bold;    
     color: black;
     font-size: 2.5vw;
 }
 
 .footer-footerPartners {
-   display: flex; 
-   justify-content: center;
-   align-items: center;
-   width: 50%;   
+    display: flex;
+    justify-content: center;
+    align-items: center;    
 }
 
 .footer-ayto p {
@@ -45,33 +52,28 @@ footer p {
 }
 
 .gaitero {
-   width: 50%;
+   width: 40%;
 }
 
 .ayto {
-    width: 50%;
+    width: 30%;
 }
 
-.f5 {
-    color: #ff4700;
-    font-family: Poppins;       
+
+.footer-f5Logo {
+    width: 30%;    
 }
 
-.footer-email {
-    color: white;
+.footer-coders {
+    padding-right: 2vw;
 }
 
 .footer-coders p {
     color: white;
-
+    font-size: 1.2vw;
+    text-align: center;
 }
 
 .footer-copyright p {
     font-size: 1.1vw;
-}
-
-@media (max-width: 50em) {
-    footer p {
-        font-size: 1vh;
-    }   
 }
