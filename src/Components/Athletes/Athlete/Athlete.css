@@ -1,0 +1,71 @@
+.athlete{
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size:larger;
+    overflow: hidden;
+}
+
+.athlete-img{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.athlete img{
+    width: 30vh;
+    height: 30vh;
+    object-fit: cover;
+    object-position: top center;
+}
+
+.athlete-icons{
+    position: absolute;
+    width: 30vh;
+    height: 30vh;
+    background-color: rgba(80, 80, 80, 0.346);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.athlete-icon{
+    padding: 0 0.5vw 0 0.5vw;
+    transition: width 1s;
+}
+
+.athlete-icon:hover{
+    content: "";
+    background-color: rgba(170, 170, 170, 0.3);
+    display: block;
+    height: 100%;
+    width: 50%;
+    z-index: 2;
+}
+
+.athlete-description{
+    width: 60%;
+    /*texto debajo de la foto centrado*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.athlete-name{
+    font-weight: 500;
+    font-size: x-large;
+}
+
+.athlete-attributes{
+    color: rgb(113, 113, 113);
+}
+
+.appear{
+    display: flex;
+}
+
+.notAppear{
+    display: none;
+}

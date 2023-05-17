@@ -4,15 +4,15 @@ import { queryAllByRole } from '@testing-library/dom';
 import App from './App';
 import React from 'react/jsx-runtime';
 import Footer from './Components/Footer/Footer';
-import FormMain from './Components/FormMain/FormMain';
+import FormMain from './Components/Forms/FormMain/FormMain';
 import { MemoryRouter } from 'react-router-dom';
 import Header from './Components/Header/Header';
 import PhotoMainPage from "./Components/PhotoMainPage/PhotoMainPage"
 import Navbar from './Components/Navbar/Navbar';
-import ButtonToForm from './Components/ButtonToForm/ButtonToForm';
-import News from './Components/News/News';
 import Carousel from './Components/Carousel/Carousel';
 import AthleteText from './Components/Carousel/AthleteText';
+import InfoSection from './Components/InfoSection/InfoSection';
+import News from './Components/News/News';
 
 
 
@@ -53,7 +53,12 @@ test('renders an img tag', () => {
 
 
 test('handleDropdownClick toggles mode state', () => {
-  render(<Navbar />);
+  render(
+    <MemoryRouter>
+  <Navbar />
+  </MemoryRouter>
+  
+  );
   const dropdownButton = screen.getByText('Info. del club');
   fireEvent.click(dropdownButton);
   expect(screen.getByTestId('navbar-dropdown')).toHaveClass('open');
@@ -63,10 +68,10 @@ test('handleDropdownClick toggles mode state', () => {
 test('handleDropdownClick toggles mode state', () => {
   render(
     <MemoryRouter>
-    <ButtonToForm />
+    <InfoSection />
   </MemoryRouter>
   );
-  const dropdownButton = screen.getByText('Publicar una actividad');
+  const dropdownButton = screen.getByTestId('buttonToForm-button');
   fireEvent.click(dropdownButton);
   expect(screen.getByTestId('button-dropdown')).toHaveClass('open');
 });

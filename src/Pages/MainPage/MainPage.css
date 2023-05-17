@@ -5,3 +5,10 @@
 .wrapper {
 margin:0vw 3vw;
 }
+
+@media (max-width: 800px) {
+.main {
+    margin-left: 0;
+}
+
+}

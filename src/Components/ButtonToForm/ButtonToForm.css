@@ -1,31 +1,34 @@
-.buttonToForm button{
-    background-color:#9395D3 ;
+.buttonToForm-button {
+    background-color: #9395D3;
     cursor: pointer;
     border-radius: 10px;
     border-style: none;
     height: 6vh;
-    width: 25vw;    
+    width: 25vw;
+
 }
 
-.buttonToForm{
+.buttonToForm {
     margin-top: 15vh;
-    margin-bottom: 15vh;
 }
 
-.buttonToForm-span{
+.buttonToForm-span {
     font-size: 2.5vh;
     color: white
 }
 
-.formDropdown {
+.formDropdown, .formNewsDropdown{
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
     overflow: hidden;
     height: 0px;
-    max-height: 100vh; 
+    max-height: 800px;
     transition: height 1s ease-in-out;
-  }
+}
 
-.formDropdown.open { 
-    height: 100vh;
-  }
+.formDropdown.open{
+    height: 800px;
+
+}

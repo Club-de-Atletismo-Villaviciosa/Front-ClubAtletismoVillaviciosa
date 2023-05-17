@@ -55,8 +55,8 @@ const ContactForm = () => {
                 <div className='map'>
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2299.2608046790697!2d-5.432351342090198!3d43.48549702484571!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd366d0a47d91b0d%3A0xc37e8fd7ffa6589c!2spista%20de%20atletismo%20municipal!5e1!3m2!1sca!2ses!4v1682414921244!5m2!1ses!2ses"
-                        title="mapGoogle" width="670" height="320" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>                     
+                        title="mapGoogle" width="670" height="320" allowFullScreen="" loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"></iframe>                     
                 </div>
 
             </form>

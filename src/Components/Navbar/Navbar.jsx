@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import "./Navbar.css"
 import { IoIosArrowDown } from "react-icons/io"
+import { Link } from 'react-router-dom'
 
 function Navbar() {
     let [mode, setMode] = useState("close")
 
     function handleDropdownClick(e) {
         mode == "close"? setMode("open") : setMode("close")
-        
     }
 
     return (
@@ -16,15 +16,15 @@ function Navbar() {
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Escudo_de_Villaviciosa.svg/350px-Escudo_de_Villaviciosa.svg.png" alt="villaviciosa logo" />
             </div>
             <ul className='navbar-ul'>
-                <a href="/"><li>Inicio</li></a>
-                <a href=""><li>Competiciones</li></a>
-                <li onClick={handleDropdownClick}>Info. del club <IoIosArrowDown /></li>
+                <Link to={"/"}><li>Inicio</li></Link>
+                <Link to={"/"}><li>Competiciones</li></Link>
+                <li className="click" onClick={handleDropdownClick}>Info. del club<IoIosArrowDown /></li>
                 <ul data-testid="navbar-dropdown" className={`navbar-ul-dropdown ${mode}`} >
-                    <a href=""><li>Historia</li></a>
-                    <a href=""><li>Palmarés</li></a>
-                    <a href=""><li>Perfiles de los atletas</li></a>
+                    <Link to={"/InfoPage"}><li>Historia</li></Link>
+                    <Link to={"/InfoPage"}><li>Palmarés</li></Link>
+                    <Link to={"/InfoPage"}><li>Perfiles de los atletas</li></Link>
                 </ul>
-                <a href="/ContactPage"><li>Contacto</li></a>
+                <Link to="/ContactPage"><li>Contacto</li></Link>
             </ul>
             <div className='navbar-bar'></div>
         </nav>
