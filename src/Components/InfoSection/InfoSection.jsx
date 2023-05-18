@@ -13,8 +13,7 @@ function InfoSection() {
   let [editForm, setEditForm] = useState(null)
   const [isOpen, setIsOpen] = useState(false);
   const [checkEdit, setCheckEdit] = useState(false);
-  let {isLogged, setIsLogged} = useContext(AuthContext)
-  console.log(isLogged)
+  let {isLogged} = useContext(AuthContext)
 
   function handleAthleteEdit(athlete) {
     setEditForm(athlete)
@@ -51,14 +50,14 @@ function InfoSection() {
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam efficitur molestie blandit. Maecenas rutrum mauris sit amet urna pulvinar feugiat. Cras non nisl quis enim iaculis egestas. Vivamus vehicula tristique hendrerit. Phasellus pharetra sapien vitae arcu porta tempor. Suspendisse quis ante venenatis, efficitur ipsum congue, posuere nibh. Morbi non ante lacus. In hac habitasse platea dictumst.</p>
       </div>
       <div className='infoSection-description'>
-        <h2>Palmarés <span onClick={handlePalmaresEdit}><MdModeEditOutline color='gray' size={20} /> <small className='small'>(editar)</small></span></h2>
+        <h2>Palmarés {isLogged && <span onClick={handlePalmaresEdit}><MdModeEditOutline color='gray' size={20} /> <small className='small'>(editar)</small></span>}</h2>
         <div className={`formListofHonors ${checkEdit ? 'open' : 'close'}`}>
           <FormList editForm={palmares[0]} customClass={checkEdit} />
         </div>
         <p className="pre-wrap">{palmares[0].description}</p>
       </div>
       {/* <button>Publicar un/a atleta</button> */}
-      <ButtonToForm type="athlete" editForm={editForm} handleDropdownClick={handleDropdownClick} isOpen={isOpen} />
+      {isLogged && <ButtonToForm type="athlete" editForm={editForm} handleDropdownClick={handleDropdownClick} isOpen={isOpen} />}
       <Athletes handleEdit={handleAthleteEdit} />
     </div>
   )

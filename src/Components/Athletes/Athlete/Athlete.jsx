@@ -4,11 +4,14 @@ import { MdModeEditOutline } from "react-icons/md"
 import { FaTrashAlt } from "react-icons/fa"
 import ApiDeleteService from '../../../Services/ApiDeleteService';
 import Confirmation from '../../Confirmation/Confirmation';
+import { useContext } from 'react';
+import { AuthContext } from '../../../Services/AuthContext';
 
 function Athlete({ athlete, handleEdit }) {
   const [hover, setHover] = useState(false);
   const [confirmation, setConfirmation] = useState(false)
   const [typeConfirmation, setTypeConfirmation] = useState("")
+  let { isLogged } = useContext(AuthContext)
 
   let mode = hover ? "appear" : "notAppear"
   const toggleHover = () => {
@@ -40,10 +43,10 @@ function Athlete({ athlete, handleEdit }) {
       {confirmation && <Confirmation type={typeConfirmation} athlete={athlete} handleAction={typeConfirmation == "delete"? handleDelete : handleEdit} handleClose={handleClose} />}
       <div className='athlete-img' onMouseEnter={toggleHover} onMouseLeave={toggleHover}>
         <img src={athlete.url} alt="athlete-img" />
-        <div className={`athlete-icons ${mode}`}>
+        {isLogged && <div className={`athlete-icons ${mode}`}>
           <MdModeEditOutline onClick={()=> {handleEdit(athlete)}} className={`athlete-icon click`} color='#f0f0f0' size={100} />
           <FaTrashAlt onClick={() => {handleClickDelete()}} className={`athlete-icon click`} color='#f0f0f0' size={70} />
-        </div>
+        </div>}
       </div>
       <div className='athlete-description'>
         <p className='athlete-name'>{athlete.name}</p>
