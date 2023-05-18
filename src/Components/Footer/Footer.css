@@ -1,49 +1,79 @@
 footer {
     background-color: #623173;
     height: 100%; 
-    width: 100%;
+    width: 100%;    
 }
 
-.footer {
-    display: flex;    
-   justify-content: center;
+.footer-main {
+    display: flex;   
+    justify-content: center;
     align-items: center;
-   
 }
 
-.phrase{      
-    font-weight: bold; 
-    padding: 2vh; 
+.footer-contact {
+    padding-left: 2vw;
+}
+
+.footer-contact, a {
+    color: white;
+    font-size: 1.5vw;
+}
+
+.footer-contact, p {
+    font-size: 1.3vw;
+}
+
+.phrase {      
+    font-weight: bold;    
     color: black;
-    font-size: 2.5vh;
+    font-size: 2.5vw;
 }
 
 .footer-footerPartners {
-   display: flex; 
-   justify-content: center;
-   align-items: center;
-   width: 50%;
-   
+    display: flex;
+    justify-content: center;
+    align-items: center;    
 }
 
-.footer-ayto p{
-    color:white;
-    
+.footer-ayto p {
+    color:white;    
 }
-.footer-gaitero p{
-    color: white;
-    
+
+.footer-gaitero p {
+    color: white;    
 }
-.footer-gaitero{
+
+.footer-gaitero {
     width: 100%;
 }
-.footer-ayto{
+
+.footer-ayto {
    width: 100%;
 }
 
-.gaitero{
-   width: 50%;
+.gaitero {
+   width: 40%;
 }
-.ayto{
-    width: 50%;
+
+.ayto {
+    width: 30%;
+}
+
+
+.footer-f5Logo {
+    width: 30%;    
+}
+
+.footer-coders {
+    padding-right: 2vw;
+}
+
+.footer-coders p {
+    color: white;
+    font-size: 1.2vw;
+    text-align: center;
+}
+
+.footer-copyright p {
+    font-size: 1.1vw;
 }

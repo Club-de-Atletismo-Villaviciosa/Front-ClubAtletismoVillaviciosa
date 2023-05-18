@@ -9,6 +9,7 @@ import { BiLogOut} from "react-icons/bi";
 import { VscAccount } from "react-icons/vsc";
 import Cookies from 'js-cookie'
 
+
 function Navbar() {
     const [isNavExpanded, setIsNavExpanded] = useState(false)
     let [mode, setMode] = useState("close")
@@ -16,7 +17,7 @@ function Navbar() {
 
 
     function handleDropdownClick(e) {
-        mode == "close"? setMode("open") : setMode("close")        
+        mode == "close" ? setMode("open") : setMode("close")
     }
 
     const handleShowNavbar = () => {
@@ -29,7 +30,7 @@ function Navbar() {
     }
 
     return (
-        <nav  className='navbar'>
+        <nav className='navbar'>
             <div className='navbar-icons'>
                 <button className='navbar-btn' onClick={handleShowNavbar}>
                     <FaBars />
@@ -39,19 +40,20 @@ function Navbar() {
                 </div>
             </div>
             <div className={`navbar-elements ${isNavExpanded && 'active'}`}>
-            <ul className='navbar-ul'>
-                <Link to={"/"}><li>Inicio</li></Link>
-                <Link to={"/CalendarPage"}><li>Competiciones</li></Link>
-                <li className="click" onClick={handleDropdownClick}>Info. del club<IoIosArrowDown /></li>
-                <ul data-testid="navbar-dropdown" className={`navbar-ul-dropdown ${mode}`} >
-                    <Link to={"/InfoPage"}><li>Historia</li></Link>
-                    <Link to={"/InfoPage"}><li>Palmarés</li></Link>
-                    <Link to={"/InfoPage"}><li>Perfiles de los atletas</li></Link>
+                <ul className='navbar-ul'>
+                    <Link to={"/"}><li>Inicio</li></Link>
+                    <Link to={"/"}><li>Competiciones</li></Link>
+                    <li className="click" onClick={handleDropdownClick}>Info. del club<IoIosArrowDown /></li>
+                    <ul data-testid="navbar-dropdown" className={`navbar-ul-dropdown ${mode}`} >
+                        <Link to={"/InfoPage"}><li>Historia</li></Link>
+                        <Link to={"/InfoPage"}><li>Palmarés</li></Link>
+                        <Link to={"/InfoPage"}><li>Perfiles de los atletas</li></Link>
+                    </ul>
+                    <Link className='navbar-contacto' to="/ContactPage"><li>Contacto</li></Link>
                 </ul>
-                <Link className='navbar-contacto' to="/ContactPage"><li>Contacto</li></Link>
-            </ul>
             </div>
-            <div className='navbar-bar'></div>
+            <div className='navbar-bar'>                
+            </div>
             <div className='navbar-btnLog'>
                 {isLogged ? <BiLogOut onClick={handleLogout} color='white' className='navbar-btnLogOut' /> : <Link to ={"/loginPage"}><VscAccount color='white' className='navbar-btnLogOut' /></Link>}
             </div>
