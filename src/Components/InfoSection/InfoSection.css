@@ -36,3 +36,9 @@
 /* .form-container{
     height: ;
 } */
+
+@media (max-width: 800px) {
+.infoSection{
+    margin-left: 0;
+}
+}

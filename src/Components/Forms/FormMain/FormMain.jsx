@@ -53,7 +53,7 @@ function FormMain({ type, editForm }) {
 
     return (
         <>
-            {confirmation && <Confirmation handleAction={handleSubmit} handleClose={handleClose} />}
+            {confirmation && <Confirmation methodType={editForm ? "put" : "post"} handleAction={handleSubmit} handleClose={handleClose} />}
             <div className="separator"></div>
             {type == "athlete" ?
                 <form className="formMain" onSubmit={handleClickSubmit} method="post">
