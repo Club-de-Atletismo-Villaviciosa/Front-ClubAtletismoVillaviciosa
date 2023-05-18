@@ -5,13 +5,15 @@ import Athletes from '../Athletes/Athletes';
 import ButtonToForm from '../ButtonToForm/ButtonToForm';
 import FormList from '../Forms/FormListOfHonors/FormList';
 import CallAxiosAthletes from '../../Services/CallAxiosAthletes';
+import { AuthContext } from '../../Services/AuthContext';
+import { useContext } from 'react';
 
 function InfoSection() {
   let [palmares, setPalmares] = useState([{ description: "" }]);
   let [editForm, setEditForm] = useState(null)
   const [isOpen, setIsOpen] = useState(false);
   const [checkEdit, setCheckEdit] = useState(false);
-
+  let {isLogged} = useContext(AuthContext)
 
   function handleAthleteEdit(athlete) {
     setEditForm(athlete)
@@ -49,14 +51,14 @@ function InfoSection() {
           Esto es una prueba de estar justificado o no ñasdñoiujasdfò òasdujfn asfoàsndf oàsudf asfouiasdf asfosaf asdfuisdjdjdjd uid uid nd uid dfàsdfòasfo id id faàsdjf isdf adfi id di ia asdifsd fi di fasdifa n"</p>
       </div>
       <div className='infoSection-description'>
-        <h2>Palmarés <span onClick={handlePalmaresEdit}><MdModeEditOutline color='gray' size={20} /> <small className='small'>(editar)</small></span></h2>
+        <h2>Palmarés {isLogged && <span onClick={handlePalmaresEdit}><MdModeEditOutline color='gray' size={20} /> <small className='small'>(editar)</small></span>}</h2>
         <div className={`formListofHonors ${checkEdit ? 'open' : 'close'}`}>
           <FormList editForm={palmares[0]} customClass={checkEdit} />
         </div>
         <p className="pre-wrap">{palmares[0].description}</p>
       </div>
       {/* <button>Publicar un/a atleta</button> */}
-      <ButtonToForm type="athlete" editForm={editForm} handleDropdownClick={handleDropdownClick} isOpen={isOpen} />
+      {isLogged && <ButtonToForm type="athlete" editForm={editForm} handleDropdownClick={handleDropdownClick} isOpen={isOpen} />}
       <Athletes handleEdit={handleAthleteEdit} />
     </div>
   )
