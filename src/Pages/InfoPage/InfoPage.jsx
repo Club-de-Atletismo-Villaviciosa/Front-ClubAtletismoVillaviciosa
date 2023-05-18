@@ -6,8 +6,10 @@ function InfoPage() {
 
   return (
     <div>
-        <Navbar />
+      <Navbar />
+        <div className='main'>
         <InfoSection />
+    </div>
     </div>
   )
 }

@@ -11,9 +11,11 @@ function FormList({ editForm }) {
     console.log(data)
     console.log(editForm)
 
-    function handleSubmit(event) {
-        editForm.description ? ApiPutService("http://localhost:8080/api/v1/listOfHonors", data, 1) : ApiPostService("http://localhost:8080/api/v1/listOfHonors", data)
-        window.location.reload()
+   async function handleSubmit(event) {
+    let response = await editForm.description ? ApiPutService("http://localhost:8080/api/v1/listOfHonors", data, 1) : ApiPostService("http://localhost:8080/api/v1/listOfHonors", data)
+        await response.then(()=> {window.location.reload()})
+     
+       
     }
     function handleClose() {
         setConfirmation(false)
@@ -45,7 +47,7 @@ function FormList({ editForm }) {
                     <div className="formMain-image-inputAndButton">
                         {/* <input type="url" name="url" onChange={handleChange} defaultValue={State ? State.url: ""} autoComplete="off" placeholder="Enlace de Imgur" required pattern="https?://.+" /> */}
 
-                        <textarea rows="15" cols="1000" name='description' defaultValue={editForm.description} value={data.description} required className="form-control" placeholder="Ingrese aquí los logros o títulos obtenidos" onChange={handleChange}
+                        <textarea rows="15" cols="112" name='description' defaultValue={editForm.description} value={data.description} required className="form-control" placeholder="Ingrese aquí los logros o títulos obtenidos" onChange={handleChange}
                             id="photo" />
                     </div>
                     <div className="formMain-postButton">

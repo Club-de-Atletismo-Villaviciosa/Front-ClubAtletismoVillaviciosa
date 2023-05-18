@@ -4,9 +4,6 @@
     cursor: pointer;
 }
 
-.infoSection{
-    margin-left: 15vw;
-}
 
 .infoSection-description{
     margin: 5vh 13vw 5vh 13vw;
@@ -16,6 +13,7 @@
     text-align: justify;
 
 }
+
 
 .infoSection-description span, .infoSection-description h2{
     display: flex;
@@ -30,9 +28,11 @@
 }
 
 .pre-wrap {
-    white-space: pre-wrap;
+    white-space: pre-line;
+    
 }
 
 /* .form-container{
     height: ;
 } */
+

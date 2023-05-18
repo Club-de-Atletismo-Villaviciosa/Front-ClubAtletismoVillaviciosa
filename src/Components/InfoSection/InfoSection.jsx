@@ -45,7 +45,8 @@ function InfoSection() {
       <img src="" alt="" />
       <div className='infoSection-description'>
         <h2>Historia del club</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam efficitur molestie blandit. Maecenas rutrum mauris sit amet urna pulvinar feugiat. Cras non nisl quis enim iaculis egestas. Vivamus vehicula tristique hendrerit. Phasellus pharetra sapien vitae arcu porta tempor. Suspendisse quis ante venenatis, efficitur ipsum congue, posuere nibh. Morbi non ante lacus. In hac habitasse platea dictumst.</p>
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Esto es una prueba de estar justificado o no ñasdñoiujasdfò òasdujfn asfoàsndf oàsudf asfouiasdf asfosaf asdfuisdjdjdjd uid uid nd uid dfàsdfòasfo id id faàsdjf isdf adfi id di ia asdifsd fi di fasdifa n"</p>
       </div>
       <div className='infoSection-description'>
         <h2>Palmarés <span onClick={handlePalmaresEdit}><MdModeEditOutline color='gray' size={20} /> <small className='small'>(editar)</small></span></h2>
