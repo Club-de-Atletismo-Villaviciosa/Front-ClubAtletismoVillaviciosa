@@ -43,8 +43,8 @@ function Navbar() {
             <div className='navbar-bar'>                
             </div>
             <div className='navbar-btnLog'>
-                <BiLogIn />
-                <BiLogOut />
+                <BiLogIn className='navbar-btnLogIn' />
+                <BiLogOut className='navbar-btnLogOut' />
             </div>
         </nav>
     )

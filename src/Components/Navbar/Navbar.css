@@ -69,9 +69,11 @@
     display: none;
 }
 
-.navbar-btnLog {
+.navbar-btnLogOut {
     font-size: 10vh;
     margin-top: 20vh;
+    display: flex;
+    align-items: center;
 }
 
 @media (max-width: 800px) {
