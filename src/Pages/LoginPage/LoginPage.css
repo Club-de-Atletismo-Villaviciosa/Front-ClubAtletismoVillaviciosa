@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+  }
+
+  .loginInput{
+    margin-bottom: 2vh;
+    margin-left: 1vw;;
+}
+
+.LoginTitle{
+    margin-top: 10vh;
+    text-align: center;
+}
+
+
+  
+  
