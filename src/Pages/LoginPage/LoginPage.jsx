@@ -37,7 +37,7 @@ function LoginPage() {
             <form onSubmit={handleSubmit}>
                 <div>
                     <label>Username:</label>
-                    <input type="email" name="username" value={data.username} onChange={handleChange} className='loginInput'/>
+                    <input type="username" name="username" value={data.username} onChange={handleChange} className='loginInput'/>
                 </div>
                 <div>
                     <label>Password:</label>
