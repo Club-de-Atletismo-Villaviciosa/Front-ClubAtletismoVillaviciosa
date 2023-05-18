@@ -27,6 +27,7 @@
 .navbar-ul li {
     color: white;
     list-style: none;
+    
 }
 
 .navbar-ul a {
@@ -70,10 +71,13 @@
 }
 .navbar-btnLogOut {
     font-size: 7vh;
-    margin-top: 20vh;
+    position: fixed;
+    bottom: 0;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
+
 @media (max-width: 800px) {
     .navbar {
         position: fixed;
