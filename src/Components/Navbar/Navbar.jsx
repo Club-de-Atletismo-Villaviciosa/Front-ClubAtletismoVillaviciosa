@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import { useContext } from 'react'
 import { AuthContext } from '../../Services/AuthContext'
 import { FaBars } from "react-icons/fa";
-import { BiLogOut, BiLogIn } from "react-icons/bi";
+import { BiLogOut } from "react-icons/bi";
 import { VscAccount } from "react-icons/vsc";
 
 function Navbar() {
