@@ -69,6 +69,11 @@
     display: none;
 }
 
+.navbar-btnLog {
+    font-size: 10vh;
+    margin-top: 20vh;
+}
+
 @media (max-width: 800px) {
     .navbar {
         position: fixed;

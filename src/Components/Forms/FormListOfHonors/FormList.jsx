@@ -11,9 +11,11 @@ function FormList({ editForm }) {
     console.log(data)
     console.log(editForm)
 
-    function handleSubmit(event) {
-        editForm.description ? ApiPutService("http://localhost:8080/api/v1/listOfHonors", data, 1) : ApiPostService("http://localhost:8080/api/v1/listOfHonors", data)
-        window.location.reload()
+   async function handleSubmit(event) {
+        // editForm.description ? ApiPutService("http://localhost:8080/api/v1/listOfHonors", data, 1) : ApiPostService("http://localhost:8080/api/v1/listOfHonors", data)
+        // window.location.reload()
+        let response = await editForm.description ? ApiPutService("http://localhost:8080/api/v1/listOfHonors", data, 1) : ApiPostService("http://localhost:8080/api/v1/listOfHonors", data)
+        let reload = await response.then(()=> {window.location.reload()})
     }
     function handleClose() {
         setConfirmation(false)
