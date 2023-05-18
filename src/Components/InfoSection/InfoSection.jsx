@@ -5,13 +5,16 @@ import Athletes from '../Athletes/Athletes';
 import ButtonToForm from '../ButtonToForm/ButtonToForm';
 import FormList from '../Forms/FormListOfHonors/FormList';
 import CallAxiosAthletes from '../../Services/CallAxiosAthletes';
+import { AuthContext } from '../../Services/AuthContext';
+import { useContext } from 'react';
 
 function InfoSection() {
   let [palmares, setPalmares] = useState([{ description: "" }]);
   let [editForm, setEditForm] = useState(null)
   const [isOpen, setIsOpen] = useState(false);
   const [checkEdit, setCheckEdit] = useState(false);
-
+  let {isLogged, setIsLogged} = useContext(AuthContext)
+  console.log(isLogged)
 
   function handleAthleteEdit(athlete) {
     setEditForm(athlete)

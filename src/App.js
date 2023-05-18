@@ -5,6 +5,7 @@ import NewsPage from './Pages/NewsPage/NewsPage';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ContactPage from "./Pages/ContactPage/ContactPage"
 import InfoPage from './Pages/InfoPage/InfoPage';
+import { AuthContext, AuthProvider } from './Services/AuthContext';
 
 function App() {
   const router = createBrowserRouter([
@@ -26,7 +27,9 @@ function App() {
 
   return (
     <div className="App">
-      <RouterProvider router={router} />
+      <AuthProvider>
+              <RouterProvider router={router} />
+      </AuthProvider>
     </div>
   );
 
