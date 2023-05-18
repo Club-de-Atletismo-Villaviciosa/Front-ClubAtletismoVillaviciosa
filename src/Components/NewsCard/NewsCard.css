@@ -37,6 +37,9 @@
 .newsCard-bodyNews span{
     color: #623173;
 }
+.newsCard-bodyNews{
+    text-align: justify;
+}
 
 
 

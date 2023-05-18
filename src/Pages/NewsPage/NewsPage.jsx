@@ -5,14 +5,12 @@ import "./NewsPage.css";
 import ButtonToForm from '../../Components/ButtonToForm/ButtonToForm';
 import Header from '../../Components/Header/Header';
 import Footer from "../../Components/Footer/Footer"
-import NavbarRespo from '../../Components/Navbar/NavbarRespo';
 
 const NewsPage = () => {
   return (
     <div>
 
-      <Navbar />
-      {/* <NavbarRespo /> */}
+      <Navbar />     
 
       <div className='main'>
         <Header/>

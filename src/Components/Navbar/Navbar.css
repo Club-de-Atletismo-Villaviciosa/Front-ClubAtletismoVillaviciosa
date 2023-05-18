@@ -1,37 +1,35 @@
 .navbar {
-    background-color: #623173;    
+    background-color: #623173;
     font-size: larger;
     width: 15vw;
     height: 100vh;
     position: fixed;
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
     align-items: center;
     overflow: hidden;
-    
 }
 
 .navbar-logo {
     margin: 5vh 0 5vh 0;
-
 }
 
-.navbar-logo img{
+.navbar-logo img {
     width: 50%;
 }
 
-.navbar-ul, .navbar-ul-dropdown{
+.navbar-ul,
+.navbar-ul-dropdown {
     display: flex;
     flex-direction: column;
-    
 }
 
-.navbar-ul li{
+.navbar-ul li {
     color: white;
     list-style: none;
 }
 
-.navbar-ul a{
+.navbar-ul a {
     text-decoration: none;
     margin-top: 1vh;
     margin-bottom: 1vh;
@@ -41,21 +39,21 @@
     margin-bottom: 1vh;
 }
 
-.navbar-ul-dropdown{
+.navbar-ul-dropdown {
     transition: all 1s;
     overflow: hidden;
 }
 
-.close{
+.close {
     height: 0vh !important;
     overflow: hidden;
 }
 
-.open{
-    height: 100% 
+.open {
+    height: 100%
 }
 
-.navbar-bar{
+.navbar-bar {
     margin-top: 10vh;
     width: 150%;
     height: 5vh;
@@ -63,31 +61,36 @@
     transform: rotate(10deg);
 }
 
-.click{
+.click {
     cursor: pointer;
 }
 
+.navbar-btn {
+    display: none;
+}
+
 @media (max-width: 800px) {
-    .navbar {   
-        position: fixed;     
+    .navbar {
+        position: fixed;
         height: 7vh;
-        top: 0; 
+        top: 0;
         z-index: 99;
-                     
     }
-    .navbar, .navbar-icons {        
+
+    .navbar,
+    .navbar-icons {
         width: 100%;
     }
-    
+
     .navbar-icons {
         display: flex;
         justify-content: space-between;
         align-items: center;
         height: 7vh;
-        
     }
+
     .navbar-btn {
-        display: flex;        
+        display: flex;
         justify-content: center;
         align-items: center;
         width: 10vw;
@@ -96,33 +99,38 @@
         background-color: #623173;
         color: white;
         border: none;
-        cursor: pointer;            
-    }   
+        cursor: pointer;
+    }
+
     .navbar-logo {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 14vh;       
+        width: 14vh;
     }
+
     .navbar-elements {
         position: fixed;
         left: 0;
         top: 7vh;
         background-color: #623173;
         width: 0;
-        transition: all 0.7s ease-in-out;        
-        /* overflow: hidden; */
+        transition: all 0.7s ease-in-out;
+        overflow: auto;
     }
+
     .navbar-elements.active {
-        
         display: flex;
-        justify-content: center;                     
+        justify-content: center;
         width: 100%;
-        height: 100vh;
-          
+        height: 110vh;
     }
-    .navbar-bar {
+
+    .navbar-ul {
+        height: 37vh;
+    }
+    
+    .navbar-bar {        
         margin-top: 50vh;
-               
     }
 }
