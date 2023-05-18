@@ -8,14 +8,12 @@ function FormList({ editForm }) {
     let [data, setData] = useState({})
     const [confirmation, setConfirmation] = useState(false)
 
-    console.log(data)
-    console.log(editForm)
 
-   async function handleSubmit(event) {
-        // editForm.description ? ApiPutService("http://localhost:8080/api/v1/listOfHonors", data, 1) : ApiPostService("http://localhost:8080/api/v1/listOfHonors", data)
-        // window.location.reload()
+    async function handleSubmit(event) {
         let response = await editForm.description ? ApiPutService("http://localhost:8080/api/v1/listOfHonors", data, 1) : ApiPostService("http://localhost:8080/api/v1/listOfHonors", data)
-        let reload = await response.then(()=> {window.location.reload()})
+        await response.then(() => { window.location.reload() })
+
+
     }
     function handleClose() {
         setConfirmation(false)

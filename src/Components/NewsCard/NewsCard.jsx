@@ -5,12 +5,16 @@ import trash from "../../assets/img/trash.png"
 import ApiDeleteService from "../../Services/ApiDeleteService"
 import Confirmation from "../Confirmation/Confirmation"
 import { useState } from "react"
+import { useContext } from "react"
+import { AuthContext } from "../../Services/AuthContext"
 
 function NewsCard({ id, url, title, news, customClass }) {
 
     const urlGeneral = "http://localhost:8080/api/v1/news"
     let navigate = useNavigate()
     const [confirmation, setConfirmation] = useState(false)
+    let { isLogged } = useContext(AuthContext)
+
 
 
     const handleDelete = () => {
@@ -36,8 +40,8 @@ function NewsCard({ id, url, title, news, customClass }) {
             <div className="newsCard-containerNews">
                 <div className="newsCard-titlePencilTrash">
                     <h2 alt="Título de la noticia">{title}</h2>
-                    <img onClick={() => { navigate("/NewsPage", { state: { id, title, url, news, edit: true} }) }} src={pencil} />
-                    <img onClick={handleClickSubmit} src={trash} />
+                    {isLogged && (<><img onClick={() => { navigate("/NewsPage", { state: { id, title, url, news, edit: true} }) }} src={pencil} />
+                    <img onClick={handleClickSubmit} src={trash} /></>)}
                 </div>
                 <p className="newsCard-bodyNews" alt="Texto de la noticia" >{news ? news.substring(0, maxLength) : ""}<span className="newsCard-span" onClick={() => { navigate("/NewsPage", { state: { id, title, url, news } }) }}>... Leer mas</span></p>
             </div>

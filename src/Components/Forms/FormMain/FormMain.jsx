@@ -23,12 +23,13 @@ function FormMain({ type, editForm }) {
     }, [editForm])
 
     console.log(data)   
-    function handleSubmit(event) {
+    async function handleSubmit(event) {
         if (type == "athlete") {
-            editForm ? ApiPutService("http://localhost:8080/api/v1/athlete", data, editForm.id) : ApiPostService("http://localhost:8080/api/v1/athlete", data)
-            return window.location.reload()
+          let response = await  editForm ? ApiPutService("http://localhost:8080/api/v1/athlete", data, editForm.id) : ApiPostService("http://localhost:8080/api/v1/athlete", data)
+            return await response.then(()=> {window.location.reload()})
         }
-        editForm ? ApiPutService(url, data, editForm.id) : ApiPostService(url, data)
+        let response = await editForm ? ApiPutService(url, data, editForm.id) : ApiPostService(url, data)
+        await response.then(()=> {window.location.reload()})
     }
 
     function handleChange(event) {
@@ -53,7 +54,7 @@ function FormMain({ type, editForm }) {
 
     return (
         <>
-            {confirmation && <Confirmation handleAction={handleSubmit} handleClose={handleClose} />}
+            {confirmation && <Confirmation methodType={editForm ? "put" : "post"} handleAction={handleSubmit} handleClose={handleClose} />}
             <div className="separator"></div>
             {type == "athlete" ?
                 <form className="formMain" onSubmit={handleClickSubmit} method="post">

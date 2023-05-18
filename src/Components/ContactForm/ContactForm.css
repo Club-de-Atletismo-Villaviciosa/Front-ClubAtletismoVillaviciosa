@@ -10,7 +10,7 @@ input, textarea {
 
 .contact-container {
     width: 50vw;
-    margin: auto;
+    margin:auto
 }
 
 .form-item {
@@ -59,4 +59,15 @@ input, textarea {
 
 .form-item textarea:valid {
     border: 2px solid black;
+}
+
+@media (max-width:800px) {
+
+    .contact-container{
+        width: 80%;
+        
+    }
+    .input-form{
+        width: 100%;
+    }
 }

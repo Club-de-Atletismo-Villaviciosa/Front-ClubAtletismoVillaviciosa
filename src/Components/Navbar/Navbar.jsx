@@ -2,12 +2,16 @@ import React, { useState } from 'react'
 import "./Navbar.css"
 import { IoIosArrowDown } from "react-icons/io"
 import { Link } from 'react-router-dom'
+import { useContext } from 'react'
+import { AuthContext } from '../../Services/AuthContext'
 import { FaBars } from "react-icons/fa";
 import { BiLogOut, BiLogIn } from "react-icons/bi";
 
 function Navbar() {
-    let [mode, setMode] = useState("close")
     const [isNavExpanded, setIsNavExpanded] = useState(false)
+    let [mode, setMode] = useState("close")
+    let {isLogged, setIsLogged} = useContext(AuthContext)
+
 
     function handleDropdownClick(e) {
         mode == "close" ? setMode("open") : setMode("close")

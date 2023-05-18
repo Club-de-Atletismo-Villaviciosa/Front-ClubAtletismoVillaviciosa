@@ -4,6 +4,8 @@ import ApiGetByIdService from '../../Services/ApiGetByIdService';
 import pencil from "../../assets/img/pencil.png";
 import "./News.css";
 import FormNews from '../FormNews/FormNews';
+import { useContext } from 'react';
+import { AuthContext } from '../../Services/AuthContext';
 
 const News = () => {
     const state = useLocation().state
@@ -11,6 +13,8 @@ const News = () => {
     const [data, setData] = useState({});
     const urlGeneral = "http://localhost:8080/api/v1/news";
     const [isOpen, setIsOpen] = useState(false);
+    let { isLogged } = useContext(AuthContext)
+
 
     const handleDropdownClick = () => {
         setIsOpen(!isOpen);
@@ -33,7 +37,7 @@ const News = () => {
             <div className='news-container'>
                 <div className='news-titlePencilForm'>
                     <h2>{data.title}</h2>
-                    <img data-testid="news-pencil" onClick={handleDropdownClick} className='news-pencil' src={pencil} alt="button to edit" />
+                    {isLogged && <img data-testid="news-pencil" onClick={handleDropdownClick} className='news-pencil' src={pencil} alt="button to edit" />}
                 </div>
                 <div data-testid="news-dropdown" className={`formNewsDropdown ${isOpen ? 'open' : 'close'}`}>
                     <FormNews item={data} />

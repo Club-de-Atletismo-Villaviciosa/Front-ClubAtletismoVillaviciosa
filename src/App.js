@@ -5,6 +5,8 @@ import NewsPage from './Pages/NewsPage/NewsPage';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ContactPage from "./Pages/ContactPage/ContactPage"
 import InfoPage from './Pages/InfoPage/InfoPage';
+import { AuthContext, AuthProvider } from './Services/AuthContext';
+import LoginPage from './Pages/LoginPage/LoginPage';
 
 function App() {
   const router = createBrowserRouter([
@@ -17,6 +19,10 @@ function App() {
       element: <NewsPage />
     },
     {
+      path: "/LoginPAge",
+      element: <LoginPage />
+    },
+    {
       path: "/ContactPage",
       element: <ContactPage />
     }, {
@@ -26,7 +32,9 @@ function App() {
 
   return (
     <div className="App">
-      <RouterProvider router={router} />
+      <AuthProvider>
+              <RouterProvider router={router} />
+      </AuthProvider>
     </div>
   );
 
