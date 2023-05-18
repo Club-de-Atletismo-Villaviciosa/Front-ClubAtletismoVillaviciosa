@@ -68,7 +68,12 @@
 .navbar-btn {
     display: none;
 }
-
+.navbar-btnLogOut {
+    font-size: 7vh;
+    margin-top: 20vh;
+    display: flex;
+    align-items: center;
+}
 @media (max-width: 800px) {
     .navbar {
         position: fixed;
