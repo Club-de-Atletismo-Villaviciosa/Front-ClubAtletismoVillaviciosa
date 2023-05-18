@@ -5,8 +5,9 @@ import { Link } from 'react-router-dom'
 import { useContext } from 'react'
 import { AuthContext } from '../../Services/AuthContext'
 import { FaBars } from "react-icons/fa";
-import { BiLogOut, BiLogIn } from "react-icons/bi";
+import { BiLogOut} from "react-icons/bi";
 import { VscAccount } from "react-icons/vsc";
+import Cookies from 'js-cookie'
 
 function Navbar() {
     const [isNavExpanded, setIsNavExpanded] = useState(false)
@@ -20,6 +21,11 @@ function Navbar() {
 
     const handleShowNavbar = () => {
         setIsNavExpanded(!isNavExpanded)
+    }
+
+    function handleLogout(){
+        Cookies.remove("user");
+        setIsLogged(false)
     }
 
     return (
@@ -47,8 +53,7 @@ function Navbar() {
             </div>
             <div className='navbar-bar'></div>
             <div className='navbar-btnLog'>
-                <Link to ={"/loginPage"}><VscAccount color='white' className='navbar-btnLogOut' /></Link>
-                {/* <BiLogOut className='navbar-btnLogOut' /> */}
+                {isLogged ? <BiLogOut onClick={handleLogout} color='white' className='navbar-btnLogOut' /> : <Link to ={"/loginPage"}><VscAccount color='white' className='navbar-btnLogOut' /></Link>}
             </div>
         </nav>
     )
