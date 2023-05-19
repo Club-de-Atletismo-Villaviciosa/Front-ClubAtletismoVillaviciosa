@@ -1,4 +1,5 @@
 import './App.css';
+import GoogleCalendar from './Components/Calendar/GoogleCalendar';
 import CalendarPage from './Pages/CalendarPage/CalendarPage';
 
 function App() {
@@ -6,7 +7,8 @@ function App() {
   return (
     <div className="App">
       
-      <CalendarPage />
+      {/* <CalendarPage /> */}
+      <GoogleCalendar />
     </div>
   );
 }
