@@ -1,9 +1,14 @@
 .header {
-    padding:2vh 0vh;
-    font-family: Playbill;
-    font-weight: lighter;
-    font-size: 8vh;
-    background-color: #244175;
-    color: white
+    /* padding:5vh 0vh; */
+/*--------------------------------------*/
+padding:2vh 0vh;
+font-family: Playbill;
+font-size: 8vh;
+background: linear-gradient(to right, #623173, #244175);
+
+color: white; 
+}
+.header h1{
+    font-weight:normal;
 }
  

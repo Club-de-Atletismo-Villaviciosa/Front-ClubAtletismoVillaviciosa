@@ -79,3 +79,8 @@ footer {
 .footer-copyright p {
     font-size: 1.1vw;
 }
+
+.footer-policy{
+    text-decoration: none;
+    color:black;
+}
