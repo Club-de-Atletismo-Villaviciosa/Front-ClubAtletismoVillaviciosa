@@ -10,10 +10,11 @@ const CalendarPage = () => {
 
         <Navbar />
 
-        <div className='mainCalendar'>
-            <Calendar />
-            <Footer />
+        <div className='main'>
+            <Calendar /> 
+            <Footer />           
         </div>
+        
     </div>
   )
 }
