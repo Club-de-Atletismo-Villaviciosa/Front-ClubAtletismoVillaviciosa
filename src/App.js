@@ -8,6 +8,7 @@ import InfoPage from './Pages/InfoPage/InfoPage';
 import { AuthContext, AuthProvider } from './Services/AuthContext';
 import LoginPage from './Pages/LoginPage/LoginPage';
 import CalendarPage from './Pages/CalendarPage/CalendarPage';
+import PolicyPage from './Components/PolicyPage/PolicyPage';
 
 function App() {
   const router = createBrowserRouter([
@@ -32,7 +33,11 @@ function App() {
     },{
     path:"/CalendarPage",
     element: <CalendarPage/>
-    }
+    },
+    {
+      path: "/PolicyPage",
+      element: <PolicyPage />
+    },
   ]);
 
   return (

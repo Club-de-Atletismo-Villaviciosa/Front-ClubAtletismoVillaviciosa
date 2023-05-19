@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Athlete from './Athlete/Athlete'
 import CallAxiosAthletes from "../../Services/CallAxiosAthletes";
 import "./Athletes.css"
-import img from "./../../assets/img/Athlete.jpg" 
+ 
 
 function Athletes({handleEdit}) {
     let [athletes, setAthletes] = useState([{}])

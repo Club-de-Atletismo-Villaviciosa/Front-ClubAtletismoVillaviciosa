@@ -9,7 +9,7 @@ const Footer = () => {
             <footer>
                 <div className='footer-main'>
                     <div className='footer-contact'>                        
-                            <a href="/">Contacto</a>
+                            <a href="/ContactPage">Contacto</a>
                             <p>elgaiteroatletismo@gmail.com</p>
                             <p>C/ Pintor Guillermo Simon (Villaviciosa) Asturias</p>                        
                     </div>
@@ -34,7 +34,8 @@ const Footer = () => {
                 </div>
 
                 <div className='footer-copyright'>
-                    <p>© 2023 Copyrigth</p>
+                    <p>©2023 Copyrigth</p>
+                    <a className='footer-policy' href="/PolicyPage"><p>Policy and Private</p></a>
                 </div>
             </footer>       
     )

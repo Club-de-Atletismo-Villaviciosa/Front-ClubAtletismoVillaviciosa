@@ -17,9 +17,9 @@ const NewsPage = () => {
         <div className='wrapper'>
           <News />
         </div>
-
+        <Footer/>
       </div>
-    <Footer/>
+    
     </div>
   )
 }

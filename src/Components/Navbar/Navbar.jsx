@@ -42,7 +42,7 @@ function Navbar() {
             <div className={`navbar-elements ${isNavExpanded && 'active'}`}>
                 <ul className='navbar-ul'>
                     <Link to={"/"}><li>Inicio</li></Link>
-                    <Link to={"/"}><li>Competiciones</li></Link>
+                    <Link to={"/calendarPage"}><li>Competiciones</li></Link>
                     <li className="click" onClick={handleDropdownClick}>Info. del club<IoIosArrowDown /></li>
                     <ul data-testid="navbar-dropdown" className={`navbar-ul-dropdown ${mode}`} >
                         <Link to={"/InfoPage"}><li>Historia</li></Link>

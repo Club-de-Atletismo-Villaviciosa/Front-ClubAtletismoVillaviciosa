@@ -28,9 +28,3 @@
     white-space: pre-line;
     
 }
-
-@media (max-width: 800px) {
-    .infoSection{
-        margin-left: 0;
-    }
-    }
