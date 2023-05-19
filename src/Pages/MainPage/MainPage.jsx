@@ -8,35 +8,37 @@ import LastThreeNews from "../../Components/LastThreeNews/LastThreeNews"
 import Footer from "../../Components/Footer/Footer"
 import Header from "../../Components/Header/Header"
 import NavbarRespo from "../../Components/Navbar/NavbarRespo"
-import { useState } from "react"
+import { useContext, useState } from "react"
+import { AuthContext } from "../../Services/AuthContext"
 
-function MainPage(){
+function MainPage() {
     const [isOpen, setIsOpen] = useState(false);
+    let { isLogged } = useContext(AuthContext)
+
     const handleDropdownClick = () => {
         setIsOpen(!isOpen);
     };
-   
-    return(    
+
+    return (
         <div>
-            <Navbar/>
+            <Navbar />
             {/* <NavbarRespo /> */}
-        
-        <div className="main"> 
-            <Header/>
-            <PhotoMainPage />
-            
-            <div className="wrapper">
-                <Carousel />
-                <LastThreeNews/>
-                <ButtonToForm  handleDropdownClick={handleDropdownClick} isOpen={isOpen}/>
-                <MainSection />
-                
+
+            <div className="main">
+                <Header />
+                <PhotoMainPage />
+
+                <div className="wrapper">
+                    <Carousel />
+                    <LastThreeNews />
+                    {isLogged && <ButtonToForm handleDropdownClick={handleDropdownClick} isOpen={isOpen} />}
+                    <MainSection />
+                </div>
+                <Footer />
             </div>
-            <Footer/>
+
         </div>
-        
-        </div>
-        
+
     )
 }
 
