@@ -1,0 +1,42 @@
+.privacy-policy{
+    text-align: center;
+    padding-top: 15vh;
+    max-width: 800px;
+    margin-left: 15vw;
+    padding: 20px;
+
+}
+
+.p_policy{
+    margin-bottom: 5vh;
+    max-width: 100vh;
+    margin: 0 auto;
+    text-align: justify;
+    margin-top: 5vh;
+    margin-top: 5vh;
+
+}
+.title_policy{
+    margin-bottom: 8vh;
+    font-size: 24px;
+    text-align: center;
+
+}
+
+.privacy-policy section{
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .title_policy {
+      font-size: 20px;
+    }
+  
+    .section h2 {
+      font-size: 16px;
+    }
+  
+    .p_policy {
+      font-size: 12px;
+    }
+  }
