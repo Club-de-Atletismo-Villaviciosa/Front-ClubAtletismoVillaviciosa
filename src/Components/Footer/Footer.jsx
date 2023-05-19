@@ -9,7 +9,7 @@ const Footer = () => {
             <footer>
                 <div className='footer-main'>
                     <div className='footer-contact'>                        
-                            <a href="/">Contacto</a>
+                            <a href="/ContactPage">Contacto</a>
                             <p>elgaiteroatletismo@gmail.com</p>
                             <p>C/ Pintor Guillermo Simon (Villaviciosa) Asturias</p>                        
                     </div>
