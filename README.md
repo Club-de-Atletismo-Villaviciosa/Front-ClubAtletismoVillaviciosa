@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+## Project: "RARE BOOKS"
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. [Project Description](#projectdescription)
+2. [Home Page](#homepage)
+3. [User Stories](#userstories)
+4. [Team Members](#teammembers)
+5. [Stacks](#stacks)
+6. [Goals](#goals)
 
-## Available Scripts
+## 1. Description
+This is a project developed for Hackathon F5 22-24 February 2023.
 
-In the project directory, you can run:
+A marketplace website for rare book vendors and buyers was created. 
 
-### `npm start`
+On this website, the vendor (specialist/antique/rare/independent book sellers) pays a fee to advertise books that they want to sell. Anyone looking for a specific book that is no longer for sale in mainstream bookshops can search for their book at this website. If they find the book on the website they can contact the vendor directly to purchase it. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 2. Home page 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<img width="640" alt="Homepage" src="https://user-images.githubusercontent.com/116795553/221128890-0abf6867-b04d-410d-8b46-04eb5cbf495d.JPG">
 
-### `npm test`
+## 3. User stories
+<h3>2.1 User Story (User):</h3>
+<ul>
+<li>Access rare books.</li>
+<li>Communicate with the vendor.</li>
+<li>Perform a product search by characteristics, keywords or location.</li>
+</ul>
+<h3>2.2 User Story (Vendor):</h3>
+<ul>
+<li>View the app as vendor.</li>
+<li>Access to post (edit, update, delete).</li>
+<li>Notify the user of newly arrived books.</li>
+</ul>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 4. Team Members
+| Name | Role | |
+| :--- | :---: | :---: |
+| Mihaela Gheorghiu | Scrum Master | https://github.com/mihaelagheorghiu10 |
+| Hilda Da Conceicao | Scrum Master (aux) | https://github.com/Hildacaro |
+| Juan Benito de Valle Mateos | Product Owner | https://github.com/Juan-Little |
+| Víctor Hugo Nieto | Product Owner (aux) | https://github.com/victornietof5 |
+| Gary Huayhuasi Lima | Developer | https://github.com/GaryHL |
+| Po Chan | Developer | https://github.com/pohengchan |
+| Camila Ruiz | Developer | https://github.com/camilaruiz17 |
+| Iris Echeverría Montes | Developer | https://github.com/Jeann11 |
+| Marta Muñoz Molero | Developer | https://github.com/MartaMunMol |
 
-### `npm run build`
+## 5. Stacks
+<img src= "https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt = "html"></img>
+<img src= "https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt = "css"></img>
+<img src= "https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt= "javascript"></img>
+<img src= "https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt= "php"></img>
+<img src= "https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt= "github"></img>
+<img src= "https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt= "laravel"></img><br>
+<img src= "https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt= "react"></img>
+<img src= "https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt= "bootstrap"></img>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Tools 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<ul>
+<li>Agile methodology - Scrum </li>
+<li>Jira - User Story and tasks </li>
+<li>Figma </li>
+<li>GitHub </li>
+<li>Postman </li>
+<li>Responsive </li>
+<li>Visual Studio Code </li>
+<li>IntelliJ IDEA </li>
+</ul>
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 6. Goals 
+<ul>
+<li>Use of a package manager </li>
+<li>Compile deployment artefacts </li>
+<li>Continuous Integration/ Continuous Deployment </li>
+</ul>
