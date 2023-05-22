@@ -13,7 +13,6 @@ function FormList({ editForm }) {
         let response = await editForm.description ? ApiPutService("http://localhost:8080/api/v1/listOfHonors", data, 1) : ApiPostService("http://localhost:8080/api/v1/listOfHonors", data)
         await response.then(() => { window.location.reload() })
 
-
     }
     function handleClose() {
         setConfirmation(false)
@@ -34,7 +33,6 @@ function FormList({ editForm }) {
         }
         setData(temp_data);
     }
-
 
     return (
         <>

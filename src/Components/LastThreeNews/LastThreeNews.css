@@ -1,61 +1,54 @@
 .item1 {
-    grid-area: item1;
-    width: 50vw;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .item2 {
-    grid-area: item2;
-    display: flex;
-    flex-direction: column; 
+  grid-area: item1;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+}
 
-    width: 25vw;
+.item2 {
+  grid-area: item2;
+  display: flex;
+  flex-direction: column;
+  width: 25vw;
+}
 
-  
-  }
-  
-  .item3 {
-    grid-area: item3;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 25vw;
-  }
-  
+.item3 {
+  grid-area: item3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 25vw;
+}
+
 .news-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
-    grid-template-areas:
-      "item1 item2 item2"
-      "item1 item3 item3";
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  grid-template-areas:
+    "item1 item2 item2"
+    "item1 item3 item3";
+  width: 100%;
+  margin-top: 10vh;
+}
+
+.first-cards {
+  vertical-align: top;
+}
+
+@media (max-width: 800px) {
+  .item1,
+  .item2,
+  .item3 {
     width: 100%;
-    margin-top: 10vh;
-   
+    text-align: start;
   }
   .first-cards {
-    vertical-align: top;
+    margin-left: 0;
   }
-
-  
-  @media (max-width: 800px){
-    .item1,.item2, .item3  {
-      width: 100%;
-      text-align: start;
-    }
-    .first-cards {
-      margin-left: 0;
-    }
-    .news-grid {
-      display: block;
-    }
-    .LastThreeNews {
-      text-align: start;
-    }
-  
+  .news-grid {
+    display: block;
   }
-   
-  
-  
-
+  .LastThreeNews {
+    text-align: start;
+  }
+}

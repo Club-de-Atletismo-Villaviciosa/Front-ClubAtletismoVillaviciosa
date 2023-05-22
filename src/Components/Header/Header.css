@@ -1,17 +1,17 @@
 .header {
-
-padding:2vh 0vh;
-font-family: Playbill;
-font-size: 3vw;
-background: linear-gradient(to right, #623173, #244175);
-
-color: white; 
+    padding: 2vh 0vh;
+    font-family: Playbill;
+    font-size: 3vw;
+    background: linear-gradient(to right, #623173, #244175);
+    color: white;
 }
-.header h1{
-    font-weight:normal;
+
+.header h1 {
+    font-weight: normal;
 }
+
 @media (max-width: 800px) {
     .header {
-    background: linear-gradient(to bottom, #623173, #244175);
+        background: linear-gradient(to bottom, #623173, #244175);
     }
 }

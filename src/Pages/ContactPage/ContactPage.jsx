@@ -11,7 +11,7 @@ const ContactPage = () => {
             <Navbar />
 
             <div className='main'>
-            <Header/>
+                <Header />
                 <div className="wrapper">
                     <ContactForm />
                 </div>

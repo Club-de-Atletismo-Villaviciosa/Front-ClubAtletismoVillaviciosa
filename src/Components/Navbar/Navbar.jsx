@@ -8,13 +8,12 @@ import { FaBars } from "react-icons/fa";
 import { BiLogOut} from "react-icons/bi";
 import { VscAccount } from "react-icons/vsc";
 import Cookies from 'js-cookie'
-
+import logoAVI_BN from "../../assets/img/logoAVI_BN.png";
 
 function Navbar() {
     const [isNavExpanded, setIsNavExpanded] = useState(false)
     let [mode, setMode] = useState("close")
     let {isLogged, setIsLogged} = useContext(AuthContext)
-
 
     function handleDropdownClick(e) {
         mode == "close" ? setMode("open") : setMode("close")
@@ -36,7 +35,7 @@ function Navbar() {
                     <FaBars />
                 </button>
                 <div className='navbar-logo'>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Escudo_de_Villaviciosa.svg/350px-Escudo_de_Villaviciosa.svg.png" alt="villaviciosa logo" />
+                    <img src={logoAVI_BN} alt="villaviciosa logo" />
                 </div>
             </div>
             <div className={`navbar-elements ${isNavExpanded && 'active'}`}>

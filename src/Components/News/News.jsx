@@ -15,7 +15,6 @@ const News = () => {
     const [isOpen, setIsOpen] = useState(false);
     let { isLogged } = useContext(AuthContext)
 
-
     const handleDropdownClick = () => {
         setIsOpen(!isOpen);
     };
@@ -29,7 +28,6 @@ const News = () => {
             .then((data) => setData(data))
             .catch((error) => console.error(error));
     }, []);
-
     
     return (
 

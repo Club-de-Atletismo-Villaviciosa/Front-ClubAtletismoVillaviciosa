@@ -1,17 +1,13 @@
 import axios from "axios";
 import url from "./UrlRequest"
 
-
-
 const CallAxiosAthletes = () => {
-
 
 const getAthletes = async () => {
     const res = await axios.get(`${url}/api/v1/athlete`);
     
     return res.data;
 }
-
 
 const getListOfHonors = async () => {
     const res = await axios.get(`${url}/api/v1/listOfHonors`);

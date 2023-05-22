@@ -1,5 +1,3 @@
-
-
 const AthleteText = [
     {id:1, text: "Me encanta este club porque creo que me hace crecer como atleta y como persona"},
     {id:2, text: "Siempre salgo ilusionada, contenta y con ganas de volver. Aquí tengo muchas amigas y me lo paso genial"},

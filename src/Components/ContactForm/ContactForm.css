@@ -62,10 +62,8 @@ input, textarea {
 }
 
 @media (max-width:800px) {
-
     .contact-container{
-        width: 80%;
-        
+        width: 80%;        
     }
     .input-form{
         width: 100%;

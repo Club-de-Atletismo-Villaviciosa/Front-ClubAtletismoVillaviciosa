@@ -5,8 +5,6 @@ import { useEffect, useState } from 'react';
 import arrowLeft from "../../assets/img/arrowLeft.png"
 import arrowRight from "../../assets/img/arrowRight.png"
 
-
-
 function MainSection() {
   const PAGE_SIZE = 10;
   const [data, setData] = useState([]);

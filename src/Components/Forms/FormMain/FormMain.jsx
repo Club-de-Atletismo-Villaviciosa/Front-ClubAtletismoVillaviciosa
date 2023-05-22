@@ -7,7 +7,6 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import InputPhoto from "../../InputPhoto/InputPhoto";
 import Confirmation from "../../Confirmation/Confirmation";
 
-
 function FormMain({ type, editForm }) {
     const url = "http://localhost:8080/api/v1/news"
 

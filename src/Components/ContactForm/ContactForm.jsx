@@ -1,4 +1,3 @@
-
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import './ContactForm.css';
@@ -48,7 +47,7 @@ const ContactForm = () => {
                 <div>
                     <ul className='contact-info'>
                         <li>Dirección: C/ Pintor Guillermo Simon (Villaviciosa) Asturias</li>
-                        <li>Email: clubatletismovillaviciosa@gmail.com</li>
+                        <li>Email: atvillaviciosa@gmail.com</li>
                     </ul>
                 </div>
 

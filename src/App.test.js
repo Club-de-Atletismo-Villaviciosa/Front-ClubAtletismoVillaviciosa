@@ -14,8 +14,6 @@ import AthleteText from './Components/Carousel/AthleteText';
 import InfoSection from './Components/InfoSection/InfoSection';
 import News from './Components/News/News';
 
-
-
 describe('Footer', () => {
   it('renders two images', () => {
     render(<Footer/>);
@@ -43,14 +41,11 @@ describe('Header', () => {
   });
 });
 
-
 test('renders an img tag', () => {
   render(<PhotoMainPage />);
   const imgElement = screen.getByRole('img');
   expect(imgElement).toBeInTheDocument();
 });
-
-
 
 test('handleDropdownClick toggles mode state', () => {
   render(
@@ -63,7 +58,6 @@ test('handleDropdownClick toggles mode state', () => {
   fireEvent.click(dropdownButton);
   expect(screen.getByTestId('navbar-dropdown')).toHaveClass('open');
 });
-
 
 test('handleDropdownClick toggles mode state', () => {
   render(
@@ -96,7 +90,6 @@ describe('Carousel', () => {
   });
 });
 
-
 test('renders home component for "/" route', () => {
   render(
     <App />
@@ -104,4 +97,3 @@ test('renders home component for "/" route', () => {
   const paginationButtons = screen.queryAllByRole('button');
   expect(paginationButtons.length).toBeGreaterThanOrEqual(2);
 });
-

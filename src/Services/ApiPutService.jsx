@@ -1,6 +1,5 @@
 import axios from "axios"
 
-
 async function ApiPutService(url, item, id) {
   try {
     let res = await axios.put(url + '/update/' + id, item)
