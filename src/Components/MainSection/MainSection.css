@@ -27,6 +27,7 @@
 border:none;
 display: flex;
 align-items: center;
+background-color: white;
 }
 
 .pagination-arrows{
@@ -48,10 +49,10 @@ align-items: center;
 @media (max-width: 850px){
     .pagination-buttonRight {
         position: absolute;
-        right: 10vw;
+        right: 15vw;
     }
     .pagination-buttonLeft{
         position: absolute;
-        left:24vw;
+        left:15vw;
     }
 }

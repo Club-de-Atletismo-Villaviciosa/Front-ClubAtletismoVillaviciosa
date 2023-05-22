@@ -6,10 +6,9 @@
   border-radius: 10px;
 }
 
-.slick-prev::before,
-.slick-next::before {
-  color: rgb(3, 3, 3) !important;
-}
+.slick-prev::before, .slick-next::before {
+    color: rgb(0, 0, 0) !important;
+  }
 
 .slider p {
   padding: 2vh;

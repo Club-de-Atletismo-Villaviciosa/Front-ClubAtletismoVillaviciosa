@@ -10,7 +10,7 @@ const Footer = () => {
                 <div className='footer-main'>
                     <div className='footer-contact'>                        
                             <a href="/ContactPage">Contacto</a>
-                            <p>elgaiteroatletismo@gmail.com</p>
+                            <p>atvillaviciosa@gmail.com</p>
                             <p>C/ Pintor Guillermo Simon (Villaviciosa) Asturias</p>                        
                     </div>
                     <div className='footer-mainPartners'>
@@ -32,7 +32,6 @@ const Footer = () => {
                         <p>(Christian Carbajo, Salah Raghib, Aurino Llera, Javier Bres)</p>
                     </div>
                 </div>
-
                 <div className='footer-copyright'>
                     <p>©2023 Copyrigth</p>
                     <a className='footer-policy' href="/PolicyPage"><p>Policy and Private</p></a>

@@ -40,7 +40,7 @@
 }
 
 .navbar-ul-dropdown {
-    transition: all 1s;
+    transition: all 0.7s ease-in-out;
     overflow: hidden;
 }
 
@@ -113,16 +113,21 @@ margin-top: 10vh;
         color: white;
         border: none;
         cursor: pointer;
+        margin-left: 3vw;
     }
     .navbar-logo {
         display: flex;
         justify-content: center;
-        align-items: center;
-        width: 14vh;
+        align-items: center; 
+     
+        
     }
-    .navbar-logo img {
-        width: 25%;
+    .navbar-logo img{
+        height: 5vh;
+        width: 7vw;
+        margin: 0vh 4vw 0vw 0vw;
     }
+   
     .navbar-elements {
         position: fixed;
         left: 0;

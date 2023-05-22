@@ -31,6 +31,10 @@ color: white;
 @media (max-width: 800px) {
     .header {
         background: linear-gradient(to bottom, #623173, #244175);
+<<<<<<< HEAD
 >>>>>>> 77919b80db43114938b3aa11ec16e2665b798c4f
+=======
+        font-size: 6vw;
+>>>>>>> b97807bc847d52b43dcf0a5bc308c967165e6776
     }
 }

@@ -35,7 +35,7 @@ function Navbar() {
                     <FaBars />
                 </button>
                 <div className='navbar-logo'>
-                    <img src={logoAVI_BN} alt="villaviciosa logo" />
+                    <img  src={logoAVI_BN} alt="villaviciosa logo" />
                 </div>
             </div>
             <div className={`navbar-elements ${isNavExpanded && 'active'}`}>
