@@ -98,11 +98,10 @@ function FormMain({ type, editForm }) {
                     <div className="formMain-image">
                         <label>Imagen:</label>
                         <div className="formMain-image-inputAndButton">
-                            {/* <input type="url" name="url" onChange={handleChange} defaultValue={State ? State.url: ""} autoComplete="off" placeholder="Enlace de Imgur" required pattern="https?://.+" /> */}
                             <textarea name='url' defaultValue={editForm ? edit.url : base64} required className="form-control" placeholder="Añade una foto" onChange={handleChange}
                                 id="photo" />
                             <InputPhoto setBase64={setBase64} setData={setData} />
-                            <p>(Asegurate que la foto esté centrada)</p>
+                            <p>(Asegúrate de que la foto esté centrada)</p>
                         </div>
                     </div>
                     <div className="formMain-activity">

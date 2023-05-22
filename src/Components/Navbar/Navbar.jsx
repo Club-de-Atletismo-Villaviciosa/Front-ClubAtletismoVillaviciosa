@@ -51,12 +51,13 @@ function Navbar() {
                     </ul>
                     <Link className='navbar-contacto' to="/ContactPage"><li>Contacto</li></Link>
                 </ul>
-            </div>
+                </div>
             <div className='navbar-bar'>                
             </div>
-            <div className='navbar-btnLog'>
-                {isLogged ? <BiLogOut onClick={handleLogout} color='white' className='navbar-btnLogOut' /> : <Link to ={"/loginPage"}><VscAccount color='white' className='navbar-btnLogOut' /></Link>}
+            <div className="navbar-btnLogDiv">
+                {isLogged ? <BiLogOut onClick={handleLogout} color='white' className='navbar-btnLogOut'/> : <Link to ={"/loginPage"}><VscAccount color='white' className='navbar-btnLogOut' /></Link>}
             </div>
+            
         </nav>
     )
 }
