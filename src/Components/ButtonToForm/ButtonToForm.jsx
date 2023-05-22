@@ -4,10 +4,6 @@ import React, { useState } from 'react'
 
 function ButtonToForm({type, editForm, handleDropdownClick, isOpen}){
 
-    console.log("llega")
-
-
-
 return(
     <div className="buttonToForm">
         <button data-testid="buttonToForm-button" className="buttonToForm-button" onClick={handleDropdownClick}><span className="buttonToForm-span">{type == "athlete"? "Publicar un/a atleta" : "Publicar una actividad"}</span></button>

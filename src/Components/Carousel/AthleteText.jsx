@@ -1,5 +1,3 @@
-
-
 const AthleteText = [
     {id:1, text:"El Gaitero Atletismo es como mi segunda casa, porque me siento a gusto con los compañeros, con el entrenador y con el ambiente; Raquel. 13 años"},
     {id:2, text:"Para mi El Gaitero es com mi segunda familia porque cuando me canso o algo por el estilo me apoya y ayudan; Cecilia 12 años"},

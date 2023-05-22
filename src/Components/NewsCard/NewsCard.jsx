@@ -15,8 +15,6 @@ function NewsCard({ id, url, title, news, customClass }) {
     const [confirmation, setConfirmation] = useState(false)
     let { isLogged } = useContext(AuthContext)
 
-
-
     const handleDelete = () => {
         ApiDeleteService(urlGeneral, id)
             .then(() => window.location.reload())

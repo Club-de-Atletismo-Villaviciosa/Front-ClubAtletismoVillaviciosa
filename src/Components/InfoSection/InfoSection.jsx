@@ -24,7 +24,6 @@ function InfoSection() {
     setCheckEdit(!checkEdit);
   }
 
-
   const handleDropdownClick = () => {
     setIsOpen(!isOpen);
   };

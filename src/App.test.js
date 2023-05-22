@@ -16,8 +16,6 @@ import News from './Components/News/News';
 import { AuthContext, AuthProvider } from './Services/AuthContext';
 
 
-
-
 describe('Footer', () => {
   it('renders two images', () => {
     render(<Footer/>);
@@ -45,14 +43,11 @@ describe('Header', () => {
   });
 });
 
-
 test('renders an img tag', () => {
   render(<PhotoMainPage />);
   const imgElement = screen.getByRole('img');
   expect(imgElement).toBeInTheDocument();
 });
-
-
 
 test('handleDropdownClick toggles mode state', () => {
   render(
@@ -123,7 +118,6 @@ describe('Carousel', () => {
   });
 });
 
-
 test('renders home component for "/" route', () => {
   render(
     <App />
@@ -131,4 +125,3 @@ test('renders home component for "/" route', () => {
   const paginationButtons = screen.queryAllByRole('button');
   expect(paginationButtons.length).toBeGreaterThanOrEqual(2);
 });
-

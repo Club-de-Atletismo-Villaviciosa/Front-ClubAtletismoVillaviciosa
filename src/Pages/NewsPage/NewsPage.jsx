@@ -9,17 +9,16 @@ import Footer from "../../Components/Footer/Footer"
 const NewsPage = () => {
   return (
     <div>
-
-      <Navbar />     
-
+      
+      <Navbar />
       <div className='main'>
-        <Header/>
+        <Header />
         <div className='wrapper'>
           <News />
         </div>
-        <Footer/>
+        <Footer />
       </div>
-    
+
     </div>
   )
 }

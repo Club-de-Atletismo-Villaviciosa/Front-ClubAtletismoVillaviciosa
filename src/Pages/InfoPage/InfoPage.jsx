@@ -7,16 +7,21 @@ import { useContext } from 'react'
 import { AuthContext } from '../../Services/AuthContext'
 
 function InfoPage() {
-  
+
   return (
     <div>
+
       <Navbar />
-        <div className='main'>
-        <InfoSection />
+      <div className='main'>
+        <Header />
+        <div className='wrapper'>
+          <InfoSection />
+        </div>
         <Footer />
       </div>
+      
     </div>
-    
+
   )
 }
 

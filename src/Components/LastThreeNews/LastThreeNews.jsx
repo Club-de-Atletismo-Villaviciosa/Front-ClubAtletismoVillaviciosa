@@ -35,6 +35,5 @@ return (
   </div>
 );
 }
-
     
 export default LastThreeNews
