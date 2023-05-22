@@ -3,8 +3,7 @@ import "./InputPhoto.css"
 
 function InputPhoto({setBase64, setData}) {
     const [file, setFile] = useState(null);
-    const [imagePreview, setImagePreview] = useState(null);
-    
+    const [imagePreview, setImagePreview] = useState(null);    
    
     const handleFileChange = (e) => {
         const selectedFile = e.target.files[0];
@@ -31,14 +30,10 @@ function InputPhoto({setBase64, setData}) {
                 context.drawImage(image, 0, 0);
                 const base64 = canvas.toDataURL();
                 setBase64(base64);
-                setData(prevData => ({...prevData, url: base64}));
-                
-               
-                
+                setData(prevData => ({...prevData, url: base64}));                
             };
         }
-    }, [imagePreview]);
-   
+    }, [imagePreview]);   
 
     return (
         <div className='input-file-container'>

@@ -24,7 +24,6 @@ function InfoSection() {
     setCheckEdit(!checkEdit);
   }
 
-
   const handleDropdownClick = () => {
     setIsOpen(!isOpen);
   };
@@ -37,7 +36,7 @@ function InfoSection() {
           return setCheckEdit(!checkEdit);
         }
         setPalmares(data)
-        console.log(data)
+       
       })
       .catch((error) => console.error(error))
   }, []);
@@ -57,7 +56,6 @@ function InfoSection() {
         </div>
         <p className="pre-wrap">{palmares[0].description}</p>
       </div>
-      {/* <button>Publicar un/a atleta</button> */}
       {isLogged && <ButtonToForm type="athlete" editForm={editForm} handleDropdownClick={handleDropdownClick} isOpen={isOpen} />}
       <Athletes handleEdit={handleAthleteEdit} />
     </div>

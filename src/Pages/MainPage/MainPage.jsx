@@ -20,8 +20,7 @@ function MainPage() {
 
     return (
         <div>
-            <Navbar />
-     
+            <Navbar />     
 
             <div className="main">
                 <Header />

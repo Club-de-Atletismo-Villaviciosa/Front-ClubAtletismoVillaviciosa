@@ -1,7 +1,6 @@
 import axios from "axios"
 import Cookies from "js-cookie"
 
-
 async function ApiPutService(url, item, id) {
   let token = Cookies.get("user")
   try {

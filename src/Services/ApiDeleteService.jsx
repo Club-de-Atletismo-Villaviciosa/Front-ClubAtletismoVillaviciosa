@@ -2,7 +2,6 @@ import axios from "axios";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
 
-
 async function ApiDeleteService(url, id) {
     let token = Cookies.get("user")
 

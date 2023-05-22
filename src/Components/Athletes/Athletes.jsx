@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Athlete from './Athlete/Athlete'
 import CallAxiosAthletes from "../../Services/CallAxiosAthletes";
-import "./Athletes.css"
- 
+import "./Athletes.css" 
 
 function Athletes({handleEdit}) {
     let [athletes, setAthletes] = useState([{}])

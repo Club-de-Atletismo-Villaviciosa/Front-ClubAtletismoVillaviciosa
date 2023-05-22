@@ -1,4 +1,3 @@
-
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import './ContactForm.css';
@@ -25,7 +24,7 @@ const ContactForm = () => {
     return (
         <div className='contact-container'>
             <form className='contact-form' ref={form} onSubmit={sendEmail}>
-            <h1>CONTACTO</h1>
+            <h2>CONTACTO</h2>
                 <div className='form-item'>
                     <label>Nombre:*</label><br />
                     <input type="text" name="user_name" id='user_name' maxLength="30" 
@@ -48,7 +47,7 @@ const ContactForm = () => {
                 <div>
                     <ul className='contact-info'>
                         <li>Dirección: C/ Pintor Guillermo Simon (Villaviciosa) Asturias</li>
-                        <li>Email: clubatletismovillaviciosa@gmail.com</li>
+                        <li>Email: atvillaviciosa@gmail.com</li>
                     </ul>
                 </div>
 

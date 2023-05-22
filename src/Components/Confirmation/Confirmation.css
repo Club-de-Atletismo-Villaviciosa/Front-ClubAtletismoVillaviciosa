@@ -9,7 +9,6 @@
     justify-content: center;
     align-items: center;
     z-index: 5;
-
 }
 
 .confirmation{
@@ -34,7 +33,6 @@
     gap: 2vw;
     margin-top: 2.5vh;
 }
-
 
 .action-button{
     padding: 1vh 2vh 1vh 2vh;

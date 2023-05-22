@@ -1,25 +1,25 @@
 .input-file-container input[type="file"] {
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-  }
-  
-  .custom-file-button {
-    background-color:#9395D3;
-position: relative;
-    border-radius: 5px;
-    border-style: none;
-    width: 30vw;
-    height: 10vh;
-    cursor: pointer;
-    color: white;
-    font-size: 2vh;
-    margin-left: 1vw;
-   
-  }
-  .input-file-container{
-    position: relative;
-  }
-  
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.custom-file-button {
+  background-color: #9395D3;
+  position: relative;
+  border-radius: 5px;
+  border-style: none;
+  width: 30vw;
+  height: 10vh;
+  cursor: pointer;
+  color: white;
+  font-size: 2vh;
+  margin-left: 1vw;
+  padding: 0.5vh 2vw;
+}
+
+.input-file-container {
+  position: relative;
+}

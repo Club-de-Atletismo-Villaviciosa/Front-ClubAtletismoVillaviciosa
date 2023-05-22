@@ -13,7 +13,7 @@ function PolicyPage() {
         
     <div className="privacy-policy">
         
-      <h1 className='title_policy'>POLÍTICA DE PRIVACIDAD</h1>
+      <h2 className='title_policy'>POLÍTICA DE PRIVACIDAD</h2>
 
     <section>
       <h2>Información recopilada</h2>

@@ -36,8 +36,6 @@ function Athlete({ athlete, handleEdit }) {
     setTypeConfirmation("delete")
   }
 
-
-
   return (
     <div className='athlete'>
       {confirmation && <Confirmation type={typeConfirmation} athlete={athlete} handleAction={typeConfirmation == "delete"? handleDelete : handleEdit} handleClose={handleClose} />}

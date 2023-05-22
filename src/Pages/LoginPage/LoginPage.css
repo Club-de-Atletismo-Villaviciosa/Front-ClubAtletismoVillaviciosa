@@ -1,20 +1,16 @@
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50vh;
-  }
-
-  .loginInput{
-    margin-bottom: 2vh;
-    margin-left: 1vw;;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
 }
 
-.LoginTitle{
-    padding-top: 10vh;
-    text-align: center;
+.loginInput {
+  margin-bottom: 2vh;
+  margin-left: 1vw;
 }
 
-
-  
-  
+.LoginTitle {
+  padding-top: 3vh;
+  text-align: center;
+}

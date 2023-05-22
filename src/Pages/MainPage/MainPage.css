@@ -1,15 +1,22 @@
 .main {
     margin-left: 15vw;
-    
 }
+
 .wrapper {
-margin:0vw 3vw;
+    margin: 0vw 3vw;
 }
 
 @media (max-width: 800px) {
+<<<<<<< HEAD
 .main {
     margin-left: 0;
     margin-top: 7vh;
 }
 
+=======
+    .main {
+        margin-left: 0;
+        margin-top: 7vh;
+    }
+>>>>>>> 77919b80db43114938b3aa11ec16e2665b798c4f
 }

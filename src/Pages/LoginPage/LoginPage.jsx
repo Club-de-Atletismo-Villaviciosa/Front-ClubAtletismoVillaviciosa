@@ -6,12 +6,13 @@ import { useContext } from 'react';
 import { AuthContext } from '../../Services/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../../Components/Navbar/Navbar';
+import Header from '../../Components/Header/Header';
+import Footer from '../../Components/Footer/Footer';
 
 function LoginPage() {
     const [data, setData] = useState({username: "", password: ""})
     let {setIsLogged} = useContext(AuthContext)
     let navigate = useNavigate()
-
 
     function handleChange(event) {
         const target = event.target;
@@ -31,13 +32,17 @@ function LoginPage() {
 
     return (
         <>
+
         <Navbar />
-        <h1 className='LoginTitle'>Solo Para Administradores</h1>
+        <div className='main'>
+        <Header />
+        <div className='wrapper'>
+        <h2 className='LoginTitle'>Solo para administradores</h2>
         <div className='container'>
             <form onSubmit={handleSubmit}>
                 <div>
                     <label>Username:</label>
-                    <input type="username" name="username" value={data.username} onChange={handleChange} className='loginInput'/>
+                    <input type="username" name="username" value={data.username} onChange={handleChange} autoFocus className='loginInput'/>
                 </div>
                 <div>
                     <label>Password:</label>
@@ -46,6 +51,10 @@ function LoginPage() {
                 <button type="submit">Iniciar sesión</button>
             </form>
         </div>
+        </div>
+        <Footer />
+        </div>
+
     </>
     );
 }

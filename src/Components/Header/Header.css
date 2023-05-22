@@ -1,4 +1,5 @@
 .header {
+<<<<<<< HEAD
     /* padding:5vh 0vh; */
 /*--------------------------------------*/
 padding:2vh 0vh;
@@ -7,14 +8,29 @@ font-size: 3vw;
 background: linear-gradient(to right, #623173, #244175);
 
 color: white; 
+=======
+    padding: 2vh 0vh;
+    font-family: Playbill;
+    font-size: 3vw;
+    background: linear-gradient(to right, #623173, #244175);
+    color: white;
+>>>>>>> 77919b80db43114938b3aa11ec16e2665b798c4f
 }
-.header h1{
-    font-weight:normal;
+
+.header h1 {
+    font-weight: normal;
 }
+<<<<<<< HEAD
  
 @media (max-width: 800px) {
     .header{
         background: linear-gradient(to bottom, #623173, #244175);
 
+=======
+
+@media (max-width: 800px) {
+    .header {
+        background: linear-gradient(to bottom, #623173, #244175);
+>>>>>>> 77919b80db43114938b3aa11ec16e2665b798c4f
     }
 }

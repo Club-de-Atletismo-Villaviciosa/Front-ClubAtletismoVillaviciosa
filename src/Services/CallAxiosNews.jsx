@@ -1,10 +1,7 @@
 import axios from "axios";
 import urlRequest from "./UrlRequest"
 
-
-
 const CallAxiosNews = () => {
-
 
 const getNews = async () => {
     const res = await axios.get(`${urlRequest}/api/v1/news`);
