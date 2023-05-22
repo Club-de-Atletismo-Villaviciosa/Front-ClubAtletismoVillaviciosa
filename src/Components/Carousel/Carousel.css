@@ -8,7 +8,7 @@
 }
 
 .slick-prev::before, .slick-next::before {
-    color: rgb(3, 3, 3) !important;
+    color: rgb(0, 0, 0) !important;
   }
 
   .slider p{

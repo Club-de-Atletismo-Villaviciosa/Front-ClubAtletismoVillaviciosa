@@ -22,7 +22,9 @@
     margin-left: 1vw;
     
 }
-
+.newsCard-titlePencilTrash h2{
+    cursor: pointer;
+}
 .newsCard-imgNews{
     width: 20vw;
     cursor: pointer;
