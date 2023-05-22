@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 
 function ButtonToForm({type, editForm, handleDropdownClick, isOpen}){
 
-    
+    console.log("llega")
 
 
 

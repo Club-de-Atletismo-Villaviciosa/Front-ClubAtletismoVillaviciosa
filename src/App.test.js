@@ -13,6 +13,8 @@ import Carousel from './Components/Carousel/Carousel';
 import AthleteText from './Components/Carousel/AthleteText';
 import InfoSection from './Components/InfoSection/InfoSection';
 import News from './Components/News/News';
+import { AuthContext, AuthProvider } from './Services/AuthContext';
+
 
 
 
@@ -20,7 +22,7 @@ describe('Footer', () => {
   it('renders two images', () => {
     render(<Footer/>);
     const images = screen.getAllByRole('img');
-    expect(images).toHaveLength(2);
+    expect(images).toHaveLength(3);
   });
 });
 
@@ -54,23 +56,41 @@ test('renders an img tag', () => {
 
 test('handleDropdownClick toggles mode state', () => {
   render(
-    <MemoryRouter>
+    <AuthProvider>
+      <MemoryRouter>
   <Navbar />
   </MemoryRouter>
+  </AuthProvider>
   
   );
   const dropdownButton = screen.getByText('Info. del club');
   fireEvent.click(dropdownButton);
   expect(screen.getByTestId('navbar-dropdown')).toHaveClass('open');
-});
 
+});
+const TestWrapper = ({ children }) => {
+  const customAuthValue = {
+    isLogged: true, 
+    setIsLogged:() => {}
+    // other properties your AuthContext might have
+  };
+
+  return (
+    <AuthContext.Provider value={customAuthValue}>
+      {children}
+    </AuthContext.Provider>
+  );
+};
 
 test('handleDropdownClick toggles mode state', () => {
   render(
-    <MemoryRouter>
-    <InfoSection />
-  </MemoryRouter>
-  );
+    <TestWrapper>
+      <MemoryRouter>
+        <InfoSection />
+      </MemoryRouter>
+    </TestWrapper>
+    
+  )
   const dropdownButton = screen.getByTestId('buttonToForm-button');
   fireEvent.click(dropdownButton);
   expect(screen.getByTestId('button-dropdown')).toHaveClass('open');
@@ -78,9 +98,11 @@ test('handleDropdownClick toggles mode state', () => {
 
 test('handleDropdownClick toggles mode state', () => {
   render(
+    <TestWrapper>
     <MemoryRouter initialEntries={[{ state: { id: 1, url: 'example.jpg', title: 'Example Title', news: 'Example news' } }]}>
       <News />
     </MemoryRouter>
+    </TestWrapper>
   );
   const dropdownButton = screen.getByTestId('news-pencil');
   fireEvent.click(dropdownButton);
@@ -89,7 +111,12 @@ test('handleDropdownClick toggles mode state', () => {
 
 describe('Carousel', () => {
   it('should render a slider with athlete text opinions', () => {
-    render(<Carousel />);
+    render(
+     
+    <Carousel />
+   
+    
+    );
     AthleteText.forEach((text) => {
       expect(screen.getAllByText(text.text)[0]).toBeVisible();
     });
