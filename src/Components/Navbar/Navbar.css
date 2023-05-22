@@ -40,7 +40,7 @@
 }
 
 .navbar-ul-dropdown {
-    transition: all 1s;
+    transition: all 0.7s ease-in-out;
     overflow: hidden;
 }
 
