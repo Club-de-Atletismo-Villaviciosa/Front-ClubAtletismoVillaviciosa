@@ -38,7 +38,7 @@ function Navbar() {
                     <img  src={logoAVI_BN} alt="villaviciosa logo" />
                 </div>
             </div>
-            <div className={`navbar-elements ${isNavExpanded && 'active'}`}>
+            <div className={`navbar-elements ${isNavExpanded ? 'active': 'inactive'}`}>
                 <ul className='navbar-ul'>
                     <Link to={"/"}><li>Inicio</li></Link>
                     <Link to={"/calendarPage"}><li>Competiciones</li></Link>

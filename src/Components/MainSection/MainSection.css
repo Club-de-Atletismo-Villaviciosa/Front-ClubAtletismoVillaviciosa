@@ -10,16 +10,19 @@
     margin-left: 0.5vw;
     margin-right: 0.5vw;
     text-align: center;
+
 }
 
-.active{
+.active, .inactive{
     font-weight: bold;
     color:#623173;
     font-size: 2.5vh;
-    
+    user-select: none;
 }
 
 .pagination button{
+    background-color: white;
+    cursor: pointer;
 border:none;
 display: flex;
 align-items: center;
