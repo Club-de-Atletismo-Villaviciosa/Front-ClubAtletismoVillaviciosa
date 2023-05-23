@@ -1,5 +1,4 @@
 import "./FormMain.css"
-import CallAxiosNews from "../../../Services/CallAxiosNews"
 import ApiPostService from '../../../Services/ApiPostService';
 import ApiPutService from '../../../Services/ApiPutService';
 import React, { useEffect, useState } from 'react';
@@ -21,7 +20,7 @@ function FormMain({ type, editForm }) {
         }
     }, [editForm])
 
-    console.log(data)   
+     
     async function handleSubmit(event) {
         if (type == "athlete") {
           let response = await  editForm ? ApiPutService("http://localhost:8080/api/v1/athlete", data, editForm.id) : ApiPostService("http://localhost:8080/api/v1/athlete", data)
