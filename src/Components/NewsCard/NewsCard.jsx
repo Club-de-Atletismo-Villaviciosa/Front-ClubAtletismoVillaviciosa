@@ -24,10 +24,7 @@ function NewsCard({ id, url, title, news, date, customClass }) {
     }
     const maxLength = 300;
 
-
-    console.log(date)
     function splitDate(text) {
-        console.log(date)
         if(text){
             let parts = text.split("T")
             return parts[0]
