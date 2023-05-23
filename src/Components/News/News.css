@@ -14,13 +14,23 @@
     margin: 3vh 0vh;
 }
 
-.news-newsUrl {
-    margin-bottom: 4vh;
-}
+
 
 .news-container p {
     text-align: justify;
     margin: 0vh 20vh 4vh;    
+}
+
+.news-image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh;
+    margin-bottom: 4vh;
+}
+
+.news-image .small{
+    cursor: default;
 }
 
 @media (max-width: 800px) {

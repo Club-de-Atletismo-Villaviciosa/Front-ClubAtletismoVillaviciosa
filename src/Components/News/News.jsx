@@ -19,6 +19,11 @@ const News = () => {
         setIsOpen(!isOpen);
     };
 
+    function replaceDate(text) {
+        let date = text.replace("T", " ")
+        return date
+    }
+
     useEffect(() => {
         if (state.edit) {
             setIsOpen(!isOpen);
@@ -28,7 +33,7 @@ const News = () => {
             .then((data) => setData(data))
             .catch((error) => console.error(error));
     }, []);
-    
+
     return (
 
         <div>
@@ -40,7 +45,10 @@ const News = () => {
                 <div data-testid="news-dropdown" className={`formNewsDropdown ${isOpen ? 'open' : 'close'}`}>
                     <FormNews item={data} />
                 </div>
-                <img className='news-newsUrl' src={data.url} alt="Imagen de una noticia" width="750" />
+                <div className='news-image'>
+                    <img className='news-newsUrl' src={data.url} alt="Imagen de una noticia" width="750" />
+                    <small className='small'>{data.date}</small>
+                </div>
                 <p className='pre-wrap'>{data.news}</p>
             </div>
         </div>

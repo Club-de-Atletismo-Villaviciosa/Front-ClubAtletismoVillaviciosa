@@ -8,7 +8,7 @@ import { useState } from "react"
 import { useContext } from "react"
 import { AuthContext } from "../../Services/AuthContext"
 
-function NewsCard({ id, url, title, news, customClass }) {
+function NewsCard({ id, url, title, news, date, customClass }) {
 
     const urlGeneral = "http://localhost:8080/api/v1/news"
     let navigate = useNavigate()
@@ -21,6 +21,16 @@ function NewsCard({ id, url, title, news, customClass }) {
             .catch((error) => console.error(error));
     }
     const maxLength = 300;
+
+
+    console.log(date)
+    function splitDate(text) {
+        console.log(date)
+        if(text){
+            let parts = text.split("T")
+            return parts[0]
+        }
+    }
 
     function handleClose() {
         setConfirmation(false)
@@ -37,7 +47,7 @@ function NewsCard({ id, url, title, news, customClass }) {
             <img className={`newsCard-imgNews ${customClass}`} alt="Imagen de la noticia" onClick={() => { navigate("/NewsPage", { state: { id, title, url, news } }) }} tabIndex="0" title="Haz clic para leer la noticia completa" src={url}></img>
             <div className="newsCard-containerNews">
                 <div className="newsCard-titlePencilTrash">
-                    <h2  onClick={() => { navigate("/NewsPage", { state: { id, title, url, news } }) }} alt="Título de la noticia">{title}</h2>
+                    <h2  onClick={() => { navigate("/NewsPage", { state: { id, title, url, news } }) }} alt="Título de la noticia">{title} <small className='small'>{splitDate(date)}</small></h2>
                     {isLogged && (<><img onClick={() => { navigate("/NewsPage", { state: { id, title, url, news, edit: true} }) }} src={pencil} />
                     <img onClick={handleClickSubmit} src={trash} /></>)}
                 </div>

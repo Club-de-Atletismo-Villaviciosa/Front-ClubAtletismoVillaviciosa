@@ -53,7 +53,7 @@ function MainSection() {
   return (
     <div  className="mainSection">
       {newData.sort((a, b) => b.id - a.id).map((item) =>(
-        <NewsCard data-testid="news-card" customClass="newsCard" key={item.id} id={item.id} title={item.title} url={item.url} news={item.news} />
+        <NewsCard data-testid="news-card" customClass="newsCard" key={item.id} id={item.id} title={item.title} url={item.url} date={item.date} news={item.news} />
       ))}
       
       <div data-testid="pagination" className="pagination">

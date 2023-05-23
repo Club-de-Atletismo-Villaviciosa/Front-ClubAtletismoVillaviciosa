@@ -24,6 +24,7 @@ return (
             title={item.title}
             url={item.url}
             news={item.news}
+            date={item.date}
             customClass={`first-cards ${
               index === 0 ? "item1" :
               index === 1 ? "item2" : 
