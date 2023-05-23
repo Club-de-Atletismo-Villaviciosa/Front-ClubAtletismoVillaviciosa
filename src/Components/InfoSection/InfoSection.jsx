@@ -58,6 +58,7 @@ function InfoSection() {
         <p className="pre-wrap">{palmares[0].description}</p>
       </div>
       {isLogged && <ButtonToForm type="athlete" editForm={editForm} handleDropdownClick={handleDropdownClick} isOpen={isOpen} />}
+      <h2>Perfiles de los atletas</h2>
       <Athletes handleEdit={handleAthleteEdit} />
     </div>
   )
