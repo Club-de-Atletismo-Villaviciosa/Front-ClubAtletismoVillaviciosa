@@ -1,5 +1,5 @@
 import "./MainSection.css"
-import CallAxiosNews from "../../Services/CallAxiosNews";
+import ApiGetService from "../../Services/ApiGetService"
 import NewsCard from "../NewsCard/NewsCard";
 import { useEffect, useState } from 'react';
 import arrowLeft from "../../assets/img/arrowLeft.png"
@@ -7,13 +7,12 @@ import arrowRight from "../../assets/img/arrowRight.png"
 
 function MainSection() {
   const PAGE_SIZE = 10;
+  const urlGeneral = "http://localhost:8080/api/v1/news"
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   
   useEffect(() => {
-    CallAxiosNews().getNews()
-      .then((data) => setData(data))
-      .catch((error) => console.error(error));
+     ApiGetService(urlGeneral).then((data)=>{setData(data)})
   }, []);
   
   const newData = [...data].slice(0,-3).reverse();

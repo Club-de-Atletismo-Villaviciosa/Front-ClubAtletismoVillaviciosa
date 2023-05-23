@@ -16,8 +16,9 @@ const FormNews = ({ item, customClass }) => {
     function handleSubmit(event) {
         ApiPutService(urlGeneral, data, State.id)
             .then(response => console.log("API response:", response))
+            .then(()=>{window.location.reload()})
             .catch(error => console.error("API error:", error))
-            .then(window.location.reload())
+             
     }
 
     function handleChange(event) {

@@ -10,7 +10,7 @@ function PolicyPage() {
         <Navbar/>
         <div className='main'>
         <Header/>
-        
+    <div className='container-privacyPolicy'>            
     <div className="privacy-policy">
         
       <h2 className='title_policy'>POLÍTICA DE PRIVACIDAD</h2>
@@ -46,6 +46,7 @@ function PolicyPage() {
         a facilisis enim erat non metus.
       </p>
     </section>
+  </div>
   </div>
   <Footer/>
   </div>

@@ -4,9 +4,9 @@ import { MdModeEditOutline } from "react-icons/md"
 import Athletes from '../Athletes/Athletes';
 import ButtonToForm from '../ButtonToForm/ButtonToForm';
 import FormList from '../Forms/FormListOfHonors/FormList';
-import CallAxiosAthletes from '../../Services/CallAxiosAthletes';
 import { AuthContext } from '../../Services/AuthContext';
 import { useContext } from 'react';
+import ApiGetService from '../../Services/ApiGetService';
 
 function InfoSection() {
   let [palmares, setPalmares] = useState([{ description: "" }]);
@@ -14,6 +14,7 @@ function InfoSection() {
   const [isOpen, setIsOpen] = useState(false);
   const [checkEdit, setCheckEdit] = useState(false);
   let {isLogged} = useContext(AuthContext)
+  const urlGeneral = "http://localhost:8080/api/v1/listOfHonors"
 
   function handleAthleteEdit(athlete) {
     setEditForm(athlete)
@@ -29,7 +30,7 @@ function InfoSection() {
   };
 
   useEffect(() => {
-    CallAxiosAthletes().getListOfHonors()
+    ApiGetService(urlGeneral)
       .then((data) => {
         console.log(data)
         if (data.length == 0 || data[0].description == null ||  data[0].description == "") {
@@ -57,6 +58,7 @@ function InfoSection() {
         <p className="pre-wrap">{palmares[0].description}</p>
       </div>
       {isLogged && <ButtonToForm type="athlete" editForm={editForm} handleDropdownClick={handleDropdownClick} isOpen={isOpen} />}
+      <h2>Perfiles de los atletas</h2>
       <Athletes handleEdit={handleAthleteEdit} />
     </div>
   )

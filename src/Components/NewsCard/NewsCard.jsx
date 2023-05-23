@@ -4,12 +4,14 @@ import pencil from "../../assets/img/pencil.png"
 import trash from "../../assets/img/trash.png"
 import ApiDeleteService from "../../Services/ApiDeleteService"
 import Confirmation from "../Confirmation/Confirmation"
-import { useState } from "react"
+import {useEffect, useState } from "react"
 import { useContext } from "react"
 import { AuthContext } from "../../Services/AuthContext"
+import ApiGetByIdService from "../../Services/ApiGetByIdService"
 
 function NewsCard({ id, url, title, news, date, customClass }) {
 
+    const [data, setData] = useState({});
     const urlGeneral = "http://localhost:8080/api/v1/news"
     let navigate = useNavigate()
     const [confirmation, setConfirmation] = useState(false)
@@ -40,6 +42,13 @@ function NewsCard({ id, url, title, news, date, customClass }) {
         event.preventDefault();
         setConfirmation(true)
     }
+    useEffect(() => {
+        ApiGetByIdService(urlGeneral, id)
+            .then((data) => setData(data))
+            .catch((error) => console.error(error));
+    }, []);
+
+console.info(data)
 
     return (
         <div className={`${customClass}`}>
@@ -49,6 +58,7 @@ function NewsCard({ id, url, title, news, date, customClass }) {
                 <div className="newsCard-titlePencilTrash">
                     <h2  onClick={() => { navigate("/NewsPage", { state: { id, title, url, news } }) }} alt="Título de la noticia">{title} <small className='small'>{splitDate(date)}</small></h2>
                     {isLogged && (<><img onClick={() => { navigate("/NewsPage", { state: { id, title, url, news, edit: true} }) }} src={pencil} />
+                    {/* <p>{data.date}</p> */}
                     <img onClick={handleClickSubmit} src={trash} /></>)}
                 </div>
                 <p className="newsCard-bodyNews" alt="Texto de la noticia" >{news ? news.substring(0, maxLength) : ""}<span className="newsCard-span" onClick={() => { navigate("/NewsPage", { state: { id, title, url, news } }) }}>... Leer mas</span></p>

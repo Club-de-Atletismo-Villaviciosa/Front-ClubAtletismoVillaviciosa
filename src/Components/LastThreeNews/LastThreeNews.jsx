@@ -1,15 +1,15 @@
 import "./LastThreeNews.css"
-import CallAxiosNews from "../../Services/CallAxiosNews";
+import ApiGetService from "../../Services/ApiGetService";
 import NewsCard from "../NewsCard/NewsCard";
 import { useEffect, useState } from 'react';
 
 function LastThreeNews(){
-
+const urlGeneral = "http://localhost:8080/api/v1/news"
 const [latestNews, setLatestNews] = useState([]);
 
 useEffect(() => {
-  CallAxiosNews().getNews()
-    .then((data) => setLatestNews(data.sort((a, b) => b.id - a.id).slice(0, 3)))
+  
+  ApiGetService(urlGeneral).then((data) => setLatestNews(data.sort((a, b) => b.id - a.id).slice(0, 3)))
     .catch((error) => console.error(error));
 }, []);
 
