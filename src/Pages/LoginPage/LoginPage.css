@@ -10,7 +10,29 @@
   margin-left: 1vw;
 }
 
-.LoginTitle {
+.loginTitle {
   padding-top: 3vh;
   text-align: center;
+  font-size: 80px;
+  font-family: Playbill;
+}
+
+.loginSubtitle{
+  font-size: 50px;
+  font-family: Playbill;
+
+
+}
+
+.login-submit{
+  background-color: #9395D3;
+    cursor: pointer;
+    border-radius: 10px;
+    border-style: none;
+    height: 4vh;
+    width: 13vw;
+    margin-bottom: 10vh;
+    color: white;
+    font-size: large;
+    font-weight: 500;
 }

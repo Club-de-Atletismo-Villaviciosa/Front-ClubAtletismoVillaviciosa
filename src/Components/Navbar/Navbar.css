@@ -69,20 +69,19 @@
     display: none;
 }
 
-.navbar-btnLogOutDiv {
+.navbar-btnLogDiv {
     position: fixed;
-    bottom: 0;
+    bottom: 2vh;
     display: flex;  
     align-items: center;
     cursor: pointer;
 }
 
 .navbar-btnLogOut{
-height: 3vw;
-width: 3vw;
-bottom: 0;
+height: 5vh;
+width: 5vh;
+bottom: 2vh;
 position: relative;
-margin-top: 10vh;
 }
 
 @media (max-width: 800px) {

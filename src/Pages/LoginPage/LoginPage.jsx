@@ -37,7 +37,8 @@ function LoginPage() {
         <div className='main'>
         <Header />
         <div className='wrapper'>
-        <h2 className='LoginTitle'>Solo para administradores</h2>
+        <h2 className='loginTitle'>Login</h2>
+        <h2 className='loginSubtitle'>Solo para administradores</h2>
         <div className='container'>
             <form onSubmit={handleSubmit}>
                 <div>
@@ -48,7 +49,7 @@ function LoginPage() {
                     <label>Password:</label>
                     <input type="password" name="password" value={data.password} onChange={handleChange} className='loginInput'/>
                 </div>
-                <button type="submit">Iniciar sesión</button>
+                <button type="submit" className='login-submit'>Iniciar sesión</button>
             </form>
         </div>
         </div>
