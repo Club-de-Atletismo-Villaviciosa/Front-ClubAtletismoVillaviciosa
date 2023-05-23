@@ -93,7 +93,7 @@ Nuestro principal objetivo ha sido que sea una página funcional e intuitiva, en
 ## 📚 7. Metodología
 <ul>
 <li>Agile con SCRUM</li>
-<li>Atomic disegn</li>
+<li>Atomic design</li>
 <li>Mob programming.</li>
 <li>Pair programming.</li>
 </ul>
@@ -115,14 +115,29 @@ FRONT-END
 git clone https://github.com/Club-de-Atletismo-Villaviciosa/Front-ClubAtletismoVillaviciosa.git
 ```
 
-2. Instalar dependencias
+2. Acceder a la carpeta del proyecto
+```bash
+cd Front-ClubAtletismoVillaviciosa/
+```
+
+3. Instalar dependencias
 ```bash
 npm install
 ```
 
-3. Activar el servidor y guardar el terminal abierto
+4. Activar el servidor y guardar el terminal abierto
 ```bash
 npm start
 ```   
 
 ## 🛠️ 9. Tests
+FRONT-END
+Se han efectuado 3 tipos de test:
+<ul>
+<li>Renderizado</li>
+<li>Eventos</li>
+<li>Enrutamiento</li>
+<ul>
+
+BACK-END
+Se ha efectuado el testeado de todo el CRUD.
