@@ -12,7 +12,6 @@ async function ApiLoginService(url, item, setIsLogged, navigate) {
             navigate('/');
         } catch (error) {
           alert("Usuario o contraseña incorrectos")
-          console.log(error)
         }
 }
 
