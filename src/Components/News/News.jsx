@@ -50,7 +50,7 @@ const News = () => {
                     <img className='news-newsUrl' src={data.url} alt="Imagen de una noticia" width="750" />
                     <small className='small'>{data.date}</small>
                 </div>
-                <p className='pre-wrap'>{data.news}</p>
+                <p className='pre-wrap news-bodyNews'>{data.news}</p>
             </div>
         </div>
 

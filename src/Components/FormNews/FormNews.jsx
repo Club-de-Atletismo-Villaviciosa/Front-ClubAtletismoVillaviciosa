@@ -57,7 +57,7 @@ const FormNews = ({ item, customClass }) => {
                     <div className="formMain-image-inputAndButton">
                         <textarea name='url' onChange={handleChange} value={data.url} required className="form-control" placeholder="Añade una foto" id="photo" />
                         <InputPhoto setBase64={setBase64} setData={setData} />
-                        <p>(Asegurate que la foto esté centrada)</p>
+                        <p>(Asegúrate de que la foto esté centrada)</p>
                     </div>
                 </div>
                 <div className="formMain-activity">
