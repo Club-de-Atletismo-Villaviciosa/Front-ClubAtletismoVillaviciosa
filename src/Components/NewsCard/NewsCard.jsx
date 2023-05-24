@@ -52,17 +52,16 @@ function NewsCard({ id, url, title, news, customClass,date }) {
         }
     }
 
-console.info(data)
+
 
     return (
         <div className={`${customClass}`}>
             {confirmation && <Confirmation type={"delete"} handleAction={handleDelete} handleClose={handleClose} />}
-            <img className={`newsCard-imgNews ${customClass}`} alt="Imagen de la noticia" onClick={() => { navigate("/NewsPage", { state: { id, title, url, news } }) }} tabIndex="0" title="Haz clic para leer la noticia completa" src={url}></img>
+            <img className={`newsCard-imgNews ${customClass}`} alt="Imagen de la noticia" onClick={() => { navigate("/NewsPage", { state: { id, title, url, news,date } }) }} tabIndex="0" title="Haz clic para leer la noticia completa" src={url}></img>
             <div className="newsCard-containerNews">
                 <div className="newsCard-titlePencilTrash">
                     <h2  onClick={() => { navigate("/NewsPage", { state: { id, title, url, news, date } }) }} alt="Título de la noticia">{title} <small className='small'>{splitDate(date)}</small></h2>
                     {isLogged && (<><img onClick={() => { navigate("/NewsPage", { state: { id, title, url, news, edit: true} }) }} src={pencil} />
-                    {/* <p>{data.date}</p> */}
                     <img onClick={handleClickSubmit} src={trash} /></>)}
                 </div>
                 <p className="newsCard-bodyNews" alt="Texto de la noticia" >{news ? news.substring(0, maxLength) : ""}<span className="newsCard-span" onClick={() => { navigate("/NewsPage", { state: { id, title, url, news } }) }}>... Leer mas</span></p>
