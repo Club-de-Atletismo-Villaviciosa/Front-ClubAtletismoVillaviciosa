@@ -16,7 +16,7 @@ function Navbar() {
     let {isLogged, setIsLogged} = useContext(AuthContext)
 
     function handleDropdownClick(e) {
-        mode == "close" ? setMode("open") : setMode("close")
+        mode == "close" ? setMode("") : setMode("close")
     }
 
     const handleShowNavbar = () => {
