@@ -26,17 +26,17 @@ const ContactForm = () => {
             <form className='contact-form' ref={form} onSubmit={sendEmail}>
             <h2>CONTACTO</h2>
                 <div className='form-item'>
-                    <label>Nombre:*</label><br />
+                    <label>Nombre:*</label>
                     <input type="text" name="user_name" id='user_name' maxLength="30" 
                     placeholder='Inserta tu nombre' autoFocus required />
                 </div>
                 <div className='form-item'>
-                    <label>Email:*</label><br />
+                    <label>Email:*</label>
                     <input type="email" name="user_email" id='user_email' pattern='^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$'
                         placeholder='Inserta tu correo electrónico' required />
                 </div>
                 <div className='form-item'>
-                    <label>Consulta:*</label><br /> 
+                    <label>Consulta:*</label>
                     <textarea name="message" rows="10" cols="30" placeholder='Mensaje' required >
                     </textarea>
                 </div>
