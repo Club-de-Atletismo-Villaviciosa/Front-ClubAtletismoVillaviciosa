@@ -2,7 +2,6 @@ import "./FormMain.css"
 import ApiPostService from '../../../Services/ApiPostService';
 import ApiPutService from '../../../Services/ApiPutService';
 import React, { useEffect, useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
 import InputPhoto from "../../InputPhoto/InputPhoto";
 import Confirmation from "../../Confirmation/Confirmation";
 
@@ -68,7 +67,7 @@ function FormMain({ type, editForm }) {
                             <textarea name='url' defaultValue={editForm ? edit.url : base64} value={data.url} required className="form-control" placeholder="Añade una foto" onChange={handleChange}
                                 id="photo" />
                             <InputPhoto setBase64={setBase64} setData={setData} />
-                            <p>(Asegurate que la foto esté centrada)</p>
+                            <p>(Asegúrate de que la foto esté centrada)</p>
                         </div>
                     </div>
                     <div className="formMain-title">
