@@ -15,18 +15,25 @@ input, textarea {
 
 .form-item {
    display: grid;
-   grid-template-rows: 100%;
-   padding-top: 3vh;
+
+   
 }
 
 .form-item label {
     display: flex;
     justify-content: flex-start;
+    margin-bottom: 2vh;
 }
 
 .input-form { 
     background-color: #9395D3;
     width: 25%;  
+}
+.form-item textarea{
+    margin-bottom: 2vh;
+}
+.form-item input{
+    margin-bottom: 2vh;
 }
 
 .contact-info {
