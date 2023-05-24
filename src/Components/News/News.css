@@ -20,6 +20,17 @@
     text-align: justify;
     margin: 0vh 20vh 4vh;    
 }
+.news-image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh;
+    margin-bottom: 4vh;
+}
+
+.news-image .small{
+    cursor: default;
+}
 
 .news-image{
     display: flex;
