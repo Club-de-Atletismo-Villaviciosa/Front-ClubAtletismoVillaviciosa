@@ -14,6 +14,7 @@ const News = () => {
     const urlGeneral = "http://localhost:8080/api/v1/news";
     const [isOpen, setIsOpen] = useState(false);
     let { isLogged } = useContext(AuthContext)
+    
 
     const handleDropdownClick = () => {
         setIsOpen(!isOpen);
@@ -28,12 +29,12 @@ const News = () => {
         if (state.edit) {
             setIsOpen(!isOpen);
         }
-
+        
         ApiGetByIdService(urlGeneral, idInState)
             .then((data) => setData(data))
             .catch((error) => console.error(error));
     }, []);
-
+    
     return (
 
         <div>

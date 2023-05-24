@@ -53,7 +53,6 @@ function NewsCard({ id, url, title, news, customClass,date }) {
     }
 
 
-
     return (
         <div className={`${customClass}`}>
             {confirmation && <Confirmation type={"delete"} handleAction={handleDelete} handleClose={handleClose} />}
