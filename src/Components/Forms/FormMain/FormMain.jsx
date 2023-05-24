@@ -2,7 +2,6 @@ import "./FormMain.css"
 import ApiPostService from '../../../Services/ApiPostService';
 import ApiPutService from '../../../Services/ApiPutService';
 import React, { useEffect, useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
 import InputPhoto from "../../InputPhoto/InputPhoto";
 import Confirmation from "../../Confirmation/Confirmation";
 
