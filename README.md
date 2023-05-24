@@ -3,12 +3,11 @@
 1. [Descripción del proyecto](#projectdescription)
 2. [Mockup](#mockup)
 3. [Historias de usuario](#userstories)
-4. [Página principal](#homepage)
-5. [Miembros del equipo](#teammembers)
-6. [Stacks](#stacks)
-7. [Metodología](#methodology)
-8. [Como instalar el proyecto](#install)
-9. [Tests](#tests)
+4. [Miembros del equipo](#teammembers)
+5. [Stacks](#stacks)
+6. [Metodología](#methodology)
+7. [Como instalar el proyecto](#install)
+8. [Tests](#tests)
 
 ## 📝 1. Descripción del proyecto
 
@@ -51,11 +50,7 @@ Nuestro principal objetivo ha sido que sea una página funcional e intuitiva, en
 <li>Yo como administrador quiero tener un login solo para administrador</li>
 </ul>
 
-## 🖥️ 4. Página principal
-
-
-
-## 🧑‍💻 5. Miembros del equipo
+## 🧑‍💻 4. Miembros del equipo
 
 | Nombre | Role | |
 | :--- | :---: | :---: |
@@ -65,7 +60,7 @@ Nuestro principal objetivo ha sido que sea una página funcional e intuitiva, en
 | Javier Bres | Developer | https://github.com/JavierBres |
 
 
-## 🔧 6. Stacks
+## 🔧 5. Stacks
 
 <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="src/assets/img/icons/HTML5-logo.svg" alt="html5" width="40" height="40"/> </a>
 <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="src/assets/img/icons/CSS3-logo.svg" alt="css3" width="40" height="40"/> </a>
@@ -90,7 +85,7 @@ Nuestro principal objetivo ha sido que sea una página funcional e intuitiva, en
 <a href="https://git-scm.com" target="_blank" rel="noreferrer"> <img src="src/assets/img/icons/Git-logo.svg" alt="git" width="40" height="40"/> </a>
 <a href="https://github.com" target="_blank" rel="noreferrer"> <img src="src/assets/img/icons/GitHub-logo.svg" alt="github" width="40" height="40"/> </a>
 
-## 📚 7. Metodología
+## 📚 6. Metodología
 <ul>
 <li>Agile con SCRUM</li>
 <li>Atomic design</li>
@@ -98,7 +93,7 @@ Nuestro principal objetivo ha sido que sea una página funcional e intuitiva, en
 <li>Pair programming.</li>
 </ul>
 
-## 💻 8. Como instalar el proyecto
+## 💻 7. Como instalar el proyecto
 BACK-END
 1. Clonar el proyecto
 ```bash
@@ -130,14 +125,14 @@ npm install
 npm start
 ```   
 
-## 🛠️ 9. Tests
+## 🛠️ 8. Tests
 FRONT-END
 Se han efectuado 3 tipos de test:
 <ul>
 <li>Renderizado</li>
 <li>Eventos</li>
 <li>Enrutamiento</li>
-<ul>
+</ul>
 
 BACK-END
 Se ha efectuado el testeado de todo el CRUD.
